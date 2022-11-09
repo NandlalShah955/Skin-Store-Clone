@@ -1,11 +1,11 @@
 
 import './App.css';
-
+import HomePage from './Static-Pages/HomePage/HomePage';
 function App() {
   return (
     <div className="App">
-     <h1>App is ready to start</h1>
-     
+    
+     <HomePage/>
     </div>
   );
 }
