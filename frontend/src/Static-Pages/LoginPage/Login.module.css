@@ -193,3 +193,13 @@
     text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .social_links > a > img {
+    width: 20%;
+  }
+
+  .social_links a {
+    font-size: 12px;
+  }
+}
