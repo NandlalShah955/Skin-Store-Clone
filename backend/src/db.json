@@ -1,0 +1,20 @@
+[
+        {
+            "title": "kush bhi",
+            "image":"ha ha kuch bhi",
+            "description": "bola to kuch bhi",
+            "price":  80000,
+            "quantity": 2,
+            "category": "Holiday",
+            "rating": 4
+        },
+        {
+            "title": "ooooooooo",
+            "image":"hhhhhh",
+            "description": "bola to kuch bhi",
+            "price":  80000,
+            "quantity": 2,
+            "category": "Sale",
+            "rating": 4
+        }
+]
