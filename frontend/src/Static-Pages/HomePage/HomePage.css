@@ -188,3 +188,119 @@ margin-top: -14px;
     
     font-family: 'Lato', sans-serif;
     }
+/* Medium screen Media Queries  */
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    .Shopcateg{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        border: 1px solid red;
+        height: auto;
+        width: 90%;
+        margin: auto;
+    }
+    .Trending_wala{
+        width: 90%;
+        height: auto;
+        margin: auto;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);
+        gap: 13px;
+    }
+
+    .Trending_wala div{
+        height: auto;
+    }
+    .buying_people{
+        width: 90%;
+        height: auto;
+        margin: auto;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 13px;
+    
+    }
+    .overblog{
+        width: 90%;
+        height: auto;
+        margin: auto;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 13px;
+    }
+}
+
+
+
+
+
+
+/* Small Screen media queries  */
+    @media screen and (min-width: 10px) and (max-width: 500px) {
+        .Shopcateg{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,1fr);
+            border: 1px solid red;
+            height: auto;
+            width: 90%;
+            margin: auto;
+        }
+        .Shopcateg div{
+            border: 1px solid green;
+            height: 95%;
+            width: auto;
+        
+        }
+        .Trending_wala{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(9,1fr);
+            gap: 13px;
+        }
+        .buying_people{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,1fr);
+            gap: 13px;
+        
+        }
+        .overblog{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 13px;
+        }
+        .diffimages{
+            width: 90%;
+            height: auto;
+            margin: auto;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(3,1fr);
+            gap: 13px;
+            margin-top: 100px;
+        
+        }
+
+
+    }

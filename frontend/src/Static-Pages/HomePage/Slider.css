@@ -20,4 +20,26 @@ border: 1px solid red;
 .carousel-status{
     display:none;
 }
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    .maindiv{
+        border: 1px solid red;
+        width: 90%;
+        margin: auto;
+        height: 300px;
+    }
+   
+}
+@media screen and (min-width: 10px) and (max-width: 500px) {
+    .maindiv{
+        border: 1px solid red;
+        width: 90%;
+        margin: auto;
+        height: 150px;
+    }
+    .carousel-slider{
+        border: 1px solid red;
+        height: 150px;
+    }
 
+
+}
