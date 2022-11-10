@@ -1,0 +1,27 @@
+.topdiv{
+    /* border: 1px solid red; */
+    width: 90%;
+    margin: auto;
+    height: 530px;
+}
+.topdiv img{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    .topdiv{
+        /* border: 1px solid red; */
+        width: 90%;
+        margin: auto;
+        height: 300px;
+    }
+   
+}
+@media screen and (min-width: 10px) and (max-width: 500px) {
+    .topdiv{
+        /* border: 1px solid red; */
+        width: 90%;
+        margin: auto;
+        height: 150px;
+    }
+}

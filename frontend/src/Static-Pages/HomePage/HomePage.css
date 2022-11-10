@@ -73,6 +73,9 @@ margin-top: -14px;
     width: 108px;
     border: 1px solid black;
 }
+.Trending_wala div button:hover{
+background-color: rgb(202, 255, 255);
+}
 .buying_people{
     width: 90%;
     height: auto;
@@ -116,6 +119,10 @@ height: auto;
     cursor: pointer;
     height: 40px;
     width: 90%;
+}
+.buying_people div div:hover{
+background-color: rgb(72, 167, 167);
+
 }
 .diffimages{
     width: 90%;
