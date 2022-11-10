@@ -8,12 +8,24 @@
     width: 100%;
     height: 100%;
 }
+#overblog2{
+    margin-top: 50px;
+}
+#overblog1{
+    margin-top: 40px;
+}
 @media screen and (min-width: 500px) and (max-width: 1000px) {
     .topdiv{
         /* border: 1px solid red; */
         width: 90%;
         margin: auto;
         height: 300px;
+    }
+    #overblog2{
+        margin-top: 50px;
+    }
+    #shop{
+        margin-top: 50px;
     }
    
 }
@@ -23,5 +35,8 @@
         width: 90%;
         margin: auto;
         height: 150px;
+    }
+    #shop{
+        margin-top: 40px;
     }
 }
