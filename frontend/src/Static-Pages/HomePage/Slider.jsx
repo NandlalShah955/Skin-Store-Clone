@@ -28,7 +28,7 @@ function Slider() {
   <Carousel autoPlay infiniteLoop showArrows showIndicators>
 
 {slider.map((el)=>{
-return <img src={el.image} alt="Image" height='100%' width='90%' />
+return <img src={el.image} alt="additional-image" height='100%' width='90%' />
 })}
 
   </Carousel>

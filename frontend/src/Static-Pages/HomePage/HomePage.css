@@ -13,13 +13,13 @@
 .Shopcateg{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    border: 1px solid red;
+   
     height: auto;
     width: 90%;
     margin: auto;
 }
 .Shopcateg div{
-    border: 1px solid green;
+   
     height: 95%;
     width: 200px;
 
@@ -36,14 +36,14 @@
     width: 90%;
     height: auto;
     margin: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
     gap: 13px;
 }
 .Trending_wala div{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 100%;
 }
 .Trending_wala div img{
@@ -80,7 +80,7 @@ margin-top: -14px;
     width: 90%;
     height: auto;
     margin: auto;
-    border: 1px solid red;
+   
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(1,1fr);
@@ -124,7 +124,7 @@ height: auto;
     width: 90%;
     height: 100px;
     margin: auto;
-    border: 1px solid red;
+   
     display: grid;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(1,1fr);
@@ -140,22 +140,18 @@ height: auto;
     height: 40%;
     width: 100%;
 }
-
-
-
-
 .overblog{
     width: 90%;
     height: auto;
     margin: auto;
-    border: 1px solid red;
+  
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(1,1fr);
     gap: 13px;
 }
 .overblog div{
-    border: 1px solid green;
+
     height: auto;
 }
 .overblog div img{
@@ -194,45 +190,43 @@ margin-top: -14px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: repeat(2,1fr);
-        border: 1px solid red;
-        height: auto;
-        width: 90%;
-        margin: auto;
+        /* border: 1px solid red; */
+       
     }
     .Trending_wala{
-        width: 90%;
-        height: auto;
-        margin: auto;
-        border: 1px solid red;
+      
+       
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(5,1fr);
-        gap: 13px;
+       
     }
 
     .Trending_wala div{
         height: auto;
     }
     .buying_people{
-        width: 90%;
-        height: auto;
-        margin: auto;
-        border: 1px solid red;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
-        gap: 13px;
+       
     
     }
     .overblog{
-        width: 90%;
-        height: auto;
-        margin: auto;
-        border: 1px solid red;
+       
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
-        gap: 13px;
+       
+    }
+    .Neoutics{
+        margin-top: 40px;
+    }
+    .Estee{
+        margin-top: 40px;
+    }
+    .DHC{
+        margin-top: 40px;
     }
 }
 
@@ -247,59 +241,67 @@ margin-top: -14px;
             display: grid;
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: repeat(3,1fr);
-            border: 1px solid red;
-            height: auto;
-            width: 90%;
-            margin: auto;
+            /* border: 1px solid red; */
+            
         }
         .Shopcateg div{
-            border: 1px solid green;
+            /* border: 1px solid green; */
             height: 95%;
             width: auto;
         
         }
         .Trending_wala{
-            width: 90%;
-            height: auto;
-            margin: auto;
-            border: 1px solid red;
+           
+            /* border: 1px solid red; */
             display: grid;
             grid-template-columns: repeat(1,1fr);
             grid-template-rows: repeat(9,1fr);
-            gap: 13px;
+           
+        }
+        .Trending_wala div{
+ height: 590px;
+        }
+        .Trending_wala div img{
+            width: 90%;
+            height: 70%;
+            border-radius: 100%;
         }
         .buying_people{
-            width: 90%;
-            height: auto;
-            margin: auto;
-            border: 1px solid red;
+           
+           
             display: grid;
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: repeat(2,1fr);
-            gap: 13px;
-        
+    
+        }
+        .Riley{
+            margin-top: 40px;
         }
         .overblog{
-            width: 90%;
-            height: auto;
-            margin: auto;
-            border: 1px solid red;
+          
             display: grid;
             grid-template-columns: repeat(1,1fr);
             grid-template-rows: repeat(3,1fr);
-            gap: 13px;
+           
         }
         .diffimages{
-            width: 90%;
-            height: auto;
-            margin: auto;
-            border: 1px solid red;
+            
+            height: 400px;
             display: grid;
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: repeat(3,1fr);
-            gap: 13px;
             margin-top: 100px;
+        gap: 2px;
+        }
         
+     
+        
+        .diffimages div img{
+            height: 50%;
+            width: 90%;
+        }
+        .Tripoller{
+            margin-top: 20px;
         }
 
 
