@@ -1,5 +1,5 @@
 import "./App.css";
-import HomePage from "./Static-Pages/HomePage/HomePage";
+// import HomePage from "./Static-Pages/HomePage/HomePage";
 import ProductDetails from "./Static-Pages/ProductsSpecifications/ProductDetails";
 
 
@@ -9,7 +9,7 @@ function App() {
     
      
 
-        <HomePage />
+        {/* <HomePage /> */}
    <ProductDetails/>
     </div>
   );
