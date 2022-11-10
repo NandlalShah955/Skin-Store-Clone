@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+.Shophai{
+    
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+.Shophaifrq{
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    text-align: start;
+    margin-left: 74px;
+}
 
 .othercustomer{
     width: 90%;
@@ -76,7 +89,7 @@ background-image: url('https://static.thcdn.com/images/xsmall/webp//productimg/o
     font-size: 20px;
 }
 .giftsel{
-  
+  border: 1px solid red;
     width: 34%;
     height: 30px;
     display: flex;
@@ -120,7 +133,7 @@ background-image: url('https://static.thcdn.com/images/xsmall/webp//productimg/o
     margin-top: -1px;
 }
 .reviewwala{
-    border: 1px solid red;
+  
     margin: auto;
     margin-top: 20px;
     width: 80%;
@@ -130,6 +143,39 @@ background-size:100% 100%;
     background-repeat: no-repeat;  
     
 }
+.frequentlybought{
+    width: 90%;
+    height: auto;
+    border: 1px solid black;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+/* .frequentlybought div{
+    border: 1px solid red;
+    height: 400px;
+} */
+.frequentlybought div:first-child{
+border: 1px solid green;
+height: 350px;
+width: 910px;
+
+}
+.frequentlybought div:last-child{
+    border: 1px solid blue;
+    width: 50%;
+    width: 453px;
+   
+}
+
+
+
+
+
+
+
+
 /* Medium screen Media Queries  */
 @media screen and (min-width: 500px) and (max-width: 1000px) {
 .othercustomer{
@@ -140,11 +186,30 @@ grid-template-rows: repeat(2,1fr);
 .reviewwala{
     
     height: 490px;
-background-image: url('./specifications-image/Reviews-image.jpeg');
+background-image: url('./specifications-image/Review-medium.jpg');
 background-size:100% 100%; 
     background-repeat: no-repeat;  
     
 }
+.frequentlybought{
+    height: 350px;
+    width: 90%;
+   
+    
+}
+.frequentlybought div:first-child{
+    /* border: 1px solid green; */
+    border: 1px solid red;
+    height: 100%;
+    width: 500px;
+    
+    }
+    .frequentlybought div:last-child{
+        border: 1px solid blue;
+        height: 100%;
+        width:240px;
+       
+    }
 }
 @media screen and (min-width: 10px) and (max-width: 500px) {
 .othercustomer{
@@ -156,4 +221,32 @@ grid-template-rows: repeat(2,1fr);
     margin-top: 5px;
 width: 70%
 }
+.reviewwala{
+    
+    height: 490px;
+background-image: url('./specifications-image/Review-small.jpg');
+background-size:100% 100%; 
+    background-repeat: no-repeat;  
+    
+}
+.frequentlybought{
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.frequentlybought div:first-child{
+    /* border: 1px solid green; */
+    border: 1px solid red;
+    height: 350px;
+    width: 100%;
+    
+    }
+    .frequentlybought div:last-child{
+        border: 1px solid blue;
+        height: 200px;
+        width: 100%;
+       
+    }
+
 }

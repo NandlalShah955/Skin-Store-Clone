@@ -6,8 +6,22 @@ import { RiStarSFill } from "react-icons/ri";
 function ProductDetails() {
   return (
     <>
-      {/* <div className='Stars'></div>
-<RiStarSFill className='stars'/> */}
+    <h1 className="Shophaifrq">Frequently Bought Together</h1>
+      <section className="frequentlybought">
+      <div className="imageswaladiv"></div>
+      <div className="totalpricewaladiv"></div>
+
+
+
+      </section>
+     
+     
+     
+     
+     
+     
+     
+     
       <h1 className="Shophai">Other customers bought</h1>
 
       <div className="othercustomer">
@@ -82,9 +96,10 @@ function ProductDetails() {
       </div>
     
     <section className="reviewwala">
-      
+
     </section>
     
+
     
     </>
   );
