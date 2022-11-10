@@ -1,19 +1,55 @@
-import React from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import styles from "./Login.module.css";
 import facebook from "./logo/Facebook_F_icon.svg.png";
 import google from "./logo/Google__G__Logo.svg.png";
 
 const Login = () => {
+  const [loginDetails, setLoginDetails] = useState({ email: "", password: "" });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setLoginDetails({ ...loginDetails, [name]: value });
+  };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    axios({
+      method: "POST",
+      url: `https://reqres.in/api/login`,
+      data: loginDetails,
+    })
+      .then((res) => {
+        console.log(res.data.token);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const { email, password } = loginDetails;
   return (
     <div className={styles.main_login}>
       <div className={styles.new_existing}>
         <div className={styles.existing_user}>
-          <form action="" className={styles.existing_content}>
+          <form
+            action=""
+            className={styles.existing_content}
+            onSubmit={handleLogin}
+          >
             <h2>Existing Customers</h2>
             <label htmlFor="">*Email adress</label>
-            <input type="email" />
+            <input
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleChange}
+            />
             <label htmlFor="">*Password</label>
-            <input type="password" />
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={handleChange}
+            />
             <a href="./" className={styles.forget_password}>
               Forgotten Your Password?
             </a>
