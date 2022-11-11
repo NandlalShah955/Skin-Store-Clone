@@ -9,9 +9,11 @@ app.get("/", async(req,res)=> {
 })
 
 app.get("/:category", async(req,res)=> { //limit left
+    const {limit=10, page=1} = req.query;
     let {category} = req.params;
+
     try{
-        let products = await Product.find({category: category});
+        let products = await Product.find({category: category}).limit(12).skip((page-1)*limit);
         res.send(products);
     }catch(e){
         res.status(401).send(e.message);
