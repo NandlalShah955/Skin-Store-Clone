@@ -6,51 +6,67 @@ import styles from "./Sales.module.css";
 import {
   MdOutlineKeyboardArrowUp,
   MdOutlineKeyboardArrowDown,
-  MdKeyboardArrowLeft,
-  MdKeyboardArrowRight,
 } from "react-icons/md";
-import { FiHeart } from "react-icons/fi";
+import { AiOutlineHeart } from "react-icons/ai";
+// AiFillHeart
 import { GoSettings } from "react-icons/go";
 import { useEffect } from "react";
-
-const getData = () => {
-  return axios.get(`http://localhost:8080/product`);
-};
+import Stars from "./Stars";
+import Pagination from "./Pagination";
 
 const Sales = () => {
   const [click, setClick] = useState(true);
+  const [click1, setClick1] = useState(true);
   const [data, setData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [sort_x, setSort_x] = useState("");
+
+  const getData = () => {
+    if (sort_x === "lowtohigh") {
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/asc`);
+    } else if (sort_x === "hightolow") {
+      return axios.get(
+        `https://blossombackend.onrender.com/products/Sale/desc`
+      );
+    } else if (sort_x === "ot") {
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/ot`);
+    } else if (sort_x === "et") {
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/et`);
+    } else if (sort_x === "tt") {
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/tt`);
+    } else if (sort_x === "ff") {
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/ff`);
+    } else if (sort_x === "af") {
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/af`);
+    } else if (sort_x === "three") {
+      return axios.get(
+        `https://blossombackend.onrender.com/products/Sale/three`
+      );
+    } else if (sort_x === "four") {
+      return axios.get(
+        `https://blossombackend.onrender.com/products/Sale/four`
+      );
+    } else if (sort_x === "five") {
+      return axios.get(
+        `https://blossombackend.onrender.com/products/Sale/five`
+      );
+    } else {
+      return axios.get(
+        `https://blossombackend.onrender.com/products/Sale?page=${currentPage}`
+      );
+    }
+  };
+
+  const sort_func = (event) => {
+    setSort_x(event.target.value);
+    getData(sort_x);
+  };
 
   useEffect(() => {
     getData()
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-
-  const saving = [
-    {
-      id: 1,
-      data: "Up to 25%",
-      off: 168,
-    },
-    {
-      id: 2,
-      data: "25% to 50%",
-      off: 477,
-    },
-    {
-      id: 3,
-      data: "50% to 75%",
-      off: 104,
-    },
-    {
-      id: 4,
-      data: "MoreThan 75%",
-      off: 2,
-    },
-  ];
+      .then((res) => setData(res.data))
+      .catch((err) => console.log(err));
+  }, [currentPage, sort_x]);
 
   return (
     <div className={styles.main__sales}>
@@ -67,7 +83,7 @@ const Sales = () => {
           </div>
           <div className={styles.savings}>
             <div onClick={() => setClick(!click)}>
-              <p>Savings</p>
+              <p>Price</p>
               {click ? (
                 <MdOutlineKeyboardArrowUp className={styles.arrow} />
               ) : (
@@ -80,21 +96,50 @@ const Sales = () => {
               click ? `${styles.refine_option1}` : `${styles.refine_option2}`
             }
           >
-            {saving.map(({ id, data, off }) => (
-              <div key={id}>
-                <input type="checkbox" />
-                <span>
-                  {data} ({off})
-                </span>
-              </div>
-            ))}
+            <div className={styles.sorting}>
+              <div>Price</div>
+              <select name="" id="" onChange={sort_func}>
+                <option value="defalt">Default</option>
+                <option value="ot">Less than $10</option>
+                <option value="et">$10 to $20</option>
+                <option value="tt">$20 to $30</option>
+                <option value="ff">$40 to $50</option>
+                <option value="af">Above $50</option>
+              </select>
+            </div>
+          </div>
+
+          <div className={styles.savings}>
+            <div onClick={() => setClick1(!click1)}>
+              <p>Get Products By Rating</p>
+              {click1 ? (
+                <MdOutlineKeyboardArrowUp className={styles.arrow} />
+              ) : (
+                <MdOutlineKeyboardArrowDown className={styles.arrow} />
+              )}
+            </div>
+          </div>
+          <div
+            className={
+              click1 ? `${styles.refine_option1}` : `${styles.refine_option2}`
+            }
+          >
+            <div className={styles.sorting}>
+              <div>Get Products By Rating</div>
+              <select name="" id="" onChange={sort_func}>
+                <option value="defalt">Default</option>
+                <option value="three">3</option>
+                <option value="four">4</option>
+                <option value="five">5</option>
+              </select>
+            </div>
           </div>
         </div>
 
         {/* product section  */}
         <div className={styles.products_area}>
           <p className={styles.off_percent}>Up to 50% off!</p>
-          <p className={styles.results}>{751} results</p>
+          <p className={styles.results}>{data.length} results</p>
           <p className={styles.results} style={{ marginTop: "20px" }}>
             Shop up to 50% off best-selling brands like SkinMedica, Decorté &
             more!
@@ -109,27 +154,16 @@ const Sales = () => {
             {/* sorting  */}
             <div className={styles.sorting}>
               <div>Sort by</div>
-              <select name="" id="">
+              <select name="" id="" onChange={sort_func}>
                 <option value="defalt">Default</option>
-                <option value="popularity">Popularity</option>
                 <option value="lowtohigh">Price: Low to High</option>
                 <option value="hightolow">Price: High to Low</option>
-                <option value="a-z">A-Z</option>
-                <option value="percentage">Percentage Discount</option>
-                <option value="newest">Newest Arrivals</option>
+                {/* <option value="a-z">A-Z</option> */}
               </select>
             </div>
             {/* pagination  */}
             <div className={`${styles.pagination} ${styles.hidden}`}>
-              <button>
-                <MdKeyboardArrowLeft />
-              </button>
-              <span>1</span>
-              <span style={{ marginRight: "8px" }}>2</span> -{" "}
-              <span style={{ marginLeft: "8px" }}>16</span>
-              <button>
-                <MdKeyboardArrowRight />
-              </button>
+              <Pagination setCurrentPage={setCurrentPage} />
             </div>
             {/* responsive refine  */}
             <div className={styles.responsive_refine}>
@@ -140,18 +174,17 @@ const Sales = () => {
 
           {/* main product  */}
           <div className={styles.all__main__products}>
-            {data?.map(({ id, image, discription, orginalP, price }) => (
-              <div key={id} className={styles.each_product}>
+            {data?.map(({ _id, image, title, rating, price }) => (
+              <div key={_id} className={styles.each_product}>
                 <div>
                   <div className={styles.wishlist}>
-                    <FiHeart />
+                    <AiOutlineHeart />
+                    {/* <AiFillHeart />} */}
                   </div>
                   <img src={image} alt="product_img" />
                 </div>
-                <p className={styles.product__dis}>{discription}</p>
-                <p className={styles.product__msrp}>
-                  MSRP: <span>{orginalP}</span>
-                </p>
+                <p className={styles.product__dis}>{title}</p>
+                <Stars stars={rating} />
                 <p className={styles.product__price}>$ {price}</p>
                 <button className={styles.product__buy}>QUICK BUY</button>
               </div>
@@ -167,15 +200,7 @@ const Sales = () => {
             <div className={`${styles.sorting} ${styles.hide__sorting}`}></div>
             {/* pagination  */}
             <div className={styles.pagination}>
-              <button>
-                <MdKeyboardArrowLeft />
-              </button>
-              <span>1</span>
-              <span style={{ marginRight: "8px" }}>2</span> -{" "}
-              <span style={{ marginLeft: "8px" }}>16</span>
-              <button>
-                <MdKeyboardArrowRight />
-              </button>
+              <Pagination setCurrentPage={setCurrentPage} />
             </div>
           </div>
         </div>

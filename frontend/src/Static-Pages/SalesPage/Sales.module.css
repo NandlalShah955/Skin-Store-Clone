@@ -55,7 +55,6 @@
   align-items: center;
   border-bottom: 2px solid black;
   cursor: pointer;
-  margin-bottom: 10px;
 }
 
 .savings > div > p {
@@ -72,16 +71,17 @@
 }
 
 .refine_option1 {
-  height: 170px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  overflow-y: scroll;
 }
 
 .refine_option1 > div {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 .refine_option1 > div input {
@@ -154,29 +154,6 @@
   cursor: pointer;
 }
 
-.sort_page .pagination button {
-  border: 1px solid gray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 25px;
-  padding: 6px 6px 7px 6px;
-  box-sizing: border-box;
-  background: transparent;
-  color: #2e3337;
-  cursor: pointer;
-}
-
-.sort_page .pagination span {
-  border: 1px solid gray;
-  padding: 12px;
-  box-sizing: border-box;
-  font-size: 20px;
-  line-height: 14px;
-  font-weight: 400;
-  color: #2e3337;
-}
-
 .all__main__products {
   margin-top: 30px;
   display: grid;
@@ -201,24 +178,8 @@
   color: #2e3337;
   margin-top: 60px;
   font-family: "Lato", sans-serif;
-}
 
-.each_product .product__msrp {
-  color: gray;
-  font-weight: 400;
-  line-height: 17px;
-  font-size: 14px;
-  font-family: "Lato", sans-serif;
-  margin-bottom: 0%;
-}
-
-.each_product .product__msrp span {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 17px;
-  color: gray;
-  text-decoration: line-through;
-  font-family: "Lato", sans-serif;
+  height: 50px;
 }
 
 .each_product .product__price {
@@ -349,6 +310,10 @@
 @media (max-width: 425px) {
   .sort_page .hide__sorting {
     display: none;
+  }
+
+  .product__dis + div {
+    margin-top: 35px;
   }
 
   .responsive__sort_page {
