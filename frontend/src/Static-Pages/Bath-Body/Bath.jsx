@@ -6,7 +6,7 @@ import '../SkinCare/SkinCare.css'
 function Bath() {
   return (
     <>
-    <h1 className="Shophai"> Shop Makeup</h1>
+   
 
 <div className="Shopcateg">
         <div>
@@ -78,7 +78,7 @@ function Bath() {
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div className="Tripoller">
+        <div className="Tripoller" id='nichekro'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/40/original-SkinStore_-_Image_5-065740.jpg"
             alt=""
@@ -120,7 +120,7 @@ Kerstin Florian’s luxury skincare range was founded by skincare expert, Floria
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div className="Tripoller">
+        <div className="Tripoller" id='nichekro'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/33/original-Screenshot_2022-04-08_124716-042733.png"
             alt=""
@@ -178,7 +178,8 @@ Enjoy the ultimate Spa-Inspired experience at home with our natural products.
           <div><HiOutlineShoppingBag/>SHOP NOW</div>
         </div>
       </div>
-    
+      <h1 className="Shophai">What Blog Says</h1>
+
       <div className="overblog" id='overblog1'>
         <div>
           <img

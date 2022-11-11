@@ -9,7 +9,7 @@ function Holiday() {
 <HolidaySlider/>
 {/* first red div  */}
 <div className="Trending_wala">
-        <div>
+        <div className='heightkm'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/01/original-original-SkinStore_Q4_Photography_2022_-_October_-_THG0035163_-_BATCHING_shot21500x500-052147-021101.jpg"
             alt="Smart Splurges"
@@ -21,7 +21,7 @@ Budget Friendly Finds</h4>
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div>
+        <div className='heightkm'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/36/original-SkinStore_Q4_Photography_2022_-_October_-_THG0035163_-_BATCHING_shot20500x500-052136.jpg"
             alt="Smart Splurges"
@@ -33,7 +33,7 @@ Splurge on something sentimental and give an extra thoughtful gift to someone yo
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div>
+        <div className='heightkm'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/57/original-original-original-SkinStore_Q4_Photography_2022_-_October_-_THG0035163_-_BATCHING_shot23500x500-053709-091327-021057.jpg"
             alt="
@@ -47,7 +47,7 @@ There's no better time to indulge in a luxury gift for you and yours. Shop the m
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div>
+        <div className='heightkm'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/05/original-SkinStore_Q4_Photography_2022_-_October_-_THG0035163_-_BATCHING_shot22500x500-053705.jpg"
             alt="Stocking Stuffers"

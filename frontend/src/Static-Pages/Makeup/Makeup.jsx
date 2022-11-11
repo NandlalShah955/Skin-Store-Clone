@@ -174,6 +174,8 @@ EltaMD UV Clear Tinted Broad-Spectrum SPF46</p>
         </div>
       </div>
     
+
+      <h1 className="Shophai"> Have a Look at Blogs</h1>
       <div className="overblog" id='overblog1'>
         <div>
           <img
@@ -199,7 +201,7 @@ EltaMD UV Clear Tinted Broad-Spectrum SPF46</p>
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div className="Tripoller">
+        <div className="Tripoller" id='nichekro'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/46/Canva-images-25_1595345347-090846.jpg"
             alt=""

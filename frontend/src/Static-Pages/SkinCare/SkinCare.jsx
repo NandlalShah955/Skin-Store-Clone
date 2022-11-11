@@ -36,7 +36,7 @@ function SkinCare() {
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div className="Tripoller">
+        <div className="Tripoller" id='nichekro'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/24/original-DZ_SKINSTORE_LANDINGPAGE_HORMONALAGING_500x500-080824.jpg"
             alt=""

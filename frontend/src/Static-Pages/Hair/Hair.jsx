@@ -9,7 +9,7 @@ function Hair() {
         <img src="./Skincare.png" alt="" />
       </div>
       
-      <div className="overblog">
+      <div className="overblog" id='overblog1'>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/33/original-original-500x500-085431-082633.jpg"
