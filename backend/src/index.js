@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
+const bodyparser=require('body-parser');
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const Connect = require("./config/db");
 
 const userRouter = require("./features/users/user.router");
@@ -11,6 +12,8 @@ const cartRouter = require("./features/cart/cart.router")
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(bodyparser.urlencoded({extended:false}))
+app.use(bodyparser.json());
 
 app.use("/users",userRouter);
 app.use("/products", productRouter);

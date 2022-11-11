@@ -26,6 +26,8 @@ to sort the products according to price range :
   http://localhost:8080/products/Sale/ff -> 41 to 50
   http://localhost:8080/products/Sale/af -> above 50
 
+for pagination http://localhost:8080/products/Sale?page=1 (get)
+
 particular detail of products using product id-> http://localhost:8080/products/Holiday/636d425a6afa0219074d088e (get)
 
 add to cart-> http://localhost:8080/carts/636bf547b54db5e103e24be5 with userID and in body give (post)
