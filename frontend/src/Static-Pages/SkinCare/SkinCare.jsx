@@ -8,7 +8,7 @@ function SkinCare() {
   return (
     <>
       <div className='topdiv'>
-        <img src="./Skincare.png" alt="" />
+        <img src="https://static.thcdn.com/images/large/webp/widgets/121-us/50/SS-Batching-Christmas-Category_Banner-EG770x380_1-081850.jpg" alt="" />
       </div>
       <h1 className="Shophai"> Shop the Range</h1>
       <div className="overblog">

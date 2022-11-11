@@ -1,11 +1,14 @@
 import "./App.css";
 // import HomePage from "./Static-Pages/HomePage/HomePage";
 // import ProductDetails from "./Static-Pages/ProductsSpecifications/ProductDetails";
-import Brands from './Static-Pages/Brands/Brands'
+// import Bath from "./Static-Pages/Bath-Body/Bath";
+import Payment from './Payment-Page/Payment'
 function App() {
   return (
     <div className="App">
-   <Brands/>
+   
+   
+   <Payment/>
      {/* <HomePage/> */}
 
     </div>

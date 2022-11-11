@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+  .AdBottom_mainCon_2 {
+    background-color: #2E3337;
+    width: 90%;
+    margin: auto;
+    color: white;
+    
+    font-size: 20px;
+    padding: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .AdBottom_mainCon_2:hover {
+    background-color: white;
+    color: #2E3337;
+    cursor: pointer;
+  }
+  @media screen and (min-width: 10px) and (max-width: 500px) {
+    .AdBottom_mainCon_2 {
+height: 150px;
+text-align: center;
+font-size: 20px;
+    }
+    
+  }

@@ -48,7 +48,7 @@ function Makeup() {
       </div>
 
       <div className='topdiv'>
-        <img src="./Skincare.png" alt="" />
+        <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/59/SS-Batching-Christmas-Category_Banner-EG1180x450_6-082659.jpg" alt="" />
       </div>
 
       <div className="overblog" id='overblog1'>

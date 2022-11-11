@@ -6,7 +6,7 @@ import '../SkinCare/SkinCare.css'
 function Bath() {
   return (
     <>
-   
+ 
 
 <div className="Shopcateg">
         <div>
@@ -48,7 +48,7 @@ function Bath() {
       </div>
 
       <div className='topdiv'>
-        <img src="./Skincare.png" alt="" />
+        <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/34/SS-Batching-Christmas-Category_Banner-EG1180x450_2-034934.jpg" alt="" />
       </div>
 
       <div className="overblog" id='overblog1'>
