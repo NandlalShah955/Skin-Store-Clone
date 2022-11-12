@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+.footer_innerCont {
+  /* border: 1px solid red; */
+  width: 90%;
+  margin: auto;
+  font-family: "Lato", sans-serif;
+  margin-top: 30px;
+}
+.footer_topContdiv_1 > div {
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.footer_topContdiv_2 {
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: left;
+}
+.footer_topCont {
+  /* border: 1px solid red; */
+  display: flex;
+  text-align: left;
+}
+.footer_topCont > div {
+  /* border: 1px solid red; */
+  width: 50%;
+}
+.footer_topContdiv_2 > div:nth-child(2) {
+  display: flex;
+  margin: 5px 0;
+}
+.footer_topContdiv_2 > div:nth-child(2) > img {
+  margin: 5px;
+}
+
+.footer_bottomCont {
+  border: 1px solid red;
+
+ text-align: left;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.footer_bottomContDiv { 
+  /* border: 1px solid red; */
+
+  padding: 20px;
+}
+.footer_bottomContDiv > p {
+  font-weight: 700;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+.footer_bottomContDiv >div> p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.footer_bottomLogoDiv{
+  padding: 30px;
+  margin-top: 20px;
+ 
+}
+.footer_bottomLogoDiv>img{
+  height: 50px;
+}
+
+
+.lowerfooterdiv{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+.payimg{
+    display: flex;
+    gap: 10px;
+}
+.image{
+    border: 1px solid rgb(225, 216, 216);
+    border-radius: 5px;
+
+}
+
+
+.leftlowerdiv{
+    margin-left: 30px;
+}
+.image>img{
+    height: 30px;
+    width: 45px;
+}
+
+
+
+
+
+
+
+
+
+
+

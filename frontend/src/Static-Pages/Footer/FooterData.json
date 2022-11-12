@@ -1,0 +1,39 @@
+{
+    "payment":[
+    {"icon":"https://cdn0.iconfinder.com/data/icons/flat-design-business-set-3/24/payment-method-visa-128.png"
+    },
+    {
+        "icon":"https://cdn2.iconfinder.com/data/icons/credit-cards-6/156/mastercard-128.png"
+    },
+    {
+        "icon":"https://cdn2.iconfinder.com/data/icons/credit-cards-6/156/american_express-128.png"
+    },
+    {
+        "icon":"https://cdn3.iconfinder.com/data/icons/credit-cards-icon-set/64/Bank.png"
+    },
+    {
+        "icon":"https://cdn2.iconfinder.com/data/icons/credit-cards-6/156/discover-128.png"
+    },
+    {
+        "icon":"https://cdn2.iconfinder.com/data/icons/credit-cards-6/156/maestro-128.png"
+    },
+    {
+        "icon":"https://cdn0.iconfinder.com/data/icons/flat-design-business-set-3/24/payment-method-cirrus-128.png"
+    },
+    {
+        "icon":"https://cdn0.iconfinder.com/data/icons/credit-card-debit-card-payment-PNG/80/Direct-Debit-Curved.png"
+    },
+    {
+        "icon":"https://cdn0.iconfinder.com/data/icons/major-credit-cards-colored/48/JD-06-128.png"
+    },
+    {
+        "icon":"https://cdn3.iconfinder.com/data/icons/pix-glyph-set/50/520775-paypal-128.png"
+    },
+    {
+        "icon":"https://cdn3.iconfinder.com/data/icons/finance-152/64/21-128.png"
+    },
+    {
+        "icon":"https://cdn2.iconfinder.com/data/icons/gadgets-and-devices/48/98-128.png"
+    }
+]
+}
