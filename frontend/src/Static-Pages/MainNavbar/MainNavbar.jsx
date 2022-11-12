@@ -1,7 +1,7 @@
 import React from 'react'
 import './MainNavbar.css'
 import {Link} from 'react-router-dom'
-import Fragrance from '../Fragrance/Fragrance'
+// import Fragrance from '../Fragrance/Fragrance'
 function MainNavbar() {
   const [isshown, setisshown] = React.useState(false)
   const [issmall, setissmall] = React.useState(false)
@@ -236,7 +236,7 @@ setisshown(true)
 }
 
 
-<Fragrance/>
+{/* <Fragrance/> */}
 
     </>
   )

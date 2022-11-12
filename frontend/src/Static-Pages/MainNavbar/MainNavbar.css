@@ -6,6 +6,7 @@ font-family: "Lato",sans-serif;
   width: 80%;
  margin-left: 40px;
  font-weight: 300;
+ position: sticky;
 }
 #navibarr{
   list-style-type: none;
@@ -13,7 +14,9 @@ font-family: "Lato",sans-serif;
   padding: 0;
   width: 100%;
   /* background-color: #EEEEEE; */
-  display: flex;
+  display: grid;
+  grid-template-columns:repeat(13,1fr);
+  grid-template-rows: repeat(1,1fr);
   justify-content: space-around;
   height: 30px;
   
@@ -105,4 +108,36 @@ height: 85%;
   font-weight: 700;
   text-align: start;
   margin-left: 20px;
+}
+
+/* Medium screen  */
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .hoveringdiv{
+    width: 100%;
+   margin-left: 40px;
+  
+   font-weight: 300;
+   position: sticky;
+    top: 0;
+   /* background-color: aqua; */
+   /* display: none; */
+  }
+  #navibarr{
+display: grid;
+grid-template-columns: repeat(7,1fr);
+grid-template-rows: repeat(2,1fr);
+/* margin-top: 180px; */
+gap: 10px;
+/* background-color: aqua; */
+  }
+}
+
+/* Small screeen  */
+@media screen and (min-width: 10px) and (max-width: 500px) {
+  #navibarr{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(4,1fr);
+height: 150px;
+  }
 }

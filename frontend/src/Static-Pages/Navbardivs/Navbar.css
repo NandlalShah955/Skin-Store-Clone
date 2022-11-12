@@ -6,12 +6,20 @@
     width: 90%;
     margin: auto;
     color: white;
+    height: 30px;
     
     font-size: 20px;
     padding: 8px;
     margin-top: 15px;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  /* .AdBottom_mainCon_2 p{
+    margin-top: 5
+    px;
+  } */
   .AdBottom_mainCon_2:hover {
     background-color: white;
     color: #2E3337;
