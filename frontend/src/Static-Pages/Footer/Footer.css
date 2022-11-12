@@ -96,6 +96,9 @@ ul{
 }
 }
 
+.footer-colss{
+
+}
 
 
 
@@ -163,12 +166,11 @@ ul{
 }
 
 /*responsive*/
-@media(max-width: 767px){
+/* @media(max-width: 767px){
   .footer-colss{
-    width: 50%;
-    margin-bottom: 30px;
+  border: 1px solid red;
 }
-}
+} */
 
 @media(max-width: 574px){
   .footer-colss{
@@ -179,5 +181,12 @@ ul{
 
 .social-links {
   display: none;
+}
+}
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+.social-links{
+	/* border: 1px solid green; */
+	margin-left: -140px;
 }
 }

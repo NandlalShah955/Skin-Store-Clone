@@ -3,7 +3,7 @@
 .AdBottom_mainCon {
     background-color: #F2F2F2;
     padding: 15px;
-    height: auto;
+    
    
   }
   .AdBottom_innerCon {
@@ -28,6 +28,8 @@
   @media screen and (min-width: 500px) and (max-width: 1000px) {
     .AdBottom_mainCon{
       margin-top: 40px;
+      /* height: 60px; */
+      
     }
   }
   @media screen and (min-width: 10px) and (max-width: 500px) {
@@ -37,6 +39,7 @@
        height: 150px;
         margin-top: 60px;
         background-color: white;
+        display: none;
     }
     
   }

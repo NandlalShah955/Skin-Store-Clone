@@ -1,12 +1,21 @@
 import "./App.css";
 
+import AllRoutes from "./AllRoutes";
 import FinalNavbar from "./FinalNavbar/FinalNavbar";
-import Navbar from "./Static-Pages/Navbardivs/Navbar";
+// import HomePage from './Static-Pages/HomePage/HomePage'
+import Footer from './Static-Pages/Footer/Footer'
 function App() {
   return (
     <div className="App">
-   <Navbar />
   
+  <FinalNavbar/>
+  
+    <AllRoutes/> 
+  {/* <HomePage/> */}
+  
+
+  <Footer/>
+   
     </div>
   );
 }

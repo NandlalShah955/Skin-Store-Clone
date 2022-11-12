@@ -33,7 +33,7 @@ setisshown(true)
 <ul id='navibarr'>
  <Link className='link' to='/Brands'>    <li onMouseOver={handleshow}  onMouseLeave={handleleave}    >Brands</li></Link>
  <Link className='link' to='/Holiday'> <li onMouseOver={handleclicksmall}  onMouseLeave={handleleaveksmall} >Holiday</li></Link>
- <Link className='link' to='/'> <li onMouseOver={handleshowimg}  onMouseLeave={handlehideimg}>Sale</li></Link>
+ <Link className='link' to='/Sale'> <li onMouseOver={handleshowimg}  onMouseLeave={handlehideimg}>Sale</li></Link>
  {/* adclassName='link' d products link here  */}
  
  <Link className='link' to='/SkinCare'> <li onMouseOver={handleshow}  onMouseLeave={handleleave} >SkinCare</li></Link>

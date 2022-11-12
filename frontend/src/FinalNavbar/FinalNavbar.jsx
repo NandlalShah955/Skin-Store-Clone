@@ -1,5 +1,6 @@
 import React from 'react'
 import MainNavbar from '../Static-Pages/MainNavbar/MainNavbar'
+import Navbars from '../Static-Pages/Navbars/Navbars'
 import Top from '../Static-Pages/Navbardivs/Top'
 import Navbar from '../Static-Pages/Navbardivs/Navbar'
 
@@ -11,10 +12,10 @@ function FinalNavbar() {
       top:0,
       backgroundColor:'white'
     }}>
-<MainNavbar/>
+
+    <Navbars/>
+    <MainNavbar/>
     <Top/>
-
-
 
 <Navbar/>
     </div>
