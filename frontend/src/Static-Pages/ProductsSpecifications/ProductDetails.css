@@ -88,6 +88,11 @@ background-image: url('https://static.thcdn.com/images/xsmall/webp//productimg/o
     color: rgb(239, 192, 34);
     font-size: 20px;
 }
+.starshaipr{
+    color: rgb(239, 192, 34);
+    font-size: 35px;
+    margin-top: 10px;
+}
 .giftsel{
   border: 1px solid red;
     width: 34%;
@@ -130,7 +135,10 @@ background-image: url('https://static.thcdn.com/images/xsmall/webp//productimg/o
     margin-top: 5px;
 }
 .uparkr{
-    margin-top: -1px;
+    margin-top: 5px;
+}
+.uparkrdubar{
+margin-top: 16px;
 }
 .reviewwala{
   
@@ -146,13 +154,13 @@ background-size:100% 100%;
 .mainimagewala{
     height: auto;
     width: 90%;
-    border: 1px solid red;
+   
     margin: auto;
     display: flex;
 }
 .imagepara{
 width: 70%;
-border: 1px solid green;
+
 height: 700px;
 display: flex;
     flex-direction: column;
@@ -164,12 +172,60 @@ display: flex;
     width: 50%;
     height: 80%;
 }
+.imagepara h3{
+    color: #2e3337;
+    margin-left: -860px;
+    
+    margin-top: 20px;
+font-weight: 400;
+}
+.imagepara p{
+color: #2e3337;
+line-height: 25px;
+font-size: 15px;
+font-family: "Lato",sans-serif;
+font-weight: 300;
+text-align: start;
+}
 .pricename{
 width: 30%;
-border: 1px solid teal;
+/* border: 1px solid teal; */
 height: 100%;
+text-align: start;
+margin-top: 30px;
+}
+.namei{
+    font-family: 'Lato', sans-serif;
+font-size: 36px;
+line-height: 43px;
+font-weight: 400;
+color: #2e3337;
 }
 
+.rate{
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: 300;
+    color: #2e3337;
+    margin-top: 40px;
+}
+
+.addwalabutton{
+    background-color: red;
+    font-size: 14px;
+    line-height: 18px;
+    color: #333333;
+    font-weight: 200;
+    font-family: 'Lato';
+    background-color: #333;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    height: 90px;
+}
 
 .add{
     text-align: start;

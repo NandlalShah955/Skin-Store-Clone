@@ -63,9 +63,16 @@ function ProductDetails() {
 
 </div>
 <div className="pricename">
-<p>{el.title}</p>
-<p> {`$${el.price}.00`} </p>
-<Link to="Carts"><button onClick={addToCart}>Add to cart</button></Link>
+<p className="namei">{el.title}</p>
+<div className="starshai">
+              <RiStarSFill className="starshaipr" />
+              <RiStarSFill className="starshaipr" />
+              <RiStarSFill className="starshaipr" />
+              <RiStarSFill className="starshaipr" />
+              <p className="uparkrdubar">(4)</p>
+            </div>
+<p className="rate"> {`$${el.price}.00`} </p>
+<Link to="Carts"><button onClick={addToCart} className='addwalabutton'>Add to cart</button></Link>
 </div>
 
 
@@ -73,41 +80,8 @@ function ProductDetails() {
       ))}
       
       
-      {/* {data?.map((el) => (
-            <div className="imgandprice" style={{
-              border: '1px solid red'
-            }}>
-              <div className="onlyimagehai" key={el.id}>
-                <img src={el.image} alt="nandlal" width={'400px'} height={'200px'}/>
-                <p>{el.description}</p>
-              </div>
-
-              <div className="pricedesc">
-                <p>{el.title}</p>
-                
-               
-              </div>
-            </div>
-         
-         
-          
-        
-      </div> */}
-          {/* wrap in this div  */}
-         
-
-       
-      
-
      
-     
-     
-     
-     
-     
-     
-     
-     
+    
      
       <h1 className="Shophai">Other customers bought</h1>
 
