@@ -13,7 +13,7 @@ import Tools from './Static-Pages/Tools/Tools'
 import Sales from './Static-Pages/SalesPage/Sales'
 import Login from './Static-Pages/LoginPage/Login'
 import Register from './Static-Pages/RegisterPage/Register'
-// import Carts from './Static-Pages/Cart/Carts'
+import Carts from './Static-Pages/Cart/Carts'
 import Payment from './Payment-Page/Payment'
 import ProductDetails from './Static-Pages/ProductsSpecifications/ProductDetails'
 function AllRoutes() {
@@ -33,10 +33,11 @@ function AllRoutes() {
 <Route path='/Fragrance' element={<Fragrance/>}/>
 <Route path='/SelfCare' element={<Selfcare/>}/>
 <Route path='/Tools' element={<Tools/>}/>
-{/* <Route path='/Carts' element={<Carts/>}/> */}
+<Route path='/Sale/:id/Carts' element={<Carts/>}/>
 <Route path='/Payment' element={<Payment/>}/>
 <Route path='/Sale/:id' element={<ProductDetails/>}/>
 
+{/* <Route path='/Carts' element={<Carts/>}/> */}
 
 
 

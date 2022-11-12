@@ -5,14 +5,45 @@ import { Link, useParams } from "react-router-dom";
 import { RiStarSFill } from "react-icons/ri";
 import { useState, useEffect } from "react";
 import axios from "axios";
+
 function ProductDetails() {
   const params = useParams();
   const [data, setdata] = useState([]);
-
+  const userData = localStorage.getItem("token") || ""
+  const [userId, userEmail, userPassword] = userData.split(":")
+  console.log(userId)
   let id = params.id;
+
+  // const addToCart = ()=> {
+  //   // event.preventDefault();
+  //   axios({
+  //     method: "POST",
+  //     url: `https://blossombackend.onrender.com/carts/${userId}`,
+  //     data: {
+  //       "quantity": 1,
+  //       "productId": id,
+  //     }
+  //   })
+  //     .then((res) => {
+  //       console.log("cartData1", res)
+  //     })
+  //     .catch((err) => console.log(err));
+  // }
+
+  function addToCart(){
+    console.log(id,"iddddddd")
+    axios.post(`https://blossombackend.onrender.com/carts/${userId}`,{
+      "quantity": 2,
+      "productId": id
+    }).then((res)=>{
+      console.log(res)
+    })
+  }
+
+  // let id = params.id;
   useEffect(() => {
     axios.get(`https://blossombackend.onrender.com/products/Sale/${id}/spec`).then((res)=>{
-      console.log(res.data)
+      // console.log(res.data)
       setdata(res.data)
     })
   }, []);
@@ -34,7 +65,7 @@ function ProductDetails() {
 <div className="pricename">
 <p>{el.title}</p>
 <p> {`$${el.price}.00`} </p>
-<Link to=""><button>Add to cart</button></Link>
+<Link to="Carts"><button onClick={addToCart}>Add to cart</button></Link>
 </div>
 
 
