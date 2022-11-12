@@ -1,0 +1,42 @@
+to login-> http://localhost:8080/users/login (post) while provide email and password in body
+{
+  "email": "a@b.com",
+  "password": "blossom"
+}
+
+to signup-> http://localhost:8080/users/signup (post) while provide userName, email and password in body
+{
+  "userName": "Yo Yo",
+  "email": "a@b.com",
+  "password": "blossom"
+}
+
+get all users-> http://localhost:8080/users (get)
+
+category-product-> http://localhost:8080/products/Sale (get)
+
+to sort the products according to price http://localhost:8080/products/Sale/dec OR http://localhost:8080/products/Sale/asc (get)
+
+to sort the products according to rating http://localhost:8080/products/New/five 0R http://localhost:8080/products/New/four OR http://localhost:8080/products/New/three
+
+to sort the products according to price range : 
+  http://localhost:8080/products/Sale/ot -> 1 to 10
+  http://localhost:8080/products/Sale/et -> 11 to 20
+  http://localhost:8080/products/Sale/tt -> 21 to 30
+  http://localhost:8080/products/Sale/ff -> 41 to 50
+  http://localhost:8080/products/Sale/af -> above 50
+
+for pagination http://localhost:8080/products/Sale?page=1 (get)
+
+particular detail of products using product id-> http://localhost:8080/products/Holiday/636d425a6afa0219074d088e (get)
+
+add to cart-> http://localhost:8080/carts/636bf547b54db5e103e24be5 with userID and in body give (post)
+{
+  "quantity": 1,
+  "productId": "636d425a6afa0219074d0963"
+}
+to increase the count-> same process like add to cart but change quantity+1 in body (post)
+
+to see partical item saved in cart with userID http://localhost:8080/carts/636bf547b54db5e103e24be5 (get)
+
+to delete data from cart using cart id->  http://localhost:8080/carts/cartID (delete)

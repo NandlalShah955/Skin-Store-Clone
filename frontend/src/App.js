@@ -1,16 +1,14 @@
+import "./App.css";
+import HomePage from "./Static-Pages/HomePage/HomePage";
+
 
 import './App.css';
-import Sales from './Static-Pages/SalesPage/Sales';
-import Login from './Static-Pages/LoginPage/Login';
-import Register from './Static-Pages/RegisterPage/Register';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <h1>App is ready to start</h1>
-      <Login />
-      <Register />
-      <Sales />
+
     </div>
   );
 }

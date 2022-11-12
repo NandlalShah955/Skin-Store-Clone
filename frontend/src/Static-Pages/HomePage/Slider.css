@@ -1,0 +1,23 @@
+/* .carousel{
+border: 1px solid red;
+} */
+.thumbs{
+    display: none;
+}
+.dots{
+   
+    border: 1px solid black;
+    font-size: 20px;
+    
+}
+
+.maindiv{
+    border: 1px solid red;
+    width: 90%;
+    margin: auto;
+    height: 530px;
+}
+.carousel-status{
+    display:none;
+}
+
