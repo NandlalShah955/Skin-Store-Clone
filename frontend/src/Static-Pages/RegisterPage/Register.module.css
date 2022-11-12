@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.main_register {
+  margin: 0%;
+  box-sizing: border-box;
+  background: #f2f2f2;
+  font-family: "Lato", sans-serif;
+  padding: 60px 0px;
+}
+
+.about {
+  width: 43%;
+  margin: auto;
+  background: white;
+  padding: 20px 30px;
+}
+
+.about_content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about_content h2 {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.about_content .sign_up {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #333333;
+}
+
+.social_links {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.social_links a {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #666666;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.social_links > a > img {
+  width: 10%;
+}
+
+.social_links a:hover {
+  background: rgb(240, 238, 238);
+  border: 1px solid rgb(240, 238, 238);
+  transition: 0.3s ease;
+}
+
+.create {
+  margin: 0;
+}
+.about_content label {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 25px;
+  color: black;
+}
+
+.about_content input {
+  height: 35px;
+  padding: 1px 5px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.option {
+  margin-top: 0%;
+  margin-left: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #666666;
+}
+
+.referal {
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 10px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.referal label {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.referal p {
+  margin-top: 10px;
+}
+
+.continue {
+  height: 45px;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  background: #2e3337;
+  color: white;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  border: none;
+}
+
+.continue:hover {
+  background: rgba(2, 199, 199, 0.85);
+  color: black;
+  text-decoration: underline;
+}
+
+.continue + p {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #333333;
+}
+
+.continue + p > a {
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+}
+
+.continue + p > a:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 1199px) {
+  .about {
+    width: 60%;
+  }
+}
+
+@media (max-width: 899px) {
+  .about {
+    width: 75%;
+  }
+}
+
+@media (max-width: 599px) {
+  .about {
+    width: 90%;
+  }
+}
+
+@media (max-width: 475px) {
+  .social_links > a > img {
+    width: 14%;
+  }
+}
