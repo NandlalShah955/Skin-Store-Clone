@@ -156,7 +156,7 @@ const Footer = () => {
           </div>
 
           <div class="footer-colss">
-            <div>
+            <div className="kuchnhi">
               <h1>THG</h1>
               <div>
                 <h4>2020 @ The Hut.com Ltd.</h4>

@@ -43,8 +43,8 @@ setisshown(true)
  <Link className='link' to='/Fragrance'> <li onMouseOver={handleclicksmall}  onMouseLeave={handleleaveksmall}>Fragrance</li></Link>
  <Link className='link' to='/SelfCare'> <li onMouseOver={handleshowimg}  onMouseLeave={handlehideimg}>Self-Care</li></Link>
  <Link className='link' to='/Tools'> <li onMouseOver={handleshow}  onMouseLeave={handleleave}>Tools</li></Link>
- <Link className='link' to='/'> <li  onMouseOver={handleshowimg}  onMouseLeave={handlehideimg}>New & Trending</li></Link>
- <Link className='link' to='/'> <li onMouseOver={handleclicksmall}  onMouseLeave={handleleaveksmall}>Build a Routine</li></Link>
+ <Link className='link' to='/'> <li  onMouseOver={handleshowimg}  onMouseLeave={handlehideimg}>New</li></Link>
+ <Link className='link' to='/'> <li onMouseOver={handleclicksmall}  onMouseLeave={handleleaveksmall}>Routine</li></Link>
  <Link className='link' to='/'> <li onMouseOver={handleshowimg}  onMouseLeave={handlehideimg}>Blog</li></Link>
 </ul>
 

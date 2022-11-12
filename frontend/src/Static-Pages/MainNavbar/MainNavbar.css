@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-*{
+/* *{
 font-family: "Lato",sans-serif;
-}
+} */
 .hoveringdiv{
   width: 80%;
  margin-left: 40px;
@@ -59,8 +59,9 @@ height: 100%;
   text-align: start;
   margin-left: 30px;
   line-height: 30px;
-  font-weight: 200;
+  font-weight: 300;
 }
+
 .hidden div h3,.smallhidden div h3{
   text-align: start;
   margin-left: 30px;

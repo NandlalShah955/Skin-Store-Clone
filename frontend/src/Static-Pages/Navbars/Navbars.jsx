@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom'
 
 // or less ideally
 
-const options = ["one", "two", "three"];
+const options = ["LOGIN", "SIGNUP"];
 
 const Navbars = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -79,8 +79,7 @@ const Navbars = () => {
               <Dropdown
                 style={{ border: "none" }}
                 options={options}
-                // onChange={this._onSelect}
-                //  value={defaultOption}
+               
                 placeholder="Account"
               />
             </li>

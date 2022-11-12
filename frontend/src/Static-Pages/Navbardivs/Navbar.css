@@ -34,3 +34,10 @@ display: none;
     }
     
   }
+  @media screen and (min-width: 500px) and (max-width: 1000px) {
+    .AdBottom_mainCon_2{
+      /* padding: 10px; */
+      /* border: 1px solid red; */
+      height: 90px;
+    }
+  }

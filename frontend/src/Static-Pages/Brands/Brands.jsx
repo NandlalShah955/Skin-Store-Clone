@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Brands.css"
 // import {useRef} from 'react'
+import {Link} from 'react-router-dom';
 function Brands() {
     let all = document.querySelectorAll("#v-main2 > p");
     all.forEach((el)=>{
@@ -22,7 +23,8 @@ function Brands() {
 
    
     <h1 className='brand'>Brands</h1>
-   <div id="v-main2">
+   <Link to='/Holiday'>
+<div id="v-main2">
     <p>A</p>
     <p>B</p>
     <p>C</p>
@@ -51,6 +53,9 @@ function Brands() {
     <p>Z</p>
     <p>#</p>
    </div>
+    
+</Link>
+   
 
    <div className="v-cont" id="A">
     <p>A</p>

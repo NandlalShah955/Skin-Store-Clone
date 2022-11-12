@@ -28,11 +28,9 @@ function ProductDetails() {
       <div className="frequentlybought">
         {/* start in this div  */}
 
-        <div className="imageswala">
-          {/* wrap in this div  */}
-          {data?.map((el) => (
+      <div className="mainimagewala"> {data?.map((el) => (
             <div className="imgandprice">
-              <div className="onlyimage" key={el.id}>
+              <div className="onlyimagehai" key={el.id}>
                 <img src={el.image} alt="nandlal" />
               </div>
 
@@ -45,7 +43,7 @@ function ProductDetails() {
           <span className="add">+</span>
           
           <div className="imgandprice">
-  <div className="onlyimage">
+  <div className="onlyimagehai">
     <img src="https://s1.thcdn.com//productimg/130/130/13978267-1504991771290107.jpg" alt="cream-image" />
   </div>
   <div className="pricedesc">
@@ -56,7 +54,9 @@ function ProductDetails() {
 
 
           </div>
-        </div>
+      </div>
+          {/* wrap in this div  */}
+         
 
         <div className="totalpricewaladiv">
           <p>Christophe Robin Cleansing Purifying Scrub with Sea Salt Duo</p>
@@ -64,6 +64,16 @@ function ProductDetails() {
         </div>
       </div>
 
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
       <h1 className="Shophai">Other customers bought</h1>
 
       <div className="othercustomer">

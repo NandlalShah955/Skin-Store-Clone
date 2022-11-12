@@ -11,17 +11,18 @@ border: 1px solid red;
     
 }
 
-.maindiv{
+.maindivhai{
     /* border: 1px solid red; */
     width: 90%;
     margin: auto;
     height: 530px;
+
 }
 .carousel-status{
     display:none;
 }
 @media screen and (min-width: 500px) and (max-width: 1000px) {
-    .maindiv{
+    .maindivhai{
         /* border: 1px solid red; */
         width: 90%;
         margin: auto;
@@ -30,7 +31,7 @@ border: 1px solid red;
    
 }
 @media screen and (min-width: 10px) and (max-width: 500px) {
-    .maindiv{
+    .maindivhai{
         /* border: 1px solid red; */
         width: 90%;
         margin: auto;

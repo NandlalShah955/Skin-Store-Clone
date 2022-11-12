@@ -60,17 +60,18 @@ font-family: 'Lato', sans-serif;
 .Trending_wala div p{
     /* font-family: 'Lato-Light',sans-serif; */
     color: rgb(0, 0, 0);
-font-weight: 200;
+font-weight: 300;
 line-height: 1.4;
 font-size: 15px;
-margin-top: -14px;
+margin-top: 14px;
 }
 .Trending_wala div button{
-    /* font-family: 'Lato', sans-serif; */
-    font-weight: 100;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     background-color: white;
     height: 44px;
     width: 108px;
+    margin-top: 10px;
     border: 1px solid black;
 }
 .Trending_wala div button:hover{
@@ -167,18 +168,19 @@ background-color: rgb(72, 167, 167);
 .overblog div p{
     /* font-family: 'Lato-Light',sans-serif; */
     color: rgb(0, 0, 0);
-font-weight: 200;
+font-weight: 300;
 line-height: 1.4;
 font-size: 15px;
-margin-top: -14px;
+margin-top: 10px;
 }
 .overblog div button{
     /* font-family: 'Lato', sans-serif; */
-    font-weight: 200;
+    font-weight: 300;
     background-color: white;
     height: 44px;
     width: 108px;
     border: 1px solid black;
+    margin-top: 10px;
 }
 .overblog div h4{
     font-weight: 400;
