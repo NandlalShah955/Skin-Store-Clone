@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+     font-family: 'Lato', sans-serif; 
+    }
+.brand{
+     text-align: center;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+
+#v-main2{
+    /* border: 1px solid; */
+    height: 25px;
+    width: 80%;
+    padding-top: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: #f4fafc; */
+    color:#12284c ;
+    font-size: 20px;
+}
+#v-main2 p:hover{
+    cursor: pointer;
+    color: blue;
+}
+.v-cont{
+    /* border: 1px solid; */
+    border-bottom: 1px solid #e0e0e0;
+    height: 80px;
+    /* margin-top: 30px */
+    padding-left: 17px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color:#12284c ;
+}
+.v-cont p{
+    margin-top: 40px;
+}
+.v-cont_sub{
+    /* border: 1px solid; */
+    height: 130px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 17px;
+    grid-gap: 15px;
+    font-size: 14px;
+}
+/* }
+body:last-child{
+    border-bottom: 1px solid #e0e0e0;
+} */
+.v-cont_sub div:hover{
+    cursor: pointer;
+    color: #0c5de0;
+}

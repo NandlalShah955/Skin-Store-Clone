@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*{
+font-family: "Lato",sans-serif;
+}
+.hoveringdiv{
+  width: 80%;
+ margin-left: 40px;
+ font-weight: 300;
+ position: sticky;
+}
+#navibarr{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* background-color: #EEEEEE; */
+  display: grid;
+  grid-template-columns:repeat(13,1fr);
+  grid-template-rows: repeat(1,1fr);
+  justify-content: space-around;
+  height: 30px;
+  
+}
+#navibarr li{
+  font-weight: 300;
+  color: #333333;
+  font-size: 15px;
+  text-decoration: dashed;
+}
+#navibarr li:hover{
+  background-color: #333333;
+  color: white;
+}
+.link{
+  text-decoration: none;
+}
+.hidden{
+  width: 70%;
+  height: 500px;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  gap: 10px;
+  border: 1px solid black;
+}
+.hidden>div,.smallhidden>div{
+
+/* border: 1px solid green; */
+width: 30%;
+height: 100%;
+}
+.hidden div ul,.smallhidden div ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.hidden div ul li,.smallhidden div ul li{
+  text-align: start;
+  margin-left: 30px;
+  line-height: 30px;
+  font-weight: 200;
+}
+.hidden div h3,.smallhidden div h3{
+  text-align: start;
+  margin-left: 30px;
+  font-weight: 400;
+}
+.smallhidden{
+  width: 70%;
+  height: 300px;
+  /* border: 1px solid red; */
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  gap: 10px;
+  border: 1px solid black;
+  margin-left: 100px;
+}
+.showimg{
+  width: 80%;
+  height: 580px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,1fr);
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  gap: 0px 20px;
+  border: 1px solid black;
+  margin-left: 150px;
+}
+.showimg div{
+width: 95%;
+height: 85%;
+/* border: 1px solid black; */
+}
+.showimg div img{
+  width: 100%;
+  height: 90%;
+}
+.showimg div p{
+  font-size: 15px;
+  margin-top: -2px;
+  color: #2e3337;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: start;
+  margin-left: 20px;
+}
+
+/* Medium screen  */
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+  .hoveringdiv{
+    width: 100%;
+   margin-left: 40px;
+  
+   font-weight: 300;
+   position: sticky;
+    top: 0;
+   /* background-color: aqua; */
+   /* display: none; */
+  }
+  #navibarr{
+display: grid;
+grid-template-columns: repeat(7,1fr);
+grid-template-rows: repeat(2,1fr);
+/* margin-top: 180px; */
+gap: 10px;
+/* background-color: aqua; */
+  }
+}
+
+/* Small screeen  */
+@media screen and (min-width: 10px) and (max-width: 500px) {
+  #navibarr{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(4,1fr);
+height: 150px;
+  }
+}

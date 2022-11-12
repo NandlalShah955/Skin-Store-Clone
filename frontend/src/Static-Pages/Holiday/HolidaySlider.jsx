@@ -1,18 +1,11 @@
 import {Carousel} from 'react-responsive-carousel'
-import './Slider.css'
+import '../HomePage/Slider.css'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Blackfriday from './Homepage-Images/Black-Friday.jpeg';
-import Singlesday from './Homepage-Images/Singles-Day.jpeg';
-import Holidayedit from './Homepage-Images/Holiday-Edit.jpeg';
-import Holidayshop from './Homepage-Images/Holiday-Shop.jpeg';
+
+import Holidayedit from './Holiday-Images/Holiday-Edit.jpeg';
+import Holidayshop from './Holiday-Images/Holiday-Shop.jpeg';
 
 const slider=[
-    {
-        image:Blackfriday
-    },
-    {
-        image:Singlesday
-    },
     {
         image:Holidayedit
     },

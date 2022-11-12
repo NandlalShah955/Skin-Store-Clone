@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+.AdBottom_mainCon {
+    background-color: #F2F2F2;
+    padding: 15px;
+    height: auto;
+   
+  }
+  .AdBottom_innerCon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+  }
+  .AdBottom_div {
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+
+}
+  .AdBottom_div > p {
+    margin: 0 15px;
+  }
+  /* meduim screen  */
+  @media screen and (min-width: 500px) and (max-width: 1000px) {
+    .AdBottom_mainCon{
+      margin-top: 40px;
+    }
+  }
+  @media screen and (min-width: 10px) and (max-width: 500px) {
+    .AdBottom_innerCon{
+        display: flex;
+        flex-direction: column;
+       height: 150px;
+        margin-top: 60px;
+        background-color: white;
+    }
+    
+  }

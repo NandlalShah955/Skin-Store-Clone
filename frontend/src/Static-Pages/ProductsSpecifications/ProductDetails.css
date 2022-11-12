@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+.Shophai{
+    
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+.Shophaifrq{
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    text-align: start;
+    margin-left: 74px;
+}
+
+.othercustomer{
+    width: 90%;
+    height: auto;
+    margin: auto;
+  
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap: 13px;
+
+}
+
+.mainwala{
+    height: 590px;
+    display: flex;
+    flex-direction: column;
+}
+.mainwala div:first-child{
+        height: 60%;
+}
+.mainwala div:last-child{
+    height: 40%;
+}
+.image1{
+    width: 100%;
+    height: 100%;
+   
+    background-image: url('https://static.thcdn.com/images/large/webp//productimg/1600/1600/12639082-1284892769599187.jpg');
+    background-size:100% 300px; 
+    background-repeat: no-repeat;
+
+}
+.image1:hover{
+background-image: url('https://static.thcdn.com/images/xsmall/webp//productimg/original/12639082-4554892769633519.jpg');
+}
+.image2{
+    width: 100%;
+    height: 100%;
+    
+    background-image: url('https://static.thcdn.com/images/large/webp//productimg/1600/1600/12771530-3164918929282606.jpg');
+    background-size:100% 300px; 
+    background-repeat: no-repeat;  
+}
+.image2:hover{
+    background-image: url('https://static.thcdn.com/images/xsmall/webp//productimg/original/12771530-4554864739754216.jpg');
+    }
+
+
+
+.image3{
+    width: 100%;
+    height: 100%;
+  
+    background-image: url('https://static.thcdn.com/images/large/webp//productimg/1600/1600/13516546-2844930071318699.jpg');
+    background-size:100% 300px; 
+    background-repeat: no-repeat;  
+}
+.image3:hover{
+    background-image: url('https://static.thcdn.com/images/xsmall/webp//productimg/original/13516546-1514932677894190.jpg');
+    }
+.image4{
+    width: 100%;
+    height: 100%;
+   
+    background-image: url('https://static.thcdn.com/images/large/webp//productimg/1600/1600/11289623-1824892771693055.jpg');
+    background-size:100% 300px; 
+    background-repeat: no-repeat;  
+}
+.image4:hover{
+    background-image: url('https://static.thcdn.com/images/xsmall/webp//productimg/original/11289623-5074892771725698.jpg');
+    }
+
+.stars{
+    color: rgb(239, 192, 34);
+    font-size: 20px;
+}
+.giftsel{
+  border: 1px solid red;
+    width: 34%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+   
+}
+.textdata{
+    text-align: start;
+}
+.pricehai{
+    margin-top: -15px;
+}
+.butkor{
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 18px;
+    text-transform: uppercase;
+   
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+    height: 50px;
+    width: 100%; 
+    margin: auto;
+   
+}
+
+
+.starshai{
+    display: flex;
+    margin-top: 5px;
+}
+.uparkr{
+    margin-top: -1px;
+}
+.reviewwala{
+  
+    margin: auto;
+    margin-top: 20px;
+    width: 80%;
+    height: 490px;
+background-image: url('./specifications-image/Reviews-image.jpeg');
+background-size:100% 100%; 
+    background-repeat: no-repeat;  
+    
+}
+.frequentlybought{
+    width: 90%;
+    height: 360px;
+    border: 1px solid #999999;
+    margin: auto;
+   display: flex;
+   flex-direction: row;
+}
+/* .frequentlybought div{
+    border: 1px solid red;
+    height: 400px;
+} */
+.imageswala{
+height: 350px;
+width: 70%;
+    /* border: 1px solid green; */
+display: flex;
+flex-direction: column;
+
+}
+.imageswala div{
+    /* border: 1px solid red; */
+width: 100%;
+height: 50%;
+    
+} 
+/*or imgandprice */
+ .imageswala>div:first-child{
+    /* background-color: pink; */
+    display: flex;
+}
+.imageswala>div:last-child{
+    /* background-color: pink; */
+    display: flex;
+}
+.imgandprice div{
+    height: 100%;
+}
+.imgandprice div:first-child{
+    width:20% ;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.imgandprice div:first-child img{
+    width: 90%;
+    height: 100%;
+}
+.imgandprice div:last-child{
+    width:80%;
+    
+
+} 
+/* .onlyimage{
+    width: 30%;
+}*/
+.add{
+    text-align: start;
+    margin-left: 100px;
+font-size: 20px;
+}
+.pricedesc p{
+    text-align: start;
+    font-size: 18px;
+    color: #2e3337;
+    font-weight: 400;
+    font-family: 'Lato-Regular', Helvetica, Arial, sans-serif;
+    line-height: 1.2;
+} 
+.imageswala>div:last-child{
+    background-color: #F2F2F2;
+}
+.totalpricewaladiv{
+    border: 1px solid blue;
+    width: 30%;
+    width: 453px;
+   
+}
+
+
+
+
+
+
+
+
+/* Medium screen Media Queries  */
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+.othercustomer{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: repeat(2,1fr);
+}
+.reviewwala{
+    
+    height: 490px;
+background-image: url('./specifications-image/Review-medium.jpg');
+background-size:100% 100%; 
+    background-repeat: no-repeat;  
+    
+}
+.Shophaifrq{
+    
+    text-align: start;
+
+    
+    
+}
+/* .frequentlybought{
+    height: 350px;
+    width: 90%;
+   
+    
+}
+.frequentlybought div:first-child{
+    border: 1px solid green;
+    border: 1px solid red;
+    height: 100%;
+    width: 500px;
+    
+    }
+    .frequentlybought div:last-child{
+        border: 1px solid blue;
+        height: 100%;
+        width:240px;
+       
+    } */
+}
+@media screen and (min-width: 10px) and (max-width: 500px) {
+.othercustomer{
+    display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-template-rows: repeat(2,1fr);
+}
+.giftsel{
+    margin-top: 5px;
+width: 70%
+}
+.Shophaifrq{
+    
+    text-align: center;
+    margin-left: 0px;
+    
+    
+}
+
+.reviewwala{
+    
+    height: 490px;
+background-image: url('./specifications-image/Review-small.jpg');
+background-size:100% 100%; 
+    background-repeat: no-repeat;  
+    
+}
+/* .frequentlybought{
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.frequentlybought div:first-child{
+    border: 1px solid green;
+    border: 1px solid red;
+    height: 350px;
+    width: 100%;
+    
+    }
+    .frequentlybought div:last-child{
+        border: 1px solid blue;
+        height: 200px;
+        width: 100%;
+       
+    } */
+
+}

@@ -104,7 +104,7 @@ function HomePage() {
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div>
+        <div className="Neoutics">
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/42/best_selling-064442.jpg"
             alt=""
@@ -129,7 +129,7 @@ function HomePage() {
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div>
+        <div className="Estee">
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/28/original-Screenshot_2022-03-07_141739-065628.png"
             alt=""
@@ -142,7 +142,7 @@ function HomePage() {
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div>
+        <div className="DHC">
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/34/original-dhc.ss-061734.jpg"
             alt=""
@@ -178,7 +178,7 @@ function HomePage() {
             src="https://static.thcdn.com/images/small/webp//productimg/480/480/13524404-5734930150395321.jpg"
             alt=""
           />
-          <p>Epionce Luminous Eye Serum Original Size 0.53ml</p>
+          <p>Epionce Luminous Eye Serum Original Size at 0.53ml</p>
           <p>$67.00</p>
           <div><HiOutlineShoppingBag/>SHOP NOW</div>
         </div>
@@ -191,7 +191,7 @@ function HomePage() {
           <p>$49.00</p>
           <div><HiOutlineShoppingBag/>SHOP NOW</div>
         </div>
-        <div>
+        <div className="Riley">
           <img
             src="https://static.thcdn.com/images/small/webp//productimg/480/480/13920999-1114993397470335.jpg"
             alt=""
@@ -200,12 +200,12 @@ function HomePage() {
           <p>$98.00</p>
           <div><HiOutlineShoppingBag/>SHOP NOW</div>
         </div>
-        <div>
+        <div className="Riley">
           <img
             src="https://static.thcdn.com/images/small/webp//productimg/480/480/12358556-1974888087906815.jpg"
             alt=""
           />
-          <p>TriPollar STOP X Device - Rose Gold Beautiful Skin</p>
+          <p>TriPollar STOP X Device - Rose Gold Beautiful Natural Skin</p>
           <p>$199.00</p>
           <div><HiOutlineShoppingBag/>SHOP NOW</div>
         </div>
@@ -267,7 +267,7 @@ SkinCeuticals believes in celebrating the skin-protective and rejuvenating power
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div>
+        <div className="Tripoller">
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/51/original-0224-STDCRE-32153-SS-BME-Skinstore-March-2022-Photography-Batching-Shot_13-500x500-023351.jpg"
             alt=""
@@ -278,7 +278,7 @@ SkinCeuticals believes in celebrating the skin-protective and rejuvenating power
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div>
+        <div className="Tripoller">
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/16/original-NB-IMAGE-5---2022-SKINSTORE-LANDING-PAGE-025016.jpg"
             alt=""
