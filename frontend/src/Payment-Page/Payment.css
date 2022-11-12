@@ -1,21 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 *{
-    margin : 0 ;
+     margin : 0 ;
      padding : 0 ;
-      box-sizing : border-box;
-      font-weight: 700;
+      box-sizing : border-box; 
+     /* font-weight: 700;
       font-family: "Lato" sans-serif;
-      color: #333333;
+      color: #333333;  */
       
 }
 
-    body{
-        background-color: #F2F2F2;
-    }
+    /* body{
+        /* background-color: #F2F2F2; */
+    
 
     .payment_navbar{
-        padding: 20px 0px 20px 220px;
+        /* padding: 20px 0px 20px 220px; */
         background-color: #FFFFFF;
         position: fixed;
         top: 0;
