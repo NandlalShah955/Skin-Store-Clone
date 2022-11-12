@@ -17,7 +17,7 @@ const slider=[
 
 function Slider() {
   return (
-    <div className='maindiv'>
+    <div className='maindivhai'>
   <Carousel autoPlay infiniteLoop showArrows showIndicators>
 
 {slider.map((el)=>{

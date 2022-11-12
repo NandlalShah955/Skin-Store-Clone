@@ -76,6 +76,12 @@ const Navbars = () => {
             <li>
               <span style={{ padding: 5 }}></span>
 
+             <select name="Account" id="">
+          
+              <option value="">Account</option>
+              <option value="">Login</option>
+              <option value="">Account</option>
+             </select>
               <Dropdown
                 style={{ border: "none" }}
                 options={options}
