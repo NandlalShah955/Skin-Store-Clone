@@ -143,86 +143,34 @@ background-size:100% 100%;
     background-repeat: no-repeat;  
     
 }
-.frequentlybought{
-    width: 90%;
-    height: 360px;
-    border: 1px solid black;
-    margin: auto;
-   display: flex;
-
-}
-/* .frequentlybought div{
-    border: 1px solid red;
-    height: 400px;
-} */
 .mainimagewala{
-    height: 100%;
-    width: 70%;
+    height: auto;
+    width: 90%;
     border: 1px solid red;
-}
-.imageswala{
-height: 350px;
-width: 30%;
-    border: 1px solid green;
-/* display: flex;
-flex-direction: column; */
-
-top: 20;
-margin-right: 200px;
-
-}
-.totalpricewaladiv{
-    border: 1px solid blue;
-    width: 30%;
-    width: 453px;
-   
-}
-.imgandprice{
-    display: flex;
-    
-}
-/* .imageswala div{
-    border: 1px solid red;
-width: 100%;
-height: 50%;
-    
-} 
-
- .imageswala>div:first-child{
-    background-color: pink;
+    margin: auto;
     display: flex;
 }
-.imageswala>div:last-child{
-    background-color: pink;
-    display: flex;
-}
-.imgandprice{
-    border: 1px solid red;
-    margin-left: -300px;
-}
-.imgandprice div{
-    height: 100%;
-}
-.imgandprice div:first-child{
-    width:20% ;
-    background-color: yellow;
-    display: flex;
+.imagepara{
+width: 70%;
+border: 1px solid green;
+height: 700px;
+display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-} 
-.imgandprice div:first-child img{
-    width: 90%;
-    height: 100%;
+    
 }
-.imgandprice div:last-child{
-    width:80%;
- }   
-    */
+.imagepara img{
+    width: 50%;
+    height: 80%;
+}
+.pricename{
+width: 30%;
+border: 1px solid teal;
+height: 100%;
+}
 
- 
-/* .onlyimagehai{
-    width: 30%;
-}*/
+
 .add{
     text-align: start;
     margin-left: 100px;
@@ -236,9 +184,7 @@ font-size: 20px;
     font-family: 'Lato-Regular', Helvetica, Arial, sans-serif;
     line-height: 1.2;
 } 
-/* .imageswala>div:last-child{
-    background-color: #F2F2F2;
-} */
+
 
 
 
@@ -270,25 +216,7 @@ background-size:100% 100%;
     
     
 }
-/* .frequentlybought{
-    height: 350px;
-    width: 90%;
-   
-    
-}
-.frequentlybought div:first-child{
-    border: 1px solid green;
-    border: 1px solid red;
-    height: 100%;
-    width: 500px;
-    
-    }
-    .frequentlybought div:last-child{
-        border: 1px solid blue;
-        height: 100%;
-        width:240px;
-       
-    } */
+
 }
 @media screen and (min-width: 10px) and (max-width: 500px) {
 .othercustomer{
@@ -316,24 +244,6 @@ background-size:100% 100%;
     background-repeat: no-repeat;  
     
 }
-/* .frequentlybought{
-    height: 550px;
-    display: grid;
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(2,1fr);
-}
-.frequentlybought div:first-child{
-    border: 1px solid green;
-    border: 1px solid red;
-    height: 350px;
-    width: 100%;
-    
-    }
-    .frequentlybought div:last-child{
-        border: 1px solid blue;
-        height: 200px;
-        width: 100%;
-       
-    } */
+
 
 }

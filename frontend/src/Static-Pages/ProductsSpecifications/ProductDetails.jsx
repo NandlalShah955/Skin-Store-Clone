@@ -19,48 +19,54 @@ function ProductDetails() {
 
   return (
     <>
-      <h1 className="Shophaifrq">Frequently Bought Together</h1>
-      <div className="frequentlybought">
+      
+      
         {/* start in this div  */}
+        {data?.map((el) => (
+      <div className="mainimagewala" key={el.id}>
 
-      <div className="mainimagewala"> {data?.map((el) => (
+<div className="imagepara">
+  <img src={el.image} alt='' />
+  <h3>Description</h3>
+  <p>{el.description}</p>
+
+</div>
+<div className="pricename">
+<p>{el.title}</p>
+<p> {`$${el.price}.00`} </p>
+<Link to=""><button>Add to cart</button></Link>
+</div>
+
+
+      </div>
+      ))}
+      
+      
+      {/* {data?.map((el) => (
             <div className="imgandprice" style={{
               border: '1px solid red'
             }}>
               <div className="onlyimagehai" key={el.id}>
                 <img src={el.image} alt="nandlal" width={'400px'} height={'200px'}/>
+                <p>{el.description}</p>
               </div>
 
               <div className="pricedesc">
                 <p>{el.title}</p>
-                <p> {`$${el.price}.00`} </p>
-                <Link to=""><button>Add to cart</button></Link>
+                
+               
               </div>
             </div>
-          ))}
-          <span className="add">+</span>
+         
+         
           
-          <div className="imgandprice">
-  <div className="onlyimagehai">
-    <img src="https://s1.thcdn.com//productimg/130/130/13978267-1504991771290107.jpg" alt="cream-image" />
-  </div>
-  <div className="pricedesc">
-    <p>Christophe Robin Cleansing Purifying Scrub with Sea Salt Duo
-</p>
-<p>$53.00</p>
-  </div>
-
-
-          </div>
-      </div>
+        
+      </div> */}
           {/* wrap in this div  */}
          
 
-        <div className="totalpricewaladiv">
-          <p>Christophe Robin Cleansing Purifying Scrub with Sea Salt Duo</p>
-          <p>$53.00</p>
-        </div>
-      </div>
+       
+      
 
      
      
