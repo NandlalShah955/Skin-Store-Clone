@@ -1,25 +1,20 @@
 import React from "react";
 import "./ProductDetails.css";
+import { Link, useParams } from "react-router-dom";
 // import "../HomePage/HomePage.css";
 import { RiStarSFill } from "react-icons/ri";
 import { useState, useEffect } from "react";
+import axios from "axios";
 function ProductDetails() {
+  const params = useParams();
   const [data, setdata] = useState([]);
 
-  const fetchData = async () => {
-    try {
-      let res = await fetch("http://localhost:8080/products");
-      let data = await res.json();
-      console.log(data);
-      // return(data)
-      setdata(data);
-      console.log(data);
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+  let id = params.id;
   useEffect(() => {
-    fetchData();
+    axios.get(`https://blossombackend.onrender.com/products/Sale/${id}/spec`).then((res)=>{
+      console.log(res.data)
+      setdata(res.data)
+    })
   }, []);
 
   return (
@@ -29,14 +24,17 @@ function ProductDetails() {
         {/* start in this div  */}
 
       <div className="mainimagewala"> {data?.map((el) => (
-            <div className="imgandprice">
+            <div className="imgandprice" style={{
+              border: '1px solid red'
+            }}>
               <div className="onlyimagehai" key={el.id}>
-                <img src={el.image} alt="nandlal" />
+                <img src={el.image} alt="nandlal" width={'400px'} height={'200px'}/>
               </div>
 
               <div className="pricedesc">
                 <p>{el.title}</p>
                 <p> {`$${el.price}.00`} </p>
+                <Link to=""><button>Add to cart</button></Link>
               </div>
             </div>
           ))}

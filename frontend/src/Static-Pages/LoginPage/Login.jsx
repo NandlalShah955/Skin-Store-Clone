@@ -1,11 +1,14 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import facebook from "./logo/Facebook_F_icon.svg.png";
 import google from "./logo/Google__G__Logo.svg.png";
 
 const Login = () => {
   const [loginDetails, setLoginDetails] = useState({ email: "", password: "" });
+  const [isLogin, SetisLogin] = useState("");
+  const [isAuth, SetIsAuth] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,14 +19,24 @@ const Login = () => {
     event.preventDefault();
     axios({
       method: "POST",
-      url: `https://reqres.in/api/login`,
+      url: `https://blossombackend.onrender.com/users/login`,
       data: loginDetails,
     })
       .then((res) => {
-        console.log(res.data.token);
+        localStorage.setItem("token", res.data.token)
+        SetisLogin(res.data.token);
+        SetIsAuth(true);
       })
       .catch((err) => console.log(err));
+
+
   };
+  console.log(isLogin, "check")
+
+  if(isAuth){
+
+    return <Navigate to="/"/>
+  }
 
   const { email, password } = loginDetails;
   return (

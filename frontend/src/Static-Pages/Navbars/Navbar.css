@@ -25,6 +25,13 @@ nav .logo{
   font-size: 30px;
   font-weight: 600;
   letter-spacing: -1px;
+  /* border: 1px solid red; */
+  width: 150px;
+  height: 100px;
+  margin-top: -20px;
+}
+.logo img{
+  object-fit: cover;
 }
 nav .nav-items{
   display: flex;

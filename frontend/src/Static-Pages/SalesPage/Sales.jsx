@@ -14,12 +14,18 @@ import { useEffect } from "react";
 import Stars from "./Stars";
 import Pagination from "./Pagination";
 
+import { Link, Navigate, useSearchParams } from "react-router-dom";
+
+
 const Sales = () => {
   const [click, setClick] = useState(true);
   const [click1, setClick1] = useState(true);
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [sort_x, setSort_x] = useState("");
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
 
   const getData = () => {
     if (sort_x === "lowtohigh") {
@@ -175,7 +181,9 @@ const Sales = () => {
           {/* main product  */}
           <div className={styles.all__main__products}>
             {data?.map(({ _id, image, title, rating, price }) => (
-              <div key={_id} className={styles.each_product}>
+              <Link to={`/Sale/${_id}`}>
+                
+              <div key={_id} className={styles.each_product} >
                 <div>
                   <div className={styles.wishlist}>
                     <AiOutlineHeart />
@@ -188,6 +196,7 @@ const Sales = () => {
                 <p className={styles.product__price}>$ {price}</p>
                 <button className={styles.product__buy}>QUICK BUY</button>
               </div>
+              </Link>
             ))}
           </div>
 
