@@ -41,7 +41,13 @@ const Carts = () => {
       </div>
       ))
       }
-      {<div className="title"></div>}
+      {
+        titl.map((el)=> (
+          <div className="CartTitle">
+            <p>{el}</p>
+          </div>
+        ))
+      }
 
       {<div className="desc"></div>}
       {<div className="ratehaimeara"></div>}
