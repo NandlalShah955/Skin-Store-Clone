@@ -23,7 +23,7 @@ const Sales = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [sort_x, setSort_x] = useState("");
-  const [loading, setloading] = useState(false)
+  // const [loading, setloading] = useState(false)
   const [searchParams, setSearchParams] = useSearchParams();
 
 
@@ -69,11 +69,11 @@ const Sales = () => {
   };
 
   useEffect(() => {
-    setloading(true)
+    // setloading(true)
     getData()
       .then((res) =>{
         setData(res.data)
-        setloading(false)
+        // setloading(false)
       }).catch((err) => console.log(err));
       
   
@@ -81,10 +81,10 @@ const Sales = () => {
   
   }, [currentPage, sort_x]);
 
-if(loading){
-  return <h1>loading...</h1>
-}
-else{
+// if(loading){
+//   return <h1>loading...</h1>
+// }
+
 
 
 
@@ -185,9 +185,9 @@ else{
               </select>
             </div>
             {/* pagination  */}
-            <div className={`${styles.pagination} ${styles.hidden}`}>
+            {/* <div className={`${styles.pagination} ${styles.hidden}`}>
               <Pagination setCurrentPage={setCurrentPage} />
-            </div>
+            </div> */}
             {/* responsive refine  */}
             <div className={styles.responsive_refine}>
               <p>Refine</p>
@@ -234,7 +234,7 @@ else{
     </div>
   
   );
-}
+
 };
 
 export default Sales;
