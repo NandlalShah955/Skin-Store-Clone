@@ -192,7 +192,7 @@ width: 30%;
 /* border: 1px solid teal; */
 height: 100%;
 text-align: start;
-margin-top: 30px;
+margin-top: 130px;
 }
 .namei{
     font-family: 'Lato', sans-serif;
@@ -209,6 +209,9 @@ color: #2e3337;
     font-weight: 300;
     color: #2e3337;
     margin-top: 40px;
+}.trucjkhai{
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 .addwalabutton{
@@ -216,8 +219,8 @@ color: #2e3337;
     font-size: 15px;
     line-height: 18px;
     color: #333333;
-    font-weight: 200;
-    font-family: 'Lato';
+    font-weight: 300;
+    font-family: 'Lato' sans-serif;
     background-color: #333;
     color: #fff;
     text-transform: uppercase;
@@ -225,6 +228,20 @@ color: #2e3337;
     width: 100%;
     margin-top: 20px;
     height: 50px;
+   
+}
+.addwalabutton:hover{
+background-color: aqua;
+color: black;
+cursor: pointer;
+}
+.icomns{
+   
+    display: flex;
+    gap: 5px;
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
 }
 
 .add{
