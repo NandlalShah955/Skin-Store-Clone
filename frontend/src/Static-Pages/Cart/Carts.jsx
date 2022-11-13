@@ -1,91 +1,52 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-// import "./Carts.css"
+import { render } from "@testing-library/react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import "./Carts.css";
 import { useNavigate } from "react-router-dom";
 // import { useStateContext } from '../Context/CartContext';
 
 const Carts = () => {
-    
-    const [data, setdata] = useState([]);
-    const [fetchData, setFetchData] = useState([]);
-    // let fetchData = []
+  const [data, setdata] = useState([]);
+  const [fetchData, setFetchData] = useState([]);
+  // let fetchData = []
+  const datafromback = JSON.parse(localStorage.getItem("cartItems"));
+  console.log(datafromback, "datahai");
 
-    let store = []
-    data.map((el)=> (
-        store.push(el.productId)
-        // <div>check</div>
+  const newdata = datafromback.map((i, val) => {
+    return i[0].image;
+  });
+  const desc = datafromback.map((i, val) => {
+    return i[0].description;
+  });
+  const titl = datafromback.map((i, val) => {
+    return i[0].title;
+  });
+  const rate = datafromback.map((i, val) => {
+    return i[0].price;
+  });
+  // {
+  //   
+  // <div className='cartNimage'></div>
+  // ))
+  // }
+  // console.log(newdata)
+
+  return (
+    <div className="imagedescpr">
+      {
+        newdata.map((el)=>(
+        <div className="Mainiimageonly">
+        <img src={el} alt="" />
         
-    ))
+      </div>
+      ))
+      }
+      {<div className="title"></div>}
 
-    // useEffect(()=> {
-    //     const cartgetData = JSON.parse(localStorage.getItem("cartItems"))
-    //     // console.log("dede", cartgetData);
-    //     setdata(cartgetData)
-    // },[])
-    // const cartgetData = JSON.parse(localStorage.getItem("cartItems"))
-    // console.log("data dede", data)
-
-    console.log(store,"store")
-    useEffect(()=> {
-        axios.get("https://blossombackend.onrender.com/carts")
-        .then((res)=> {
-            setdata(res.data)
-        })
-        
-    }, [])
-
-    useEffect(()=>{
-        store.map((el)=> (
-            axios.get(`https://blossombackend.onrender.com/products/Sale/${el}/spec`)
-            .then(res=>{
-                // console.log(res.data, "1111111111111111111")
-                let d = res.data;
-                // if(d){
-                //     fetchData.push(d)
-                // }
-                if(d){
-                    setFetchData(d)
-                }
-            })
-        ))
-    },[data])
-    console.log(fetchData, "setFetchData")
-    const navigate = useNavigate();
-
-    // const deleteItem = (id)=> {
-    //     axios.delete(``)
-    // }
-
-    // const {
-    //     decQty,
-    //     incQty,
-    //     qty,
-    //     onRemove,
-    //     cartItems,
-    //     totalPrice,
-    //     totalQuantities,
-    //     toggleCartItemQuantity,
-    // } = useStateContext();
-
-// console.log(el,qty)
-    return (
-        <div>
-            <div>
-                {
-                    fetchData.map((el)=> (
-                        <div>
-                            <img src={el.image} width="200px"/>
-                            <h2>Title: {el.title}</h2>
-                            {el.price}
-
-                        </div>
-                    ))
-                }
-                
-            </div>
-        </div>
-    )
+      {<div className="desc"></div>}
+      {<div className="ratehaimeara"></div>}
+    </div>
+  );
 };
 
-
-export default Carts
+export default Carts;

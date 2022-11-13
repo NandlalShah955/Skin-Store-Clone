@@ -14,48 +14,28 @@ function ProductDetails() {
   const [userId, userEmail, userPassword] = userData.split(":")
   console.log(userId)
   let id = params.id;
-  let cartData = JSON.parse(localStorage.getItem("cartItems"))|| [];
+  let cartData = JSON.parse(localStorage.getItem("cartItems"))||[]
 
+// console.log(cartData)
 
-  // const addToCart = ()=> {
-  //   // event.preventDefault();
-  //   axios({
-  //     method: "POST",
-  //     url: `https://blossombackend.onrender.com/carts/${userId}`,
-  //     data: {
-  //       "quantity": 1,
-  //       "productId": id,
-  //     }
-  //   })
-  //     .then((res) => {
-  //       console.log("cartData1", res)
-  //     })
-  //     .catch((err) => console.log(err));
-  // }
 
  
 
-  // let id = params.id;
+ 
   useEffect(() => {
     axios.get(`https://blossombackend.onrender.com/products/Sale/${id}/spec`).then((res)=>{
-      // console.log(res.data)
+      
      
       setdata(res.data)
+      // console.log(res.data)
       // return(datahai)
     })
   }, []);
-//  console.log(data,"datacheck")
+
 
  function addToCart(){
-    // console.log(data,'checkdata')
-    // axios.post(`https://blossombackend.onrender.com/carts/${userId}`,{
-    //   "quantity": 2,
-    //   "productId": id
-    // }).then((res)=>{
-    //   console.log(res)
-    // })
-    // localStorage.setItem('')
-  // console.log("first")
+   
+  // console.log(data,"checking");
   cartData.push(data)
   localStorage.setItem("cartItems", JSON.stringify(cartData))
   }
@@ -78,6 +58,7 @@ function ProductDetails() {
 </div>
 <div className="pricename">
 <p className="namei">{el.title}</p>
+
 <div className="starshai">
               <RiStarSFill className="starshaipr" />
               <RiStarSFill className="starshaipr" />
