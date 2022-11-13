@@ -23,7 +23,7 @@ const Sales = () => {
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [sort_x, setSort_x] = useState("");
-
+  const [loading, setloading] = useState(false)
   const [searchParams, setSearchParams] = useSearchParams();
 
 
@@ -69,10 +69,27 @@ const Sales = () => {
   };
 
   useEffect(() => {
+    setloading(true)
     getData()
-      .then((res) => setData(res.data))
-      .catch((err) => console.log(err));
+      .then((res) =>{
+        setData(res.data)
+        setloading(false)
+      }).catch((err) => console.log(err));
+      
+  
+  
+  
   }, [currentPage, sort_x]);
+
+if(loading){
+  return <h1>loading...</h1>
+}
+else{
+
+
+
+
+
 
   return (
     <div className={styles.main__sales}>
@@ -215,7 +232,9 @@ const Sales = () => {
         </div>
       </div>
     </div>
+  
   );
+}
 };
 
 export default Sales;

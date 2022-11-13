@@ -1,9 +1,9 @@
 import React, { useState,useEffect } from "react";
-import { Link ,Navigate} from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 import "./Payment.css";
 import {BsCheckCircleFill} from 'react-icons/bs'
 function Payment() {
-  
+  const navi=useNavigate()
   const [data, setdata] = useState([])
   const [total, settotal] = useState(0)
   const [totalcost, settotalcost] = useState(0)
@@ -36,10 +36,11 @@ settotal(tc)
 
 const attheend =()=>{
 setsuccess(true)
-//   setTimeout(() => {
-//   <Navigate to='/'/>
-// }, 4000);
-window.alert("helo")
+  setTimeout(() => {
+    navi('/')
+// window.alert("helo")
+}, 4000);
+
 }
 
   if(success){
