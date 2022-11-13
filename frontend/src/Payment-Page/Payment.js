@@ -1,11 +1,14 @@
 import React, { useState,useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link ,Navigate} from "react-router-dom";
 import "./Payment.css";
+import {BsCheckCircleFill} from 'react-icons/bs'
 function Payment() {
   
   const [data, setdata] = useState([])
   const [total, settotal] = useState(0)
   const [totalcost, settotalcost] = useState(0)
+  
+  const [success, setsuccess] = useState(false)
   const fetchData = async () => {
     try {
       let res = await fetch("http://localhost:8080/products");
@@ -18,6 +21,8 @@ function Payment() {
 const tc=data.reduce((total,a)=>{
   return total+Number(a.price)
 },0)
+
+
 settotal(tc)
 
 
@@ -29,10 +34,28 @@ settotal(tc)
     fetchData();
   }, []);
 
+const attheend =()=>{
+setsuccess(true)
+//   setTimeout(() => {
+//   <Navigate to='/'/>
+// }, 4000);
+window.alert("helo")
+}
+
+  if(success){
+    return ( 
+    <>
+<BsCheckCircleFill className="donedanadan"/>
+<h1>Order Placed</h1>
+<p>Thank You for Placing the Order Keep Shoping</p>
+   
+    </>)
+  }
 
 
   return (
     <div>
+     <h1>Payment </h1>
       <nav className="payment_navbar">
         <Link to="/">
           <img src="https://s1.thcdn.com/checkout/resources/images/e1ea488cfe9c3b7fc40c08ba4949b1c9.svg" />
@@ -82,7 +105,7 @@ settotal(tc)
             </div>
 
             <label>Card Number</label>
-            <input type="number" />
+            <input type="password" />
 
             <label>Name on card</label>
             <input type="text" />
@@ -92,7 +115,8 @@ settotal(tc)
 <label>Year</label>
             <input type="year" />
           </div>
-          <button className="submit">SUBMIT MY ORDER</button>
+          <button className="submit" onClick={attheend}>SUBMIT MY ORDER</button>
+        
         </div>
          
 

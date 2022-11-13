@@ -31,22 +31,24 @@
          height: auto;
          width: 60%;
          margin: auto;
-         margin-top: 150px;
+         margin-top:10px;
         display: flex;
-       
+      
          gap: 80px;
+         /* position: absolute; */
     }
     .sbhai{
         height: auto;
     }
     .sbhai{
         width: 70%;
-       
       
+      padding: 10px;
         height: 100%;
         text-align: start;
         display: flex;
         flex-direction: column;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         gap: 50px;
     }
     .imageswala{
@@ -54,15 +56,16 @@
        
         background-color: #FFFFFF;
         height: 30%;
-        position: fixed;
+        position: absolute;
         font-weight: 300;
         margin-left: 700px;
+       
         
     }
     .emailwala{
         width: 100%;
         background-color: #FFFFFF;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        /*  */
     }
      .chotawla{
        width: 100%;
@@ -134,29 +137,7 @@ margin-top: 4px;
     color: #333333;
     line-height: 24px;
 }
-/* .sbhai h2{
-    font-size: 23px;
-    line-height: 24px;
-    color: #333333;
-    font-weight: 700;
-}
-.sbhai label{
-    font-size: 14px;
-    font-weight: 400;
-    color: #333333;
-    line-height: 24px;
-    margin-top: -40px;
-}
-.sbhai p{
-    font-size: 14px;
-    line-height: 24px;
-    color: #333333;
-    font-weight: 400;
 
-} */
-/* .uparkro{
-    margin-top: -40px;
-} */
 .paymentmethod input{
     height: 50px;
     width: 90%;
@@ -191,4 +172,8 @@ width: 60px;
 }
 .pricedesc{
 font-size: 10px;
+}
+.donedanadan{
+font-size: 200px;
+color: rgb(126, 200, 15);
 }
