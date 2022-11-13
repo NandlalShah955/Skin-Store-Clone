@@ -65,9 +65,13 @@ const Navbars = () => {
             class="search-data"
             placeholder="Search for a product ot brand..."
           />
-          <button type="submit">
-            <AiOutlineSearch size={26} />
+         <Link to='/Sale'>
+<button type="submit">
+            <AiOutlineSearch size={26}style={{margin:'5px'}} />
           </button>
+
+         </Link>
+          
         </form>
 
         <div
@@ -77,7 +81,7 @@ const Navbars = () => {
           }
         >
           <ul>
-            <AiOutlineUserAdd size={22} style={{ marginTop: "20px" }} />
+            <AiOutlineUserAdd size={22} style={{ marginTop: "30px" }} />
             <li>
               <span style={{ padding: 5 }}></span>
 
@@ -93,12 +97,18 @@ const Navbars = () => {
                
                 placeholder="Account"
               /> */}
-              {userEmail ? <Link to="/Login"><button style={{width: '80px', padding: '3px', borderRadius:'55px'}}>{userEmail}</button></Link> : <Link to="/Register"><button>SignUp</button></Link>}
+              {userEmail ? <Link to="/Login"><button style={{width: '80px', padding: '3px', borderRadius:'55px'}}>{userEmail}</button></Link> : <Link to="/Register"><button className="BaSign">SignUp</button></Link>}
             </li>
+          
+            
+          
+           
             <span style={{ paddingLeft: 20 }}>
-              <BsMinecartLoaded style={{ marginTop: "20px" }} />
+              <BsMinecartLoaded style={{ marginTop: "32px" }} />
             </span>
-            <li style={{ marginTop: "20px" }}>Cart</li>
+           
+            <li style={{ marginTop: "30px" }}>Cart</li>
+          -
           </ul>
         </div>
       </nav>
