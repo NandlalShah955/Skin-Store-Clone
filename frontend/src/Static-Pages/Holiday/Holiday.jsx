@@ -2,6 +2,7 @@
 import '../HomePage/HomePage.css'
 import HolidaySlider from './HolidaySlider'
 import {HiOutlineShoppingBag} from 'react-icons/hi'
+import { Link } from 'react-router-dom'
 function Holiday() {
   return (
     <>
@@ -21,7 +22,7 @@ Budget Friendly Finds</h4>
           </p>
           <button>SHOP NOW</button>
         </div>
-        <div className='heightkm'>
+          <div className='heightkm'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/36/original-SkinStore_Q4_Photography_2022_-_October_-_THG0035163_-_BATCHING_shot20500x500-052136.jpg"
             alt="Smart Splurges"

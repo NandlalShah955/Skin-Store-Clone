@@ -5,22 +5,56 @@ import { useNavigate } from "react-router-dom";
 // import { useStateContext } from '../Context/CartContext';
 
 const Carts = () => {
+    
     const [data, setdata] = useState([]);
     const [fetchData, setFetchData] = useState([]);
+    // let fetchData = []
 
-    const showData = (id)=> {
-        console.log(id, "productData");
-    }
+    let store = []
+    data.map((el)=> (
+        store.push(el.productId)
+        // <div>check</div>
+        
+    ))
 
+    // useEffect(()=> {
+    //     const cartgetData = JSON.parse(localStorage.getItem("cartItems"))
+    //     // console.log("dede", cartgetData);
+    //     setdata(cartgetData)
+    // },[])
+    // const cartgetData = JSON.parse(localStorage.getItem("cartItems"))
+    // console.log("data dede", data)
+
+    console.log(store,"store")
     useEffect(()=> {
         axios.get("https://blossombackend.onrender.com/carts")
         .then((res)=> {
             setdata(res.data)
-            // console.log(res.data)
         })
+        
     }, [])
-    console.log(data, "cartData")
+
+    useEffect(()=>{
+        store.map((el)=> (
+            axios.get(`https://blossombackend.onrender.com/products/Sale/${el}/spec`)
+            .then(res=>{
+                // console.log(res.data, "1111111111111111111")
+                let d = res.data;
+                // if(d){
+                //     fetchData.push(d)
+                // }
+                if(d){
+                    setFetchData(d)
+                }
+            })
+        ))
+    },[data])
+    console.log(fetchData, "setFetchData")
     const navigate = useNavigate();
+
+    // const deleteItem = (id)=> {
+    //     axios.delete(``)
+    // }
 
     // const {
     //     decQty,
@@ -38,10 +72,16 @@ const Carts = () => {
         <div>
             <div>
                 {
-                    data.map((el)=> (
-                        <h1>{el.productId}</h1>
+                    fetchData.map((el)=> (
+                        <div>
+                            <img src={el.image} width="200px"/>
+                            <h2>Title: {el.title}</h2>
+                            {el.price}
+
+                        </div>
                     ))
                 }
+                
             </div>
         </div>
     )

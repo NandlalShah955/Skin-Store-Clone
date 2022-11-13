@@ -8,7 +8,7 @@ import { CartStateContext } from './Static-Pages/Context/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
    <BrowserRouter>
       <CartStateContext>
 
@@ -20,7 +20,7 @@ root.render(
       
    
    
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

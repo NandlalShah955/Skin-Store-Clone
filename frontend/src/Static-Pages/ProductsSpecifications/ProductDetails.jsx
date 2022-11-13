@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProductDetails.css";
-import { Link, useParams } from "react-router-dom";
+import { json, Link, useParams } from "react-router-dom";
 // import "../HomePage/HomePage.css";
 import { RiStarSFill } from "react-icons/ri";
 import { useState, useEffect } from "react";
@@ -14,6 +14,8 @@ function ProductDetails() {
   const [userId, userEmail, userPassword] = userData.split(":")
   console.log(userId)
   let id = params.id;
+  let cartData = JSON.parse(localStorage.getItem("cartItems"))|| [];
+
 
   // const addToCart = ()=> {
   //   // event.preventDefault();
@@ -42,10 +44,10 @@ function ProductDetails() {
       // return(datahai)
     })
   }, []);
- console.log(data,"datacheck")
+//  console.log(data,"datacheck")
 
- function addToCart(data){
-    console.log(data,'checkdata')
+ function addToCart(){
+    // console.log(data,'checkdata')
     // axios.post(`https://blossombackend.onrender.com/carts/${userId}`,{
     //   "quantity": 2,
     //   "productId": id
@@ -54,6 +56,8 @@ function ProductDetails() {
     // })
     // localStorage.setItem('')
   // console.log("first")
+  cartData.push(data)
+  localStorage.setItem("cartItems", JSON.stringify(cartData))
   }
 
 
@@ -82,8 +86,9 @@ function ProductDetails() {
               <p className="uparkrdubar">(4)</p>
             </div>
 <p className="rate"> {`$${el.price}.00`} </p>
-<Link to="Carts"></Link>
+<Link to={`/Sale/${id}/Carts`}>
 <button onClick={addToCart} className='addwalabutton'>Add to cart</button>
+</Link>
 <div className="icomns"><ImTruck className="trucjkhai"/> <p>2-3 Business Day Delivery</p></div>
 
 
