@@ -1,14 +1,15 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import { Navigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import facebook from "./logo/Facebook_F_icon.svg.png";
 import google from "./logo/Google__G__Logo.svg.png";
-
+import { AuthContext } from "../../Components/AuthContext";
 const Login = () => {
   const [loginDetails, setLoginDetails] = useState({ email: "", password: "" });
   const [isLogin, SetisLogin] = useState("");
   const [isAuth, SetIsAuth] = useState(false);
+const {Auth,setisAuth}=useContext(AuthContext)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,6 +27,7 @@ const Login = () => {
         localStorage.setItem("token", res.data.token)
         SetisLogin(res.data.token);
         SetIsAuth(true);
+        setisAuth(true)
       })
       .catch((err) => console.log(err));
 

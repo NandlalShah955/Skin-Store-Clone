@@ -1,6 +1,6 @@
 
 
-import React, {  useState } from "react";
+import React from "react";
 import "./Carts.css";
 import {Link} from 'react-router-dom'
 // import { useNavigate } from "react-router-dom";
@@ -8,12 +8,16 @@ import {Link} from 'react-router-dom'
 // import { useStateContext } from '../Context/CartContext';
 
 const Carts = () => {
-  const [data, setdata] = useState([]);
-  const [fetchData, setFetchData] = useState([]);
+ 
   // let fetchData = []
+ 
+ 
+ 
   const datafromback = JSON.parse(localStorage.getItem("cartItems"));
   console.log(datafromback, "datahai");
 
+ 
+ 
   const newdata = datafromback.map((i, val) => {
     return i[0].image;
   });
@@ -23,6 +27,10 @@ const Carts = () => {
   const rate = datafromback.map((i, val) => {
     return i[0].price;
   });
+// Button Logic 
+
+
+
 
   console.log(rate,"rate")
   let meratotal=0;
@@ -70,12 +78,15 @@ console.log(meratotal)
 
         <div className="ratehaimeara">
     <p>Price:-{el}$ only</p>
+    
         </div>
         ))
         
         }
 </div>
-
+<div>
+ 
+</div>
 
       
     </div>

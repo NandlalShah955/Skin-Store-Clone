@@ -97,7 +97,7 @@ const Navbars = () => {
                
                 placeholder="Account"
               /> */}
-              {userEmail ? <Link to="/Login"><button style={{width: '80px', padding: '3px', borderRadius:'55px'}}>{userEmail}</button></Link> : <Link to="/Register"><button className="BaSign">SignUp</button></Link>}
+              {userEmail ? <Link to="/Login"><button style={{width: 'auto', padding: '3px', borderRadius:'55px',height:'auto'}}>{userEmail}</button></Link> : <Link to="/Register"><button className="BaSign">SignUp</button></Link>}
             </li>
           
             

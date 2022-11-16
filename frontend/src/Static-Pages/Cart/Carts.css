@@ -26,6 +26,11 @@ margin-top: 120px;
 justify-content: space-between;
 align-items: center;
 }
+.ratehaimeara{
+  gap: 80px;
+  margin-top: 125px;
+}
+
 .incdec{
  height: 40px;
  width: 50px;
@@ -53,7 +58,7 @@ margin-left: 10px;
     margin: auto;
     text-decoration: none;
 }
-.antimpage{
+.antimpage:hover{
   background-color: aqua;
   color: black;
   

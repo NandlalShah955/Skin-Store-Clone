@@ -4,12 +4,12 @@ import styles from "./Register.module.css";
 import facebook from "../LoginPage/logo/Facebook_F_icon.svg.png";
 import google from "../LoginPage/logo/Google__G__Logo.svg.png";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [signupDetails, setSignupDetails] = useState({ email: "", password: "", userName: "" });
   const { email, password, userName } = signupDetails;
-
+const navigate=useNavigate()
   const handleChange = (e)=>{
     const {name, value} = e.target;
     setSignupDetails({...signupDetails, [name]: value});
@@ -23,6 +23,7 @@ const Register = () => {
       data: signupDetails,
     }).then((res)=>{
       console.log(res.data.token)
+      navigate('/Login')
     })
   }
   return (
@@ -88,9 +89,10 @@ const Register = () => {
               * Your referrals discount is automatically applied at cart
             </p>
           </div>
-          <Link to="/Login">
+          
+         
           <button className={styles.continue}>CONTINUE</button>
-          </Link>
+          
           <p>
             By proceeding, you are confirming that you agree to our{" "}
             <a href="./">Terms and Conditions</a> and{" "}

@@ -16,13 +16,14 @@ import Register from './Static-Pages/RegisterPage/Register'
 import Carts from './Static-Pages/Cart/Carts'
 import Payment from './Payment-Page/Payment'
 import ProductDetails from './Static-Pages/ProductsSpecifications/ProductDetails'
+import PrivateRoute from './Components/PrivateRoute'
 function AllRoutes() {
   return (
     <Routes>
 <Route path='/' element={<HomePage/>}/>
 <Route path='/Brands' element={<Brands/>}/>
 <Route path='/Holiday' element={<Holiday/>}/>
-<Route path='/Sale' element={<Sales/>}/>
+<Route path='/Sale' element={<PrivateRoute><Sales/></PrivateRoute>}/>
 <Route path='/Register' element={<Register/>}/>
 {/* add proucts page link here  */}
 <Route path='/Login' element={<Login/>}/>
