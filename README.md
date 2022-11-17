@@ -64,7 +64,9 @@
 
 # Installation
   npm install create-react-app blossom
+  <br/>
   cd blossom
+  <br/>
   npm start
 
 
