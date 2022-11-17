@@ -33,9 +33,11 @@
 ​
 ### `A collaborative project built by a team of 4, executed in 4 days with both frontend and backend technology.`
 <br>
-​
+
+
 ## ✅ **Netlify link** [Click Here To See Magic](https://blossom-two.vercel.app/)
-## ✅ **Netlify link** [Click Here To See Magic](https://cerulean-brioche-712e23.netlify.app/)
+
+
 ## 🤝 **_Collaborators_**
 
 # 🧔🏻 **Nandlal Saw ** `Team Leader`
