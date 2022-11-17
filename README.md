@@ -49,7 +49,7 @@
 # 👨🏻 **Nitesh Samaniya ** 
 
 - Github: [Nitesh](https://github.com/Nitesh-Samaniya)
-- Linkedin: [Nitesh Lal](https://www.linkedin.com/in/nitesh-samaniya-5b2563233/)
+- Linkedin: [Nitesh](https://www.linkedin.com/in/nitesh-samaniya-5b2563233/)
 
 
 # 👨🏻 **Ravi Ranjan ** 
