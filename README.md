@@ -35,7 +35,7 @@
 <br>
 ​
 ## ✅ **Netlify link** [Click Here To See Magic](https://blossom-two.vercel.app/)
-
+## ✅ **Netlify link** [Click Here To See Magic](https://cerulean-brioche-712e23.netlify.app/)
 ## 🤝 **_Collaborators_**
 
 # 🧔🏻 **Nandlal Saw ** `Team Leader`
