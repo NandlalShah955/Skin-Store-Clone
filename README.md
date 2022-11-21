@@ -4,7 +4,21 @@
 ​
 # Project look like this
 # HomePage
+![image](./frontend/src/Static-Pages/Top-Images/Homepage.png)
+# Products Page
+![image](./frontend/src/Static-Pages/Top-Images/Products_page.png)
 
+# Products Specifications Page
+![image](./frontend/src/Static-Pages/Top-Images/Specpage.png)
+
+# Cart Page
+![image](./frontend/src/Static-Pages/Top-Images/Cart.png)
+
+# Signup Page
+![image](./frontend/src/Static-Pages/Top-Images/Register.png)
+
+# Login Page
+![image](./frontend/src/Static-Pages/Top-Images/Login.png)
 
 ​
 [Video presentation of this project](https://drive.google.com/file/d/128jVVwKv2TntuZ8ulj2n_6N74kg6HkAO/view?usp=sharing) 
@@ -45,11 +59,13 @@
 - Github: [Nandlal](https://github.com/NandlalShah955)
 - Linkedin: [Nandlal](https://www.linkedin.com/in/nandlal-saw-a2761822b/)
 - Email: (nandlalsaw789@gmail.com)
+-Portfolio: [Nandlal](https://nandlalshah955.github.io/)
 
 # 👨🏻 **Nitesh Samaniya ** 
 
 - Github: [Nitesh](https://github.com/Nitesh-Samaniya)
 - Linkedin: [Nitesh](https://www.linkedin.com/in/nitesh-samaniya-5b2563233/)
+-Portfolio: [Nitesh](https://nitesh-samaniya.github.io/)
 
 
 # 👨🏻 **Ravi Ranjan ** 
