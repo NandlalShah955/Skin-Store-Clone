@@ -58,9 +58,11 @@
 
 - Github: [Nandlal](https://github.com/NandlalShah955)
 - Linkedin: [Nandlal](https://www.linkedin.com/in/nandlal-saw-a2761822b/)
-- Email: (nandlalsaw789@gmail.com)
-<br/>
 -Portfolio: [Nandlal](https://nandlalshah955.github.io/)
+
+- Email: (nandlalsaw789@gmail.com)
+
+
 
 # 👨🏻 **Nitesh Samaniya ** 
 
