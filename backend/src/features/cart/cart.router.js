@@ -19,34 +19,15 @@ app.get("/:id", async(req,res)=> { //user ki id
     }
 })
 
-app.post("/:id", async(req,res)=> { //user ki id
-    try{
-        let cartItem = await Cart.findOne({
-            userId: req.params.id,
-            productId: req.body.productId,
-        })
 
-        if(cartItem){
-            let item = await Cart.updateOne(
-                {
-                    userId: req.params.id,
-                    productId: req.body.productId,
-                },
-                {
-                    $set: {quantity: req.body.quantity}
-                }
-            )
-            return res.send(item);
-        }
-        else{
-            let item = await Cart.create({
-                ...req.body,
-                userId: req.params.id,
-            });
-            return res.send(item);
-        }
+app.post("/:id", async(req,res)=> {//user ki id -> add product to cart
+    const {id} = req.params;
+    try{
+        const item = new Cart({...req.body,  userId: id})
+        await item.save();
+        return res.status(200).send(item);
     }catch(e){
-        res.status(500).send(e.message);
+        return res.status(401).send(e);
     }
 })
 

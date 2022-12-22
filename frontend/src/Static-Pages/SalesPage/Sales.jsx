@@ -29,32 +29,32 @@ const Sales = () => {
 
   const getData = () => {
     if (sort_x === "lowtohigh") {
-      return axios.get(`https://blossombackend.onrender.com/products/Sale/asc`);
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/asc?page=${currentPage}`);
     } else if (sort_x === "hightolow") {
       return axios.get(
-        `https://blossombackend.onrender.com/products/Sale/desc`
+        `https://blossombackend.onrender.com/products/Sale/desc?page=${currentPage}`
       );
     } else if (sort_x === "ot") {
-      return axios.get(`https://blossombackend.onrender.com/products/Sale/ot`);
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/ot?page=${currentPage}`);
     } else if (sort_x === "et") {
-      return axios.get(`https://blossombackend.onrender.com/products/Sale/et`);
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/et?page=${currentPage}`);
     } else if (sort_x === "tt") {
-      return axios.get(`https://blossombackend.onrender.com/products/Sale/tt`);
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/tt?page=${currentPage}`);
     } else if (sort_x === "ff") {
-      return axios.get(`https://blossombackend.onrender.com/products/Sale/ff`);
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/ff?page=${currentPage}`);
     } else if (sort_x === "af") {
-      return axios.get(`https://blossombackend.onrender.com/products/Sale/af`);
+      return axios.get(`https://blossombackend.onrender.com/products/Sale/af?page=${currentPage}`);
     } else if (sort_x === "three") {
       return axios.get(
-        `https://blossombackend.onrender.com/products/Sale/three`
+        `https://blossombackend.onrender.com/products/Sale/three?page=${currentPage}`
       );
     } else if (sort_x === "four") {
       return axios.get(
-        `https://blossombackend.onrender.com/products/Sale/four`
+        `https://blossombackend.onrender.com/products/Sale/four?page=${currentPage}`
       );
     } else if (sort_x === "five") {
       return axios.get(
-        `https://blossombackend.onrender.com/products/Sale/five`
+        `https://blossombackend.onrender.com/products/Sale/five?page=${currentPage}`
       );
     } else {
       return axios.get(
@@ -106,7 +106,7 @@ const Sales = () => {
           </div>
           <div className={styles.savings}>
             <div onClick={() => setClick(!click)}>
-              <p>Price</p>
+              <p>Get Products By Price Range</p>
               {click ? (
                 <MdOutlineKeyboardArrowUp className={styles.arrow} />
               ) : (
@@ -120,9 +120,9 @@ const Sales = () => {
             }
           >
             <div className={styles.sorting}>
-              <div>Price</div>
+              <div></div>
               <select name="" id="" onChange={sort_func}>
-                <option value="defalt">Default</option>
+                <option value="defalt">Price</option>
                 <option value="ot">Less than $10</option>
                 <option value="et">$10 to $20</option>
                 <option value="tt">$20 to $30</option>
@@ -150,7 +150,7 @@ const Sales = () => {
             <div className={styles.sorting}>
               <div>Get Products By Rating</div>
               <select name="" id="" onChange={sort_func}>
-                <option value="defalt">Default</option>
+                <option value="defalt">Rating</option>
                 <option value="three">3</option>
                 <option value="four">4</option>
                 <option value="five">5</option>
@@ -176,9 +176,9 @@ const Sales = () => {
           <div className={styles.sort_page}>
             {/* sorting  */}
             <div className={styles.sorting}>
-              <div>Sort by</div>
+              <div>Sort :</div>
               <select name="" id="" onChange={sort_func}>
-                <option value="defalt">Default</option>
+                <option value="defalt">Sort By Price</option>
                 <option value="lowtohigh">Price: Low to High</option>
                 <option value="hightolow">Price: High to Low</option>
                 {/* <option value="a-z">A-Z</option> */}

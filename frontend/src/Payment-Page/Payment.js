@@ -66,11 +66,11 @@ setsuccess(true)
       <section className="maindiv">
         <div className="sbhai">
           <div className="emailwala">
-            <h2>Checkout as a guest</h2>
-            <p className="uparkro">
+            <h2 style={{marginBottom: "10px"}}>Checkout as a guest</h2>
+            <p className="uparkro" style={{marginBottom: "5px"}}>
               Complete your order Without signing up,or sign up after payment
             </p>
-            <h2>1.Email and delivery address</h2>
+            <h2 style={{marginBottom: "10px"}}>1.Email and delivery address</h2>
             <label>Email Address</label>
             <input type="text" />
           <p className="uparkro"> We'll send the purchase receipt to this email</p> 
@@ -125,8 +125,8 @@ setsuccess(true)
         
         <div className="imageswala">
           {/* wrap in this div  */}
-          <h4>Your product</h4>
-          {data?.map((el) => (
+          <h2>Your products: </h2>
+          {/* {data?.map((el) => (
             <div className="imgandprice">
               <div className="onlyimage" key={el.id}>
                 <img src={el.image} alt="nandlal" />
@@ -138,7 +138,7 @@ setsuccess(true)
               </div>
             </div>
           ))}
-          <p>Total Price:{total}</p>
+          <p>Total Price:{total}</p> */}
 
         </div>
       </section>
