@@ -8,8 +8,8 @@ import { BsMinecartLoaded } from "react-icons/bs";
 import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 import "react-dropdown/style.css";
-import {Link,useNavigate} from 'react-router-dom'
 
+import { Link } from 'react-router-dom'
 
 // or less ideally
 
@@ -18,13 +18,12 @@ import {Link,useNavigate} from 'react-router-dom'
 const Navbars = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const userData = localStorage.getItem("token") || ""
-  // const [userId, userEmail, userPassword] = userData.split(":")
-const navigate=useNavigate()
 
-  const handleChange=(e)=>{
-    navigate(`/${e.target.value}`)
-  }
-  // console.log(userEmail)
+  const [userId, userEmail, userPassword] = userData.split(":")
+  const [isNav, setIsNav] = useState(false)
+  // console.log(userData);
+  console.log(userEmail)
+
   return (
     <div>
      
@@ -32,50 +31,50 @@ const navigate=useNavigate()
 
 
       <nav>
-        <div class="menu-icon">
+        <div className="menu-icon">
           <span>
-            <AiOutlineMenu
+            <Navbars22
               onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
               }}
             />
           </span>
         </div>
-        <div class="logo">
+        <div className="logo">
           <Link to="/"> <img
-              class="img1"
-              src={img}
-              width="100%"
-              height="100%"
-              alt="pcg"
-            /></Link>
-           
-       
+            className="img1"
+            src={img}
+            width="100%"
+            height="100%"
+            alt="pcg"
+          /></Link>
+
+
         </div>
 
-        <div class="search-icon">
+        <div className="search-icon">
           <span>
             <AiOutlineSearch />
           </span>
         </div>
-        <div class="cancel-icon">
-          <span class="fas fa-times">
+        <div className="cancel-icon">
+          <span className="fas fa-times">
             <AiOutlineClose />
           </span>
         </div>
-        <form class="co" action="#">
+        <form className="co" action="#">
           <input
             type="search"
-            class="search-data"
+            className="search-data"
             placeholder="Search for a product ot brand..."
           />
-         <Link to='/Sale'>
-<button type="submit">
-            <AiOutlineSearch size={26}style={{margin:'5px'}} />
-          </button>
+          <Link to='/Sale'>
+            <button type="submit">
+              <AiOutlineSearch size={26} style={{ margin: '5px' }} />
+            </button>
 
-         </Link>
-          
+          </Link>
+
         </form>
 
         <div
@@ -85,38 +84,138 @@ const navigate=useNavigate()
           }
         >
           <ul>
-            <AiOutlineUserAdd size={22} style={{ marginTop: "30px" }} />
+            {/* <AiOutlineUserAdd size={22} style={{ marginTop: "30px" }} /> */}
             <li>
-              <span style={{ padding: 5 }}></span>
+              {/* <span style={{ padding: 5 }}></span> */}
 
-             <select name="Profile" id="" onChange={handleChange} className={'select-tag'}>
+
+              {/* <select name="Account" id="">
           
-              <option value="">Profile</option>
-             
-              <option value="Register">Signup</option>
-              <option value="login">Login</option>
-             </select> 
-           
-              {/* {userEmail ? <Link to="/Login"><button style={{width: '80px', padding: '3px', borderRadius:'55px'}}>{userEmail}</button></Link> : <Link to="/Register"><button className="BaSign">SignUp</button></Link>} */}
+              <option value="">Account</option>
+              <option value="">Login</option>
+              <option value="">Account</option>
+             </select> */}
+              {/* <Dropdown
+                style={{ border: "none" }}
+                options={options}
+               
+                placeholder="Account"
+              /> */}
+              {userEmail ? <Link to="/Login"><button>{userEmail}</button></Link> : <Link to="/Register"><li className="BaSign"><AiOutlineUserAdd /> SignUp</li></Link>}
+
             </li>
-          
-            
-          
-           
-            <span style={{ paddingLeft: 20 }}>
+
+
+
+
+            {/* <span style={{ paddingLeft: 20 }}>
               <BsMinecartLoaded style={{ marginTop: "32px" }} />
-            </span>
-           
-            <li style={{ marginTop: "30px" }}>Cart</li>
-          -
+            </span> */}
+
+            <li ><Link to={`/Sale/:id/Carts`}><BsMinecartLoaded /> Cart </Link></li>
+
           </ul>
         </div>
       </nav>
 
       <div className="line"></div>
+      {/* <div className="menuthing">
+        <span>
+          <AiOutlineMenu
+            onClick={() => {
+              setIsNav(!isNav);
+            }}
+          />
+        </span>
+      </div>
+      <div className="metjabhai">
+        <div class="nav-items"
+          className={
+            isNav ? "navigation-menu expanded" : "navigation-menu"
+          }>
+          <ul>
+            <li>
+              <a href="/">Product</a>
+            </li>
+            <li>
+              <a href="/">User</a>
+            </li>
+            <li>
+              <a href="/">Music</a>
+            </li>
+            <li>
+              <a href="/music">Brands</a>
+            </li>
+            <li>
+              <a href="/music">Holiday</a>
+            </li>
+            <li>
+              <a href="/music">SkinCare</a>
+            </li>
+            <li>
+              <a href="/music">Makeup</a>
+            </li>
+            <li>
+              <a href="/music">BathBody</a>
+            </li>
+            <li>
+              <a href="/music">Fragrance</a>
+            </li>
+            <li>
+              <a href="/music">SelfCare</a>
+            </li>
+          </ul>
+        </div>
+      </div> */}
     </div>
   );
 };
+
+const Navbars22 = () => {
+  const [isNav, setIsNav] = useState(false)
+
+
+  return (
+    <div>
+            <div className="menuthing">
+        <span>
+          <AiOutlineMenu
+            onClick={() => {
+              setIsNav(!isNav);
+            }}
+          />
+        </span>
+      </div>
+      <div className="metjabhai">
+        <div class="nav-items"
+          className={
+            isNav ? "navigation-menu expanded" : "navigation-menu"
+          }>
+          <ul>
+            <li>
+              <a href="/Holiday">Holiday</a>
+            </li>
+            <li>
+              <a href="/Sale">Sale</a>
+            </li>
+            <li>
+              <a href="/Makeup">Makeup</a>
+            </li>
+            <li>
+              <a href="/BathBody">BathBody</a>
+            </li>
+            <li>
+              <a href="/Fragrance">Fragrance</a>
+            </li>
+            <li>
+              <a href="/SelfCare">SelfCare</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 //------------------Main Nav-----------------------
 
