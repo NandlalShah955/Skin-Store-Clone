@@ -19,7 +19,7 @@ import {
       case LOGIN_GET_LOADING: {
         return {
           ...state,
-          loading: true,
+          isloading: true,
           iserror:false,
         };
       }
