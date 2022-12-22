@@ -3,17 +3,15 @@ import {
     LOGIN_GET_SUCCESS,
     LOGIN_GET_LOADING,
     LOGOUT_GET,
-    UPDATE_GET_SUCCESS,
+    // UPDATE_GET_SUCCESS,
   } from "./login.types";
-  let token = localStorage.getItem("token") || "";
-  let name = localStorage.getItem("name")   || "";
-  let id = localStorage.getItem("id")   || "";
+  
   let initialstate = {
-    name,
-    loading: false,
-    error: false,
-    token,
-    id
+    isauth:false,
+    isloading: false,
+    iserror: false,
+    token:''
+    
   };
   
   export const loginReducer = (state = initialstate, { type, payload }) => {
@@ -22,54 +20,52 @@ import {
         return {
           ...state,
           loading: true,
+          iserror:false,
         };
       }
       case LOGIN_GET_SUCCESS: {
-        if (payload.token) {
-          localStorage.setItem("token", payload.token);
-          localStorage.setItem("name", payload.username);
-          localStorage.setItem("id", payload.id);
+        // if (payload.token) {
+        //   localStorage.setItem("token", payload.token);
+        //   localStorage.setItem("name", payload.username);
+        //   localStorage.setItem("id", payload.id);
 
-        }
+        // }
   
         return {
           ...state,
-          loading: false,
-          error: false,
+          isloading: false,
+          iserror: false,
           token: payload.token,
-          name: payload.username,
-          id:payload.id
+          isauth:true,
         };
       }
-      case UPDATE_GET_SUCCESS: {
-        if (payload.token) {
-          // localStorage.setItem("token", payload.token);
-          localStorage.setItem("name", payload.username);
-        }
+      // case UPDATE_GET_SUCCESS: {
+      //   if (payload.token) {
+      //     // localStorage.setItem("token", payload.token);
+      //     localStorage.setItem("name", payload.username);
+      //   }
   
-        return {
-          ...state,
-          loading: false,
-          error: false,
-          token: payload.token,
-          name: payload.name
-        };
-      }
+      //   return {
+      //     ...state,
+      //     isloading: false,
+      //     iserror: false,
+      //     token: payload.token,
+      //     name: payload.name
+      //   };
+      // }
         
       case LOGIN_GET_ERROR: {
         return {
           ...state,
-          loading: false,
-          error: true,
+          isloading: false,
+          iserror: true,
         };
       }
       case LOGOUT_GET: {
-        localStorage.removeItem("token");
+       
         return {
-          ...state,
-          loading: false,
-          error: false,
-          token: "",
+          ...initialstate,
+         
         };
       }
       default:

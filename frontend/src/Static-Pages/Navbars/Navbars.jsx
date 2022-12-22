@@ -85,19 +85,14 @@ const Navbars = () => {
             <li>
               <span style={{ padding: 5 }}></span>
 
-             {/* <select name="Account" id="">
+             <select name="Account" id="">
           
               <option value="">Account</option>
               <option value="">Login</option>
               <option value="">Account</option>
-             </select> */}
-              {/* <Dropdown
-                style={{ border: "none" }}
-                options={options}
-               
-                placeholder="Account"
-              /> */}
-              {userEmail ? <Link to="/Login"><button style={{width: '80px', padding: '3px', borderRadius:'55px'}}>{userEmail}</button></Link> : <Link to="/Register"><button className="BaSign">SignUp</button></Link>}
+             </select> 
+           
+              {/* {userEmail ? <Link to="/Login"><button style={{width: '80px', padding: '3px', borderRadius:'55px'}}>{userEmail}</button></Link> : <Link to="/Register"><button className="BaSign">SignUp</button></Link>} */}
             </li>
           
             

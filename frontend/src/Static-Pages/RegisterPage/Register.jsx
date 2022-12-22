@@ -32,7 +32,7 @@ function Register() {
     }
   };
 if(isauth){
-  navigate('/login')
+  navigate('/Login')
 }
 if(isloading){
   return (
