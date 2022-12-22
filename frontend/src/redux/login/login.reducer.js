@@ -4,7 +4,7 @@ import {
     LOGIN_GET_LOADING,
     LOGOUT_GET,
     UPDATE_GET_SUCCESS,
-  } from "./login.action.types";
+  } from "./login.types";
   let token = localStorage.getItem("token") || "";
   let name = localStorage.getItem("name")   || "";
   let id = localStorage.getItem("id")   || "";
@@ -16,7 +16,7 @@ import {
     id
   };
   
-  export const authReducer = (state = initialstate, { type, payload }) => {
+  export const loginReducer = (state = initialstate, { type, payload }) => {
     switch (type) {
       case LOGIN_GET_LOADING: {
         return {

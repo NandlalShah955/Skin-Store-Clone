@@ -1,19 +1,20 @@
 import axios from "axios";
-import { SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./signup.types";
-let API=process.env.API;
-
+import { SIGNUP_LOADING, SIGNUP_SUCCESS, SIGNUP_ERROR } from "./signup.types";
+let API = process.env.API;
+console.log(API);
 
 export const signup = (creds) => async (dispatch) => {
-    dispatch({ type: SIGNUP_LOADING })
-    try {
-        let res = await axios.post(`${API}/users/signup`, creds);
-        const data=await res.data;
-        dispatch({ type: SIGNUP_SUCCESS, payload: data });
-        
-        
-    }
-    catch (e) {
-        dispatch({type:SIGNUP_ERROR,payload:e.message})
-    }
-    
-}
+  dispatch({ type: SIGNUP_LOADING });
+  try {
+    let res = await axios.post(
+      'https://blossombackend.onrender.com/users/signup',
+      creds
+    );
+    const data = await res.data;
+    console.log(creds);
+    dispatch({ type: SIGNUP_SUCCESS, payload: data });
+    return data;
+  } catch (e) {
+    dispatch({ type: SIGNUP_ERROR, payload: e.message });
+  }
+};

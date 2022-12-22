@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LOGIN_GET_ERROR, LOGIN_GET_SUCCESS, LOGIN_GET_LOADING,LOGOUT_GET, UPDATE_GET_SUCCESS } from "./login.action.types";
+import { LOGIN_GET_ERROR, LOGIN_GET_SUCCESS, LOGIN_GET_LOADING,LOGOUT_GET, UPDATE_GET_SUCCESS } from "./login.types";
 export const login = (creds) => async (dispatch) => {
 
     // dispatch({ type: LOGIN_GET_LOADING });

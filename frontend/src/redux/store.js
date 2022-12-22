@@ -1,9 +1,20 @@
-import { legacy_createStore,combineReducers,compose,applyMiddleware } from "redux";
+import {
+  legacy_createStore,
+  combineReducers,
+  compose,
+  applyMiddleware,
+} from "redux";
 import thunk from "redux-thunk";
-import { authReducer } from "./login-signup/login.reducer";
-import { signupReducer } from "./login-signup/signup.reducer";
+import { loginReducer } from "./login/login.reducer";
+import { signupReducer } from "./signup/signup.reducer";
 
-const rootreducer = combineReducers({ signup:signupReducer,auth:authReducer});
+const rootreducer = combineReducers({
+  signup: signupReducer,
+  login: loginReducer,
+});
 const createcomposer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-export const store = legacy_createStore( rootreducer,createcomposer(applyMiddleware(thunk)));
+export const store = legacy_createStore(
+  rootreducer,
+  createcomposer(applyMiddleware(thunk))
+);
