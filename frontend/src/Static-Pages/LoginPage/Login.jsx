@@ -1,44 +1,50 @@
-import axios from "axios";
-import React, { useState } from "react";
-import { Navigate } from "react-router-dom";
+
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
 import facebook from "./logo/Facebook_F_icon.svg.png";
 import google from "./logo/Google__G__Logo.svg.png";
+import { useSelector, useDispatch } from "react-redux";
+import { login } from "../../redux/login/login.actions";
 
 const Login = () => {
-  const [loginDetails, setLoginDetails] = useState({ email: "", password: "" });
-  const [isLogin, SetisLogin] = useState("");
-  const [isAuth, SetIsAuth] = useState(false);
-
+  const { isauth, iserror, isloading } = useSelector((store) => store.login);
+  const [loginDetails, setloginDetails] = useState({});
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setLoginDetails({ ...loginDetails, [name]: value });
+    setloginDetails({ 
+      ...loginDetails,
+       [name]: value 
+      });
   };
 
   const handleLogin = (event) => {
     event.preventDefault();
-    axios({
-      method: "POST",
-      url: `https://blossombackend.onrender.com/users/login`,
-      data: loginDetails,
-    })
-      .then((res) => {
-        localStorage.setItem("token", res.data.token)
-        SetisLogin(res.data.token);
-        SetIsAuth(true);
-      })
-      .catch((err) => console.log(err));
-
-
+    if (!loginDetails.email || !loginDetails.password) {
+      alert("Please enter all details");
+    } else {
+      dispatch(login(loginDetails));
+    }
   };
-  console.log(isLogin, "check")
+ 
+  useEffect(() => {
+    if (iserror) {
+      alert("Incorrect Email or password");
+    } else if (isauth) {
+      alert("Logged in successfully");
 
-  if(isAuth){
+      navigate("/Sale");
+    }
+  }, [isauth, iserror]);
 
-    return <Navigate to="/"/>
+  if (isloading) {
+    return (
+      <img src="https://flevix.com/wp-content/uploads/2020/01/Bounce-Bar-Preloader-1.gif" alt="loading" />
+    );
   }
 
-  const { email, password } = loginDetails;
   return (
     <div className={styles.main_login}>
       <div className={styles.new_existing}>
@@ -50,19 +56,9 @@ const Login = () => {
           >
             <h2>Existing Customers</h2>
             <label htmlFor="">*Email adress</label>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-            />
+            <input type="email" name="email" onChange={handleChange} />
             <label htmlFor="">*Password</label>
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={handleChange}
-            />
+            <input type="password" name="password" onChange={handleChange} />
             <a href="./" className={styles.forget_password}>
               Forgotten Your Password?
             </a>

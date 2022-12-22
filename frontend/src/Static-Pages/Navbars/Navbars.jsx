@@ -1,30 +1,32 @@
 import React, { useState } from "react";
-// // import { Button } from 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.css';
+
 import img from "./logo/Blossom.png";
 import "./Navbar.css";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BsMinecartLoaded } from "react-icons/bs";
-// import  {TopNav}  from "./TopNav";
+
 import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Dropdown from "react-dropdown";
+
 import "react-dropdown/style.css";
+
 import { Link } from 'react-router-dom'
 
 // or less ideally
 
-const options = ["LOGIN", "SIGNUP"];
+
 
 const Navbars = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const userData = localStorage.getItem("token") || ""
+
   const [userId, userEmail, userPassword] = userData.split(":")
   const [isNav, setIsNav] = useState(false)
   // console.log(userData);
   console.log(userEmail)
+
   return (
     <div>
-      {/* <TopNav /> */}
+     
 
 
 
@@ -86,6 +88,7 @@ const Navbars = () => {
             <li>
               {/* <span style={{ padding: 5 }}></span> */}
 
+
               {/* <select name="Account" id="">
           
               <option value="">Account</option>
@@ -99,6 +102,7 @@ const Navbars = () => {
                 placeholder="Account"
               /> */}
               {userEmail ? <Link to="/Login"><button>{userEmail}</button></Link> : <Link to="/Register"><li className="BaSign"><AiOutlineUserAdd /> SignUp</li></Link>}
+
             </li>
 
 
