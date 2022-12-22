@@ -3,9 +3,8 @@ import styles from "./Register.module.css";
 
 import facebook from "../LoginPage/logo/Facebook_F_icon.svg.png";
 import google from "../LoginPage/logo/Google__G__Logo.svg.png";
-
 // import { useNavigate } from "react-router-dom";
-
+import signup from '../../redux/signup/signup.actions'
 function Register() {
  
 const [userdetails, setuserdetails] = useState({})
@@ -27,6 +26,7 @@ setuserdetails({
       ){
         alert("Please fill all you details")
       }else{
+         {alert('Your account has been Created')}
 
 
 
