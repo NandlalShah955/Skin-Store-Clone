@@ -39,7 +39,7 @@ nav .logo{
   object-fit: cover;
 }
 nav .nav-items{
-  display: flex;
+  /* display: flex; */
   /* flex: 1; */
   padding: 0 0 0 40px;
 }
@@ -116,8 +116,11 @@ nav .search-icon{
     padding: 0px;
   }
   nav .logo{
+    /* height: 100px;
+    width: 60%; */
     flex: 2;
     text-align: center;
+    /* object-fit: contain; */
   }
 
   nav .nav-items{
@@ -285,8 +288,22 @@ nav .logo.space{
     display: none;
   }
 }
+@media screen and (min-width: 780px) and (max-width: 1800px) {
+.metjabhai{
+  display: none;
+}
+  .menuthing{
+    text-align: start;
+    display: none;
+  }
 
+}
 
+.menuthing{
+  text-align: start;
+  margin:5px 30px;
+  /* display: none; */
+}
 @media screen and (max-width: 768px) {
   .navigation-menu ul {
    position: absolute;
@@ -295,23 +312,24 @@ nav .logo.space{
     flex-direction: column;
     width: 100%;
     height: calc(100vh - 77px);
-    background-color: gray;
-    border-top: 1px solid black;
+    background-color:white;
+    /* border-top: 1px solid white; */
   }
   .navigation-menu li {
     text-align: center;
     margin: 0;
   }
   .navigation-menu li a {
-    color: white;
-    
+    color: black;
     width: 100%;
     padding: 1.5rem 0;
   }
   .navigation-menu li:hover {
-    background-color: #eee;
+    background-color: teal;
   }
 }
+
+
 
 @media screen and (max-width: 768px) {
   .navigation-menu ul {
@@ -319,6 +337,7 @@ nav .logo.space{
     display: none;
   }
 }
+
 
 @media screen and (max-width: 768px) {
   .navigation-menu.expanded ul {
