@@ -1,29 +1,33 @@
 import React, { useState } from "react";
-// // import { Button } from 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.css';
+
 import img from "./logo/Blossom.png";
 import "./Navbar.css";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BsMinecartLoaded } from "react-icons/bs";
-// import  {TopNav}  from "./TopNav";
+
 import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Dropdown from "react-dropdown";
+
 import "react-dropdown/style.css";
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
+
 
 // or less ideally
 
-const options = ["LOGIN", "SIGNUP"];
+
 
 const Navbars = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const userData = localStorage.getItem("token") || ""
-  const [userId, userEmail, userPassword] = userData.split(":")
-  // console.log(userData);
-  console.log(userEmail)
+  // const [userId, userEmail, userPassword] = userData.split(":")
+const navigate=useNavigate()
+
+  const handleChange=(e)=>{
+    navigate(`/${e.target.value}`)
+  }
+  // console.log(userEmail)
   return (
     <div>
-      {/* <TopNav /> */}
+     
 
 
 
@@ -85,19 +89,15 @@ const Navbars = () => {
             <li>
               <span style={{ padding: 5 }}></span>
 
-             {/* <select name="Account" id="">
+             <select name="Profile" id="" onChange={handleChange} className={'select-tag'}>
           
-              <option value="">Account</option>
-              <option value="">Login</option>
-              <option value="">Account</option>
-             </select> */}
-              {/* <Dropdown
-                style={{ border: "none" }}
-                options={options}
-               
-                placeholder="Account"
-              /> */}
-              {userEmail ? <Link to="/Login"><button style={{width: '80px', padding: '3px', borderRadius:'55px'}}>{userEmail}</button></Link> : <Link to="/Register"><button className="BaSign">SignUp</button></Link>}
+              <option value="">Profile</option>
+             
+              <option value="Register">Signup</option>
+              <option value="login">Login</option>
+             </select> 
+           
+              {/* {userEmail ? <Link to="/Login"><button style={{width: '80px', padding: '3px', borderRadius:'55px'}}>{userEmail}</button></Link> : <Link to="/Register"><button className="BaSign">SignUp</button></Link>} */}
             </li>
           
             

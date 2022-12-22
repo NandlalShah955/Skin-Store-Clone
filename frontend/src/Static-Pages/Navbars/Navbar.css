@@ -557,3 +557,9 @@ nav .logo.space{
   font: inherit;
   cursor: pointer;
 }
+.select-tag{
+width: 100px;
+margin-top: 20px;
+height: 40px;
+
+}
