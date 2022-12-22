@@ -154,23 +154,25 @@ background-size:100% 100%;
 .mainimagewala{
     height: auto;
     width: 90%;
-   
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   /* padding: -200px; */
     margin: auto;
     display: flex;
 }
 .imagepara{
-width: 70%;
+width: 60%;
 
-height: 700px;
+height: 600px;
 display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    /* border: 1px solid red; */
 }
 .imagepara img{
     width: 50%;
-    height: 80%;
+    height: 60%;
+    margin-top: -180px;
 }
 .imagepara h3{
     color: #2e3337;
@@ -231,8 +233,8 @@ color: #2e3337;
    
 }
 .addwalabutton:hover{
-background-color: aqua;
-color: black;
+background-color: teal;
+color: white;
 cursor: pointer;
 }
 .icomns{
@@ -282,20 +284,20 @@ background-size:100% 100%;
     background-repeat: no-repeat;  
     
 }
-.Shophaifrq{
-    
-    text-align: start;
+.Shophaifrq{    
+    text-align: start;  
+}
 
-    
-    
+.imagepara p{
+    display: none;
 }
 
 }
 @media screen and (min-width: 10px) and (max-width: 500px) {
 .othercustomer{
     display: grid;
-grid-template-columns: repeat(2,1fr);
-grid-template-rows: repeat(2,1fr);
+grid-template-columns: repeat(1,1fr);
+grid-template-rows: repeat(1,1fr);
 }
 .giftsel{
     margin-top: 5px;
@@ -305,8 +307,12 @@ width: 70%
     
     text-align: center;
     margin-left: 0px;
-    
-    
+      
+}
+
+.mainwala{
+    /* display: none; */
+    margin-top: -80px;
 }
 
 .reviewwala{
@@ -317,9 +323,21 @@ background-size:100% 100%;
     background-repeat: no-repeat;  
     
 }
+.imagepara p{
+    display: none;
+}
+.imagepara img{
+    width: 70%;
+    height: 50%;
+    margin-top: -200px;
+    /* margin-bottom: -150px; */
+}
+.pricename{
+    margin-top: -250px;
+}
 .mainimagewala{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 width: 90%;
 margin: auto;
 }

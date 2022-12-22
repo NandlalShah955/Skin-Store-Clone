@@ -22,15 +22,7 @@ function ProductDetails() {
  
 
  
-  useEffect(() => {
-    axios.get(`https://blossombackend.onrender.com/products/Sale/${id}/spec`).then((res)=>{
-      
-     
-      setdata(res.data)
-      // console.log(res.data)
-      // return(datahai)
-    })
-  }, []);
+ 
 
 
  function addToCart(){
@@ -40,41 +32,45 @@ function ProductDetails() {
   localStorage.setItem("cartItems", JSON.stringify(cartData))
   }
 
-
+  useEffect(() => {
+    axios.get(`https://blossombackend.onrender.com/products/Sale/${id}/spec`).then((res)=>{
+      setdata(res.data)
+    })
+  }, []);
 
   return (
     <>
       
-      
+      <h1 style={{color:'red', marginTop:'20px', fontFamily:'cursive', marginBottom:'40px'}}>Product's Specification</h1>
         {/* start in this div  */}
         {data?.map((el) => (
       <div className="mainimagewala" key={el.id}>
 
-<div className="imagepara">
-  <img src={el.image} alt='' />
-  <h3>Description</h3>
-  <p>{el.description}</p>
+      <div className="imagepara">
+        <img  src={el.image} alt='' />
+        <h3> </h3>
+        {/* <p>{el.description}</p> */}
 
-</div>
-<div className="pricename">
-<p className="namei">{el.title}</p>
+      </div>
+      <div  style={{marginLeft: "25px", marginTop: '50px'}} className="pricename">
+      <p className="namei">{el.title}</p>
 
-<div className="starshai">
-              <RiStarSFill className="starshaipr" />
-              <RiStarSFill className="starshaipr" />
-              <RiStarSFill className="starshaipr" />
-              <RiStarSFill className="starshaipr" />
-              <p className="uparkrdubar">(4)</p>
-            </div>
-<p className="rate"> {`$${el.price}.00`} </p>
-<Link to={`/Sale/${id}/Carts`}>
-<button onClick={addToCart} className='addwalabutton'>Add to cart</button>
-</Link>
-<div className="icomns"><ImTruck className="trucjkhai"/> <p>2-3 Business Day Delivery</p></div>
+      <div style={{marginTop: "-15px"}} className="starshai">
+                    <RiStarSFill className="starshaipr" />
+                    <RiStarSFill className="starshaipr" />
+                    <RiStarSFill className="starshaipr" />
+                    <RiStarSFill className="starshaipr" />
+                    <p className="uparkrdubar">(4)</p>
+                  </div>
+      <p style={{marginTop: "-5px"}} className="rate"> {`$${el.price}.00`} </p>
+      <Link to={`/Sale/${id}/Carts`}>
+      <button onClick={addToCart} className='addwalabutton'>Add to cart</button>
+      </Link>
+      <div className="icomns"><ImTruck className="trucjkhai"/> <p>2-3 Business Day Delivery</p></div>
 
 
 
-</div>
+      </div>
 
 
       </div>
@@ -84,22 +80,22 @@ function ProductDetails() {
      
     
      
-      <h1 className="Shophai">Other customers bought</h1>
+      <h1 style={{color:'red', marginTop:'20px', fontFamily:'cursive', marginBottom:'90px'}} className="Shophai">Recommendation</h1>
 
       <div className="othercustomer">
         <div className="mainwala">
           <div className="image1"></div>
           <div className="textdata">
-            <p>SkinCeuticals Tripeptide-R Neck Repair 1.7oz</p>
-            <div className="giftsel">Select your Gift</div>
-            <div className="starshai">
+            {/* <p>SkinCeuticals Tripeptide-R Neck Repair 1.7oz</p> */}
+            {/* <div className="giftsel">Select your Gift</div> */}
+            {/* <div className="starshai">
               <RiStarSFill className="stars" />
               <RiStarSFill className="stars" />
               <RiStarSFill className="stars" />
               <RiStarSFill className="stars" />
               <p className="uparkr">(4)</p>
-            </div>
-            <p className="pricehai">$67.00</p>
+            </div> */}
+            {/* <p className="pricehai">$67.00</p> */}
             <span className="butkor">QUICK BUY</span>
           </div>
         </div>
@@ -107,7 +103,7 @@ function ProductDetails() {
         <div className="mainwala">
           <div className="image2"></div>
           <div className="textdata">
-            <p>SkinCeuticals Silymarin CF Serum 1 fl. oz</p>
+            {/* <p>SkinCeuticals Silymarin CF Serum 1 fl. oz</p>
             <div className="giftsel">Select your Gift</div>
             <div className="starshai">
               <RiStarSFill className="stars" />
@@ -117,7 +113,7 @@ function ProductDetails() {
               <RiStarSFill className="stars" />
               <p className="uparkr">(5)</p>
             </div>
-            <p className="pricehai">$167.00</p>
+            <p className="pricehai">$167.00</p> */}
             <span className="butkor">QUICK BUY</span>
           </div>
         </div>
@@ -125,7 +121,7 @@ function ProductDetails() {
         <div className="mainwala">
           <div className="image3"></div>
           <div className="textdata">
-            <p>SkinCeuticals Retinol 0.3 Refining Night Treatment 30ml</p>
+            {/* <p>SkinCeuticals Retinol 0.3 Refining Night Treatment 30ml</p>
             <div className="giftsel">Select your Gift</div>
             <div className="starshai">
               <RiStarSFill className="stars" />
@@ -134,7 +130,7 @@ function ProductDetails() {
               <RiStarSFill className="stars" />
               <p className="uparkr">(4)</p>
             </div>
-            <p className="pricehai">$67.00</p>
+            <p className="pricehai">$67.00</p> */}
             <span className="butkor">QUICK BUY</span>
           </div>
         </div>
@@ -142,7 +138,7 @@ function ProductDetails() {
         <div className="mainwala">
           <div className="image4"></div>
           <div className="textdata">
-            <p>SkinCeuticals Metacell Renewal B3</p>
+            {/* <p>SkinCeuticals Metacell Renewal B3</p>
             <div className="giftsel">Select your Gift</div>
             <div className="starshai">
               <RiStarSFill className="stars" />
@@ -151,7 +147,7 @@ function ProductDetails() {
 
               <p className="uparkr">(3)</p>
             </div>
-            <p className="pricehai">$169.00</p>
+            <p className="pricehai">$169.00</p> */}
             <span className="butkor">QUICK BUY</span>
           </div>
         </div>

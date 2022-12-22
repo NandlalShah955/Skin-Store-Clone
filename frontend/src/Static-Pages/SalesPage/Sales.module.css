@@ -47,6 +47,7 @@
   line-height: 25px;
   color: #2e3337;
   margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .savings > div {
@@ -64,6 +65,7 @@
   font-family: "Lato", sans-serif;
   color-interpolation-filters: #2e3337;
   margin-bottom: 10px;
+  margin-top: 5px;
 }
 
 .savings > div > .arrow {
@@ -176,10 +178,10 @@
   font-weight: 600;
   line-height: 19px;
   color: #2e3337;
-  margin-top: 60px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   font-family: "Lato", sans-serif;
-
-  height: 50px;
+  height: 30px;
 }
 
 .each_product .product__price {
@@ -304,6 +306,7 @@
   }
   .all__main__products {
     padding: 0%;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -313,7 +316,7 @@
   }
 
   .product__dis + div {
-    margin-top: 35px;
+    margin-top: 15px;
   }
 
   .responsive__sort_page {
