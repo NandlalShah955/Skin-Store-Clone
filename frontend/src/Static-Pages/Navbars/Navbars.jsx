@@ -89,7 +89,7 @@ const navigate=useNavigate()
             <li>
               <span style={{ padding: 5 }}></span>
 
-             <select name="Profile" id="" onChange={handleChange}>
+             <select name="Profile" id="" onChange={handleChange} className={'select-tag'}>
           
               <option value="">Profile</option>
              
