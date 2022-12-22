@@ -3,36 +3,42 @@ import styles from "./Register.module.css";
 
 import facebook from "../LoginPage/logo/Facebook_F_icon.svg.png";
 import google from "../LoginPage/logo/Google__G__Logo.svg.png";
-import axios from "axios";
 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+
+function Register() {
+ 
+const [userdetails, setuserdetails] = useState({})
+ 
+  const handleChange = (e) => {
+const {name,value}=e.target;
+setuserdetails({
+  ...userdetails,
+  [name]:value,
+})
+ };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if(
+      !userdetails.userName ||
+      !userdetails.email ||
+      !userdetails.password 
+      ){
+        alert("Please fill all you details")
+      }else{
 
 
-const Register = () => {
-  const navigate = useNavigate();
-  const [signupDetails, setSignupDetails] = useState({ email: "", password: "", userName: "" });
-  const { email, password, userName } = signupDetails;
-  const handleChange = (e)=>{
-    const {name, value} = e.target;
-    setSignupDetails({...signupDetails, [name]: value});
+
+      }
   };
 
-  const handleSignup = (event)=> {
-    event.preventDefault();
-    axios({
-      method: "POST",
-      url: `https://blossombackend.onrender.com/users/signup`,
-      data: signupDetails,
-    }).then((res)=>{
-      console.log(res.data.token)
-      navigate('/Login')
-    })
-    navigate("/Login")
-  }
   return (
     <div className={styles.main_register}>
       <div className={styles.about}>
-        <form action="" className={styles.about_content} onSubmit={handleSignup}>
+        <form className={styles.about_content}
+        onSubmit={handleSubmit}
+        >
           <h2>About You</h2>
           <p className={styles.sign_up}>Sign Up With</p>
           <div className={styles.social_links}>
@@ -53,29 +59,16 @@ const Register = () => {
             Or create an email account
           </p>
           <label htmlFor="">* Full Name</label>
-          <input
-              type="text"
-              name="userName"
-              value={userName}
-              onChange={handleChange}
-            />
+          <input type="text" 
+          name="userName" onChange={handleChange} />
 
           <label htmlFor="">* Email address</label>
-          <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={handleChange}
-            />
+          <input type="email"
+           name="email" onChange={handleChange} />
           <label htmlFor="">* Confirm Email address</label>
           <input type="email" />
           <label htmlFor="">* Password</label>
-          <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={handleChange}
-            />
+          <input type="password" name="password" onChange={handleChange} />
           <label htmlFor="">
             Cell Phone Number <span>(Optional)</span>
           </label>
@@ -92,10 +85,11 @@ const Register = () => {
               * Your referrals discount is automatically applied at cart
             </p>
           </div>
-          
-         
-          <button className={styles.continue}>CONTINUE</button>
-          
+
+          <button className={styles.continue} >
+            CONTINUE
+          </button>
+
           <p>
             By proceeding, you are confirming that you agree to our{" "}
             <a href="./">Terms and Conditions</a> and{" "}
@@ -105,6 +99,6 @@ const Register = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Register;
