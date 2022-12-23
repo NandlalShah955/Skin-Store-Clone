@@ -16,6 +16,7 @@ import Register from './Static-Pages/RegisterPage/Register'
 import Carts from './Static-Pages/Cart/Carts'
 import Payment from './Payment-Page/Payment'
 import ProductDetails from './Static-Pages/ProductsSpecifications/ProductDetails'
+import Privateroute from './Components/Privateroute'
 function AllRoutes() {
   return (
     <Routes>
@@ -33,8 +34,20 @@ function AllRoutes() {
 <Route path='/Fragrance' element={<Fragrance/>}/>
 <Route path='/SelfCare' element={<Selfcare/>}/>
 <Route path='/Tools' element={<Tools/>}/>
-<Route path='/Sale/:id/Carts' element={<Carts/>}/>
-<Route path='/Payment' element={<Payment/>}/>
+<Route path='/Sale/:id/Carts' element={
+<Privateroute>
+
+<Carts/>
+</Privateroute>
+
+}/>
+<Route path='/Payment' element={
+<Privateroute>
+
+<Payment/>
+</Privateroute>
+
+}/>
 <Route path='/Sale/:id' element={<ProductDetails/>}/>
 
 {/* <Route path='/Carts' element={<Carts/>}/> */}

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState,useEffect } from "react";
+import axios from 'axios'
 import img from "./logo/Blossom.png";
 import "./Navbar.css";
 import { AiOutlineUserAdd } from "react-icons/ai";
@@ -18,11 +18,12 @@ import { Link,useNavigate } from 'react-router-dom'
 const Navbars = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const userData = localStorage.getItem("token") || ""
-
+  const [data, setdata] = useState([])
+  const [searchdata, setsearchdata] = useState('')
   const [userId, userEmail, userPassword] = userData.split(":")
   const [isNav, setIsNav] = useState(false)
   // console.log(userData);
-  console.log(userEmail)
+  // console.log(userEmail)
 
   const navigate=useNavigate()
 
@@ -30,7 +31,23 @@ const Navbars = () => {
     navigate(`/${e.target.value}`)
   }
 
+const handleSearch=async(e)=>{
+  setsearchdata(e.target.value)
+  try {
+    let res=await axios.get(`https://blossombackend.onrender.com/products/Sale/${searchdata}`)
+    setdata(res.data)
+    setIsNav(true)
+} catch (error) {
+  console.log(error)
+}
 
+}
+// console.log(data)
+
+
+useEffect(() => {
+  handleSearch()
+}, [])
 
 
 
@@ -78,6 +95,7 @@ const Navbars = () => {
             type="search"
             className="search-data"
             placeholder="Search for a product ot brand..."
+            onChange={handleSearch}
           />
           <Link to='/Sale'>
             <button type="submit">
@@ -87,6 +105,8 @@ const Navbars = () => {
           </Link>
 
         </form>
+
+
 
         <div
           class="nav-items"
@@ -175,6 +195,33 @@ const Navbars = () => {
           </ul>
         </div>
       </div> */}
+  
+      {isNav?(
+  <div className="showsome">
+ <div className="suggestion_boxhai">
+  {data.map((el)=>(
+   
+   <Link to='/Sale'>
+     <div key={el.id} className='searchkro'>
+      <img src={el.image} alt='Image' className="products_image"/>
+<h3>{el.title}</h3>
+  
+  
+   
+    </div>
+   </Link>
+   
+  ))}
+</div>
+   
+  </div>
+    ):(
+      <div className="shownothing"></div>
+    )}
+     
+  
+   
+   
     </div>
   );
 };
