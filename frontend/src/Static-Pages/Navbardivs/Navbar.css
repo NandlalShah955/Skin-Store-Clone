@@ -39,5 +39,6 @@ display: none;
       /* padding: 10px; */
       /* border: 1px solid red; */
       height: 90px;
+      display: none;
     }
   }
