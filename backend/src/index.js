@@ -5,9 +5,9 @@ const bodyparser=require('body-parser');
 const PORT = process.env.PORT || 8080;
 const Connect = require("./config/db");
 
-const userRouter = require("./features/users/user.router");
-const productRouter = require("./features/products/product.router");
-const cartRouter = require("./features/cart/cart.router")
+const userRouter = require("./routes/user.router");
+const productRouter = require("./routes/product.router");
+const cartRouter = require("./routes/cart.router");
 
 const app = express();
 app.use(express.json());
