@@ -6,7 +6,7 @@ font-family: "Lato",sans-serif;
   width: 80%;
  margin-left: 40px;
  font-weight: 300;
- position: sticky;
+ /* position: sticky; */
 }
 #navibarr{
   list-style-type: none;

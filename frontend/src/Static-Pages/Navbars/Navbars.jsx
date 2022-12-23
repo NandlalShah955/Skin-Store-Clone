@@ -46,8 +46,12 @@ const Navbars = () => {
         setdata([]);
       }else{
         setdata(res.data)
+        setIsNav(true);
+       setTimeout(() => {
+        setIsNav(false)
+       }, 4000);
       }
-      setIsNav(true);
+      
     } catch (error) {
       console.log(error);
     }
@@ -209,7 +213,7 @@ const Navbars = () => {
         </div>
       </div> */}
 
-      {setdata.length!=0 ? (
+      {(setdata.length!=0 && isNav)? (
         
           <div className="suggestionwala">
             {data.map((el) => (
