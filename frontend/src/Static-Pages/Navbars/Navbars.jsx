@@ -222,10 +222,8 @@ const Navbars = () => {
             ))}
           </div>
        
-      ) :setdata.length==0 (
-        <div className="suggestionwala"style={{overflowY:'hidden'}}
-        
-        ></div>
+      ) : (
+        ' '
       )}
     </div>
   );
