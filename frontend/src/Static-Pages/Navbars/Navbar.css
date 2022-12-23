@@ -589,3 +589,60 @@ margin-top: 20px;
 height: 40px;
 
 }
+/* .suggestion_boxhai{
+  height: 600px;
+   overflow-x: hidden;
+  
+  overflow-y: scroll; 
+  left: 30%;
+  margin-top: -30px;
+  width: 500px;
+ position: absolute;
+
+  background-color: rgb(218, 200, 198);
+} */
+.suggestionwala{
+  height: auto;
+  width: 500px;
+  margin-top: -30px;
+  position: absolute;
+  overflow-x: hidden;
+  left: 30%;
+  background-color: white;
+  overflow-y: scroll;
+}
+.searchkro{
+  display: flex;
+  margin: 20px;
+  
+}
+.shownothing{
+  display: none;
+}
+.products_image{
+width: 40%;
+height: 100px;
+}
+.products_image+h3{
+  font-weight: 300;
+  text-align: center;
+  margin-top: 20px;
+  color: black;
+  text-decoration: none;
+}
+.btnhai{
+  width: auto;
+  height: 40px;
+background-color: white;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+border: 1px solid black;
+
+}
+.btnhaisec{
+  width: auto;
+  height: 40px;
+background-color: white;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+border: 1px solid black;
+margin-left:5px;
+}

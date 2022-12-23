@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+.main_login {
+  margin: 0%;
+  box-sizing: border-box;
+  background: #f2f2f2;
+  font-family: "Lato", sans-serif;
+  padding: 60px 0px;
+}
+
+.new_existing {
+  width: 45%;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+.new_existing > div {
+  width: 100%;
+  height: auto;
+}
+
+.existing_content {
+  padding: 20px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+}
+
+.existing_content h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333333;
+}
+
+.existing_content label {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: cursive;
+  margin-top: 20px;
+  color: #333333;
+}
+
+.existing_content label:nth-child(4) {
+  margin-top: 20px;
+}
+
+.existing_content input {
+  padding: 1px 5px;
+  height: 40px;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+.new_user_content {
+  padding: 20px 30px;
+  box-sizing: border-box;
+  background: white;
+}
+
+.new_user_content h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333333;
+}
+
+.forget_password {
+  width: 68%;
+  margin-top: 30px;
+  text-transform: uppercase;
+  color: #4d5155;
+  font-size: 15px;
+}
+
+.forget_password:hover {
+  text-decoration: none;
+}
+
+.sing_in_button {
+  margin-top: 20px;
+  height: 45px;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  background: #2e3337;
+  color: white;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  border: none;
+}
+
+.sing_in_button:hover {
+  background: rgba(2, 199, 199, 0.85);
+  color: black;
+  text-decoration: underline;
+}
+
+.sing_in_button + p {
+  color: #333333;
+  font-size: 15px;
+}
+
+.social_links {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.social_links a {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #666666;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px;
+}
+
+.social_links > a > img {
+  width: 13%;
+}
+
+.social_links a:hover {
+  background: rgb(240, 238, 238);
+  border: 1px solid rgb(240, 238, 238);
+  transition: 0.3s ease;
+}
+
+.new_user_content {
+  display: flex;
+  flex-direction: column;
+}
+
+.new_continue {
+  height: 45px;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  background: #2e3337;
+  color: white;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.new_continue:hover {
+  background: rgba(2, 199, 199, 0.85);
+  color: black;
+  text-decoration: underline;
+}
+
+@media (max-width: 1199px) {
+  .new_existing {
+    width: 83%;
+  }
+}
+
+@media (max-width: 1032px) {
+  .forget_password {
+    text-overflow: inherit;
+  }
+}
+
+@media (max-width: 899px) {
+  .new_existing {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 599px) {
+  .new_existing {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .forget_password {
+    width: 100%;
+    font-size: 14.5px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .social_links > a > img {
+    width: 20%;
+  }
+
+  .social_links a {
+    font-size: 12px;
+  }
+}

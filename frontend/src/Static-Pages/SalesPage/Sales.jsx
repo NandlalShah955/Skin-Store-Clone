@@ -95,11 +95,11 @@ const Sales = () => {
     <div className={styles.main__sales}>
       <div className={styles.navigation_tab}>
         <span className={styles.home_hover}>Home</span> <span>/</span>{" "}
-        <span>Featured Offers</span>
+        <span>All Products</span>
       </div>
       <div className={styles.main__products}>
         {/* filter section  */}
-        <div className={styles.refine}>
+        <div style={{marginTop: "30px"}} className={styles.refine}>
           <p className={styles.refine_head}>Refine</p>
           <div>
             <hr />
@@ -161,16 +161,16 @@ const Sales = () => {
 
         {/* product section  */}
         <div className={styles.products_area}>
-          <p className={styles.off_percent}>Up to 50% off!</p>
-          <p className={styles.results}>{data.length} results</p>
-          <p className={styles.results} style={{ marginTop: "20px" }}>
-            Shop up to 50% off best-selling brands like SkinMedica, Decorté &
-            more!
-          </p>
-          <p className={styles.results}>
+          {/* <p className={styles.off_percent}>Up to 50% off!</p> */}
+          <p style={{color: "teal", fontSize: "20px", fontFamily: "cursive", fontWeight: "bolder", marginBottom: "40px"}} className={styles.results}>{data.length} Results</p>
+          {/* <p className={styles.results} style={{ marginTop: "20px" }}> */}
+            {/* Shop up to 50% off best-selling brands like SkinMedica, Decorté & */}
+            {/* more! */}
+          {/* </p> */}
+          {/* <p className={styles.results}>
             Check out our featured offers page here, or our coupons page for all
-            live offers here.
-          </p>
+            live offers here.</u>
+          </p> */}
 
           {/* sorting and paginatin section  */}
           <div className={styles.sort_page}>
