@@ -9,7 +9,7 @@ import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 import "react-dropdown/style.css";
 
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 
 // or less ideally
 
@@ -23,6 +23,17 @@ const Navbars = () => {
   const [isNav, setIsNav] = useState(false)
   // console.log(userData);
   console.log(userEmail)
+
+  const navigate=useNavigate()
+
+  const handleChange=(e)=>{
+    navigate(`/${e.target.value}`)
+  }
+
+
+
+
+
 
   return (
     <div>
@@ -89,19 +100,16 @@ const Navbars = () => {
               {/* <span style={{ padding: 5 }}></span> */}
 
 
-              {/* <select name="Account" id="">
+              <select name="Profile" id="" onChange={handleChange} className={'select-tag'}>
           
-              <option value="">Account</option>
-              <option value="">Login</option>
-              <option value="">Account</option>
-             </select> */}
-              {/* <Dropdown
-                style={{ border: "none" }}
-                options={options}
-               
-                placeholder="Account"
-              /> */}
-              {userEmail ? <Link to="/Login"><button>{userEmail}</button></Link> : <Link to="/Register"><li className="BaSign"><AiOutlineUserAdd /> SignUp</li></Link>}
+              <option value="Register">Signup</option>
+              <option value="login">Login</option>
+              <option value="seller">Seller Dashboard</option>
+              <option value="userinfo">User profile</option>
+              <option value="admin">Admin Dashboard</option>
+             </select>
+             
+              {/* {userEmail ? <Link to="/Login"><button>{userEmail}</button></Link> : <Link to="/Register"><li className="BaSign"><AiOutlineUserAdd /> SignUp</li></Link>} */}
 
             </li>
 
