@@ -1,77 +1,114 @@
-import React, { useState } from "react";
-// // import { Button } from 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import img from "./logo/Blossom.png";
 import "./Navbar.css";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BsMinecartLoaded } from "react-icons/bs";
-// import  {TopNav}  from "./TopNav";
+
 import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import Dropdown from "react-dropdown";
+
 import "react-dropdown/style.css";
-import {Link} from 'react-router-dom'
 
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../../redux/login/login.actions";
 // or less ideally
-
-const options = ["LOGIN", "SIGNUP"];
 
 const Navbars = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  const userData = localStorage.getItem("token") || ""
-  const [userId, userEmail, userPassword] = userData.split(":")
-  // console.log(userData);
-  console.log(userEmail)
+  const userData = localStorage.getItem("token") || "";
+  const [data, setdata] = useState([]);
+  const [searchdata, setsearchdata] = useState("");
+  const [userId, userEmail, userPassword] = userData.split(":");
+  const [isNav, setIsNav] = useState(false);
+  const dispatch = useDispatch();
+  const { isauth } = useSelector((store) => store.login);
+
+  console.log(userEmail);
+
+  // for navigating the user to the different pages
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    navigate(`/${e.target.value}`);
+  };
+
+  // For search operation in input box
+  const handleSearch = async (e) => {
+   const searcheddata=e.target.value
+   
+    try {
+      let res = await axios.get(
+        `https://blossombackend.onrender.com/products/Sale/${searchdata}`
+      );
+      if(searcheddata===''){
+
+        setdata([]);
+      }else{
+        setdata(res.data)
+      }
+      setIsNav(true);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  // console.log(data)
+
+  useEffect(() => {
+    handleSearch();
+  }, []);
+
+  const handlelogout = (e) => {
+    dispatch(logout());
+  };
+
   return (
     <div>
-      {/* <TopNav /> */}
-
-
-
       <nav>
-        <div class="menu-icon">
+        <div className="menu-icon">
           <span>
-            <AiOutlineMenu
+            <Navbars22
               onClick={() => {
                 setIsNavExpanded(!isNavExpanded);
               }}
             />
           </span>
         </div>
-        <div class="logo">
-          <Link to="/"> <img
-              class="img1"
+        <div className="logo">
+          <Link to="/">
+            {" "}
+            <img
+              className="img1"
               src={img}
               width="100%"
               height="100%"
               alt="pcg"
-            /></Link>
-           
-       
+            />
+          </Link>
         </div>
 
-        <div class="search-icon">
+        <div className="search-icon">
           <span>
             <AiOutlineSearch />
           </span>
         </div>
-        <div class="cancel-icon">
-          <span class="fas fa-times">
+        <div className="cancel-icon">
+          <span className="fas fa-times">
             <AiOutlineClose />
           </span>
         </div>
-        <form class="co" action="#">
+        <form className="co" action="#">
           <input
             type="search"
-            class="search-data"
+            className="search-data"
             placeholder="Search for a product ot brand..."
+            onChange={handleSearch}
           />
-         <Link to='/Sale'>
-<button type="submit">
-            <AiOutlineSearch size={26}style={{margin:'5px'}} />
-          </button>
-
-         </Link>
-          
+          <Link to="/Sale">
+            <button type="submit">
+              <AiOutlineSearch size={26} style={{ margin: "5px" }} />
+            </button>
+          </Link>
         </form>
 
         <div
@@ -81,39 +118,160 @@ const Navbars = () => {
           }
         >
           <ul>
-            <AiOutlineUserAdd size={22} style={{ marginTop: "30px" }} />
+            {/* <AiOutlineUserAdd size={22} style={{ marginTop: "30px" }} /> */}
             <li>
-              <span style={{ padding: 5 }}></span>
+              {/* <span style={{ padding: 5 }}></span> */}
+              {isauth ? (
+                <div>
+                  <button className="btnhai">{userEmail}</button>
+                  <button className="btnhaisec" onClick={handlelogout}>
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                <select
+                  name="Profile"
+                  id=""
+                  onChange={handleChange}
+                  className={"select-tag"}
+                >
+                  <option value="Register">Signup</option>
+                  <option value="login">Login</option>
+                  <option value="seller">Seller Dashboard</option>
+                  <option value="userinfo">User profile</option>
+                  <option value="admin">Admin Dashboard</option>
+                </select>
+              )}
 
-             {/* <select name="Account" id="">
-          
-              <option value="">Account</option>
-              <option value="">Login</option>
-              <option value="">Account</option>
-             </select> */}
-              {/* <Dropdown
-                style={{ border: "none" }}
-                options={options}
-               
-                placeholder="Account"
-              /> */}
-              {userEmail ? <Link to="/Login"><button style={{width: '80px', padding: '3px', borderRadius:'55px'}}>{userEmail}</button></Link> : <Link to="/Register"><button className="BaSign">SignUp</button></Link>}
+              {/* {userEmail ? <Link to="/Login"><button>{userEmail}</button></Link> : <Link to="/Register"><li className="BaSign"><AiOutlineUserAdd /> SignUp</li></Link>} */}
             </li>
-          
-            
-          
-           
-            <span style={{ paddingLeft: 20 }}>
+
+            {/* <span style={{ paddingLeft: 20 }}>
               <BsMinecartLoaded style={{ marginTop: "32px" }} />
-            </span>
-           
-            <li style={{ marginTop: "30px" }}>Cart</li>
-          -
+            </span> */}
+
+            <li>
+              <Link to={`/Sale/:id/Carts`}>
+                <BsMinecartLoaded /> Cart{" "}
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
 
       <div className="line"></div>
+      {/* <div className="menuthing">
+        <span>
+          <AiOutlineMenu
+            onClick={() => {
+              setIsNav(!isNav);
+            }}
+          />
+        </span>
+      </div>
+      <div className="metjabhai">
+        <div class="nav-items"
+          className={
+            isNav ? "navigation-menu expanded" : "navigation-menu"
+          }>
+          <ul>
+            <li>
+              <a href="/">Product</a>
+            </li>
+            <li>
+              <a href="/">User</a>
+            </li>
+            <li>
+              <a href="/">Music</a>
+            </li>
+            <li>
+              <a href="/music">Brands</a>
+            </li>
+            <li>
+              <a href="/music">Holiday</a>
+            </li>
+            <li>
+              <a href="/music">SkinCare</a>
+            </li>
+            <li>
+              <a href="/music">Makeup</a>
+            </li>
+            <li>
+              <a href="/music">BathBody</a>
+            </li>
+            <li>
+              <a href="/music">Fragrance</a>
+            </li>
+            <li>
+              <a href="/music">SelfCare</a>
+            </li>
+          </ul>
+        </div>
+      </div> */}
+
+      {setdata.length!=0 ? (
+        
+          <div className="suggestionwala">
+            {data.map((el) => (
+              <Link to="/Sale">
+                <div key={el.id} className="searchkro">
+                  <img src={el.image} alt="Image" className="products_image" />
+                  <h3>{el.title}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+       
+      ) :setdata.length==0 (
+        <div className="suggestionwala"style={{overflowY:'hidden'}}
+        
+        ></div>
+      )}
+    </div>
+  );
+};
+
+const Navbars22 = () => {
+  const [isNav, setIsNav] = useState(false);
+
+  return (
+    <div>
+      <div className="menuthing">
+        <span>
+          <AiOutlineMenu
+            onClick={() => {
+              setIsNav(!isNav);
+            }}
+          />
+        </span>
+      </div>
+      <div className="metjabhai">
+        <div
+          class="nav-items"
+          className={isNav ? "navigation-menu expanded" : "navigation-menu"}
+        >
+          <ul>
+            <li>
+              <a href="/Holiday">Holiday</a>
+            </li>
+            <li>
+              <a href="/Sale">Sale</a>
+            </li>
+            <li>
+              <a href="/Makeup">Makeup</a>
+            </li>
+            <li>
+              <a href="/BathBody">BathBody</a>
+            </li>
+            <li>
+              <a href="/Fragrance">Fragrance</a>
+            </li>
+            <li>
+              <a href="/SelfCare">SelfCare</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
@@ -124,7 +282,7 @@ const Navbars = () => {
 // <div className={styles.NavInnerCont}>
 //   <div className={styles.NavLogodiv}>
 //     <img
-//    
+//
 //       alt=""
 //     />
 //   </div>

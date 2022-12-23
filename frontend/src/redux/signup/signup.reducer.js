@@ -1,9 +1,11 @@
-import { SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./signup.action.types";
+import { SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./signup.types";
   let token = localStorage.getItem("token") || "";
   let initialstate = {
-    loading: false,
-    error: false,
+    isloading: false,
+    iserror: false,
     token,
+    isauth:false,
+    
   };
   
   export const signupReducer = (state = initialstate, { type, payload }) => {
@@ -11,7 +13,8 @@ import { SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./signup.action.ty
       case SIGNUP_LOADING: {
         return {
           ...state,
-          loading: true,
+          isloading: true,
+          iserror:false
         };
       }
       case SIGNUP_SUCCESS: {
@@ -21,8 +24,9 @@ import { SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./signup.action.ty
   
         return {
           ...state,
-          loading: false,
-          error: false,
+          isloading: false,
+          iserror: false,
+          isauth:true,
           token: payload.token,
         };
       }
@@ -30,8 +34,8 @@ import { SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./signup.action.ty
       case SIGNUP_ERROR: {
         return {
           ...state,
-          loading: false,
-          error: true,
+          isloading: false,
+          iserror: true,
         };
       }
     

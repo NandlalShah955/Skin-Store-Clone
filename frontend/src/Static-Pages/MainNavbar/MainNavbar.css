@@ -121,7 +121,7 @@ height: 85%;
    position: sticky;
     top: 0;
    /* background-color: aqua; */
-   /* display: none; */
+   display: none;
   }
   #navibarr{
 display: grid;
@@ -140,5 +140,6 @@ display: grid;
 grid-template-columns: repeat(3,1fr);
 grid-template-rows: repeat(4,1fr);
 height: 150px;
+display: none;
   }
 }
