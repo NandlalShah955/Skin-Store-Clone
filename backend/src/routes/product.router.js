@@ -1,5 +1,5 @@
 const express = require("express");
-const Product = require("./product.model");
+const Product = require("../models/product.model");
 
 const app = express.Router();
 
@@ -85,13 +85,23 @@ app.get("/:category/:sortType", async(req,res)=> {
     }
 })
 
-
 app.get("/:category/:id", async(req,res)=> {
     try{
         let product = await Product.find({_id:req.params.id,category:req.params.category});
         res.send(product);
     }catch(e){
         res.status(401).send(e.message)
+    }
+})
+
+app.post("/", async(req,res)=> {
+    const id = req.headers["authorization"];
+    try{
+        const product = new Product({...req.body, userId: id});
+        await product.save();
+        return res.status(200).send(product);
+    }catch(e){
+        return res.status(400).send(e)
     }
 })
 
