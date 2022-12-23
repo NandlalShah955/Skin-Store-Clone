@@ -232,6 +232,13 @@ nav .logo.space{
     right: 30px;
   }
 }
+
+@media (max-width: 850px){
+  .logo img{
+    /* height: 110px; */
+    width: 40%;
+  }
+}
 @media (max-width: 350px){
   nav .menu-icon,
   nav .cancel-icon,
@@ -283,12 +290,12 @@ nav .logo.space{
   color: black;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 500px) and (max-width: 1000px) {
   .navigation-menu ul {
     display: none;
   }
 }
-@media screen and (min-width: 780px) and (max-width: 1800px) {
+@media screen and (min-width: 821px) and (max-width: 1800px) {
 .metjabhai{
   display: none;
 }
@@ -304,7 +311,7 @@ nav .logo.space{
   margin:5px 30px;
   /* display: none; */
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 822px) {
   .navigation-menu ul {
    position: absolute;
     top: 125px;
@@ -331,7 +338,7 @@ nav .logo.space{
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 822px) {
   .navigation-menu ul {
     /* previous styles */
     display: none;
@@ -339,7 +346,7 @@ nav .logo.space{
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 822px) {
   .navigation-menu.expanded ul {
     display: block;
   }

@@ -16,6 +16,7 @@ import Register from './Static-Pages/RegisterPage/Register'
 import Carts from './Static-Pages/Cart/Carts'
 import Payment from './Payment-Page/Payment'
 import ProductDetails from './Static-Pages/ProductsSpecifications/ProductDetails'
+import { UserInfo } from './Static-Pages/UserInfo/UserInfo'
 function AllRoutes() {
   return (
     <Routes>
@@ -36,7 +37,7 @@ function AllRoutes() {
 <Route path='/Sale/:id/Carts' element={<Carts/>}/>
 <Route path='/Payment' element={<Payment/>}/>
 <Route path='/Sale/:id' element={<ProductDetails/>}/>
-
+<Route path='/userinfo' element={<UserInfo />} />
 {/* <Route path='/Carts' element={<Carts/>}/> */}
 
 

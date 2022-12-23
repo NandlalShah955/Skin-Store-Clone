@@ -82,6 +82,10 @@ ul{
 	background-color: #ffffff;
 }
 
+.social-links{
+	padding: 30px;
+}
+
 /*responsive*/
 @media(max-width: 767px){
   .footer-col{
@@ -97,7 +101,7 @@ ul{
 }
 
 .footer-colss{
-
+	margin-top: 50px;
 }
 
 
@@ -187,9 +191,16 @@ ul{
 
 .social-links{
 	/* border: 1px solid green; */
-	margin-left: -140px;
+	margin-left: -150px;
+
 }
 .kuchnhi{
 	margin-top: 80px;
+	display: none;
 }
 }
+
+.line{
+	border: 1px solid black;
+	margin-top: 25px;
+  }
