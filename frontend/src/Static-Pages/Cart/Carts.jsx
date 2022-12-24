@@ -32,16 +32,19 @@ const Carts = () => {
   const [inc, setInc] = useState(false);
   const [dec, setDec] = useState(false);
   const [itemDelete, setItemDelete] = useState(false); 
+  const [loading, setloading] = useState(false)
   const userData = localStorage.getItem("token") || ""
   const [userId, userEmail, userPassword] = userData.split(":")
   console.log(userId)
   let total = 0
 
-  const handleRemove = (id) => {
-    let res = axios.delete(`https://blossombackend.onrender.com/carts/${id}`)
+  const handleRemove = async(id) => {
+    setloading(true)
+    let res = await axios.delete(`https://blossombackend.onrender.com/carts/${id}`)
     console.log("res deleted",res.data)
     
     setItemDelete(!itemDelete);
+  setloading(false)
   };
 
   const handleDec = (id, quantity) => {
@@ -57,12 +60,20 @@ const Carts = () => {
 
   useEffect(()=>{
     // let userId = "6372460dfad1cc8a20b5b694";
-    axios.get(`https://blossombackend.onrender.com/carts/${userId}`).then((res)=>{
+    setloading(true)
+     axios.get(`https://blossombackend.onrender.com/carts/${userId}`).then((res)=>{
       // console.log(res.data)
       setData(res.data);
+      setloading(false)
     })
   },[inc, dec, itemDelete]);
   
+  if (loading) {
+    return (
+      <img src="https://flevix.com/wp-content/uploads/2020/01/Bounce-Bar-Preloader-1.gif" alt="loading" />
+    );
+  }
+
 
   return (
     <>

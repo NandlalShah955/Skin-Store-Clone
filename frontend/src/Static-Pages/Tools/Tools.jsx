@@ -1,13 +1,18 @@
 import {HiOutlineShoppingBag} from 'react-icons/hi'
 import '../HomePage/HomePage.css'
 import '../SkinCare/SkinCare.css'
+import { useNavigate } from 'react-router-dom'
 
 function Tools() {
+  const navigate=useNavigate()
+  const handleredirect=()=>{
+navigate('/Sale')
+ }
   return (
     <>
 <h1 className="Shophai"> Shop Tools</h1>
 
-<div className="Shopcateg">
+<div className="Shopcateg" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/53/Page-001-024853.png"
@@ -46,11 +51,11 @@ function Tools() {
         </div>
       </div>
 
-      <div className='topdiv'>
+      <div className='topdiv' onClick={handleredirect}>
         <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/56/SS-Batching-Christmas-Category_Banner-EG1180x450_5-082556.jpg" alt="" />
       </div>
 
-      <div className="overblog" id='overblog1'>
+      <div className="overblog" id='overblog1' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/51/original-0224-STDCRE-32153-SS-BME-Skinstore-March-2022-Photography-Batching-Shot_15-500x500-074151.jpg"
@@ -96,7 +101,7 @@ You can buy the full range ESPA skin care products online and enjoy the luxury o
         </div>
       </div>
 
-      <div className="overblog" id='overblog2'>
+      <div className="overblog" id='overblog2' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/10/original-AntiAgingCollection-SkinStore-500x500-044510.jpg"

@@ -2,16 +2,22 @@ import React from 'react'
 import '../HomePage/HomePage.css'
 import './SkinCare.css'
 import {HiOutlineShoppingBag} from 'react-icons/hi'
+import { useNavigate } from 'react-router-dom'
 
 
 function SkinCare() {
+  const navigate=useNavigate()
+  const handleredirect=()=>{
+navigate('/Sale')
+ }
+ 
   return (
     <>
-      <div className='topdiv'>
+      <div className='topdiv' onClick={handleredirect}>
         <img src="https://static.thcdn.com/images/large/webp/widgets/121-us/50/SS-Batching-Christmas-Category_Banner-EG770x380_1-081850.jpg" alt="" />
       </div>
       <h1 className="Shophai"> Shop the Range</h1>
-      <div className="overblog">
+      <div className="overblog" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/36/17_1009_CucumberExtract_US17_1009_CucumberExtract_US-012536.jpg"
@@ -51,7 +57,7 @@ function SkinCare() {
         </div>
       </div>
 
-      <div className="overblog" id='overblog2'>
+      <div className="overblog" id='overblog2' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/42/original-original-Shot_9_500x500-070853-041942.jpg"
@@ -93,7 +99,7 @@ function SkinCare() {
    
       <h1 className="Shophai" id='shop'> Shop by Ingredient</h1>
 
-      <div className="Shopcateg">
+      <div className="Shopcateg" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/10/Page-001-095910.png"
@@ -134,7 +140,7 @@ function SkinCare() {
 
       <h1 className="Shophai"> Best Sellers</h1>
 
-      <div className="buying_people">
+      <div className="buying_people" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp//productimg/480/480/12596429-3594871019700125.jpg"
@@ -176,7 +182,7 @@ EltaMD UV Clear Tinted Broad-Spectrum SPF46</p>
 
       <h1 className="Shophai">Over On The Blog</h1>
 
-      <div className="overblog">
+      <div className="overblog" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/18/1223-DPO660-PD-SS-Jan-batch-shot-15_1200x672_1610651093-070718.jpg"

@@ -2,8 +2,14 @@ import React from "react";
 import "./HomePage.css";
 import {HiOutlineShoppingBag} from 'react-icons/hi'
 import Slider from "./Slider";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  const navigate=useNavigate()
+  const handleredirect=()=>{
+navigate('/Sale')
+ }
+ 
   return (
     <>
 
@@ -11,7 +17,7 @@ function HomePage() {
 
       <h1 className="Shophai">Shop by Category</h1>
       {/* Shop by Category images  */}
-      <div className="Shopcateg">
+      <div className="Shopcateg" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/01/Page-001-025201.png"
@@ -53,7 +59,7 @@ function HomePage() {
       <h1 className="Shophai"> Trending Offers</h1>
       {/* Trending Offers Div     */}
 
-      <div className="Trending_wala">
+      <div className="Trending_wala" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/39/17_1009_CucumberExtract_US17_1009_CucumberExtract_US-014239.jpg"
@@ -172,7 +178,7 @@ function HomePage() {
 
       {/* WHAT PEOPLE ARE NOW DIV  */}
 
-      <div className="buying_people">
+      <div className="buying_people" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp//productimg/480/480/13524404-5734930150395321.jpg"
@@ -213,7 +219,7 @@ function HomePage() {
 
       {/* DIfferent images div starts from here   */}
 
-      <div className="diffimages">
+      <div className="diffimages" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/26/180x72_4_233548301_CA_SS_Logo_Amend_BAU_THG0030424-041301-124116-063126.png"
@@ -254,7 +260,7 @@ function HomePage() {
 
       <h1 className="Shophai"> Over On the Blog</h1>
 
-      <div className="overblog">
+      <div className="overblog" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/06/original-SkinC_Ferulic-034413-012406.jpg"
