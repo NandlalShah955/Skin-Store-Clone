@@ -200,7 +200,7 @@ export const Footer = () => {
 
 const Footer2 = () => {
   return (
-    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+    <MDBFooter  bgColor='light' className='text-center text-lg-start text-muted'>
       <div className="line"></div>
 
       <section className=''>

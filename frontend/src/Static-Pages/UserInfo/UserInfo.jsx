@@ -34,14 +34,25 @@ import {
   MDBCardText,
   MDBCardBody,
   MDBCardImage,
-  // MDBTypography,
-  // MDBIcon,
+  MDBTypography,
+  MDBIcon,
+  MDBTable,
+  MDBTableHead
 } from "mdb-react-ui-kit";
 
 
 export const UserInfo = () => {
 
+  // const userData1 = localStorage.getItem("token") || "";
+  // const [userId1, userEmail1, userPassword1] = userData1.split(":");
 
+
+
+  const userName = localStorage.getItem("username") || "";
+  const userEmail = localStorage.getItem("useremail") || "";
+  const userRole = localStorage.getItem("userrole") || "";
+  
+  const userCreate = localStorage.getItem("usercreatedAt") || "";
   return (<div>
     {/* <section className="vh-100" style={{ backgroundColor: "#f4f5f7" }}>
       <MDBContainer className="py-5 h-100">
@@ -76,7 +87,7 @@ export const UserInfo = () => {
                       <MDBCol size="6" className="mb-3">
                         <MDBTypography tag="h6">Email</MDBTypography>
                         <MDBCardText className="text-muted">
-                          info@example.com
+                        {userEmail}
                         </MDBCardText>
                       </MDBCol>
                       <MDBCol size="6" className="mb-3">
@@ -135,8 +146,8 @@ export const UserInfo = () => {
                   className="rounded-circle"
                   style={{ width: '150px' }}
                   fluid />
-                <p className="text-muted mb-1">Bharat, Nandlal, Nitesh</p>
-                <p className="text-muted mb-4">Pune, India</p>
+                <p className="text-muted mb-1">{userName}, India</p>
+                <p className="text-muted mb-4">{userRole}</p>
                 <div className="d-flex justify-content-center mb-2">
                 </div>
               </MDBCardBody>
@@ -150,7 +161,7 @@ export const UserInfo = () => {
                     <MDBCardText>Full Name</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">Bharat</MDBCardText>
+                    <MDBCardText className="text-muted">{userName}</MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
@@ -159,16 +170,16 @@ export const UserInfo = () => {
                     <MDBCardText>Email</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">example@example.com</MDBCardText>
+                    <MDBCardText className="text-muted">{userEmail}</MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Phone</MDBCardText>
+                    <MDBCardText>Role</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">(097) 234-5678</MDBCardText>
+                    <MDBCardText className="text-muted">{userRole}</MDBCardText>
                   </MDBCol>
                 </MDBRow>
                 <hr />
@@ -183,10 +194,10 @@ export const UserInfo = () => {
                 <hr />
                 <MDBRow>
                   <MDBCol sm="3">
-                    <MDBCardText>Address</MDBCardText>
+                    <MDBCardText>Account Create</MDBCardText>
                   </MDBCol>
                   <MDBCol sm="9">
-                    <MDBCardText className="text-muted">Kolhapur, India</MDBCardText>
+                    <MDBCardText className="text-muted">{userCreate}</MDBCardText>
                   </MDBCol>
                 </MDBRow>
               </MDBCardBody>
