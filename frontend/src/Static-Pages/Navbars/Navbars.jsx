@@ -262,6 +262,12 @@ const Navbars22 = () => {
           className={isNav ? "navigation-menu expanded" : "navigation-menu"}
         >
           <ul>
+          <li>
+              <a href="/Register">Sign Up</a>
+            </li>
+            <li>
+              <a href="/Login">Login</a>
+            </li>
             <li>
               <a href="/Holiday">Holiday</a>
             </li>
