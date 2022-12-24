@@ -21,22 +21,22 @@
 # Login Page
 ![Screenshot (79)](https://user-images.githubusercontent.com/101573792/209440288-50bf4f7c-c889-4e37-9fac-c430bd2e49c4.png)
 
-#User Profile Page
+# User Profile Page
 ![Screenshot (82)](https://user-images.githubusercontent.com/101573792/209440518-ae44e20f-1d68-4488-8bb4-59103965b822.png)
 
-#Seller Page
+# Seller Page
 ![Screenshot (81)](https://user-images.githubusercontent.com/101573792/209440781-10ff9f42-69f5-43b2-bb0f-467f22631485.png)
 
-#Admin Page
+# Admin Page
 ![Screenshot (83)](https://user-images.githubusercontent.com/101573792/209440716-f9a78383-48e2-4a9c-838d-81c04920171a.png)
 
-#Address Page
+# Address Page
 ![Screenshot (84)](https://user-images.githubusercontent.com/101573792/209440736-50d3432a-f898-400e-a6e2-e5d0350631dd.png)
 
-#Payment Page
+# Payment Page
 ![Screenshot (85)](https://user-images.githubusercontent.com/101573792/209440749-bd657379-daac-4746-8d45-8397e95a46eb.png)
 
-#Hair Page
+# Hair Page
 ![Screenshot (86)](https://user-images.githubusercontent.com/101573792/209440805-e103f76f-6d36-47a4-9f07-10bce2ff28b5.png)
 
 
