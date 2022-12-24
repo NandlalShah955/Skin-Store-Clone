@@ -584,11 +584,12 @@ nav .logo.space{
   cursor: pointer;
 }
 .select-tag{
-width: 100px;
-margin-top: 20px;
-height: 40px;
+width: 150px;
+margin-top: 5px;
+height: 30px;
 
 }
+
 /* .suggestion_boxhai{
   height: 600px;
    overflow-x: hidden;
@@ -636,7 +637,7 @@ height: 100px;
   height: 40px;
 background-color: white;
 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-border: 1px solid black;
+border: none
 
 }
 .btnhaisec{
@@ -645,5 +646,10 @@ border: 1px solid black;
 background-color: white;
 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 border: 1px solid black;
-margin-left:5px;
+margin-left:20px;
+border: none;
+}
+.userfont{
+  font-size: 20px;
+  margin-right: 10px;
 }
