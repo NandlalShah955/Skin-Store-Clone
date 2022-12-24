@@ -6,9 +6,11 @@
 # Credentials
 ### Admin 
  Username : admin@blossom.com
+ <br/>
  Password :admin
 ### Seller 
  Username :seller@blossom.com
+ <br/>
  Password :seller
 
 # Project look like this
