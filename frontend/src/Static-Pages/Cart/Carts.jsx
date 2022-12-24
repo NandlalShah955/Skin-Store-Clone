@@ -1,5 +1,10 @@
 import React, {  useState } from "react";
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import { AiOutlineMinusCircle } from 'react-icons/ai';
+import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { BsFillTrashFill } from 'react-icons/bs';
+
+
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 import {
   MDBBtn,
@@ -24,6 +29,28 @@ import axios from "axios";
 
 const Carts = () => {
   const [data, setData] = useState([]);
+  const [inc, setInc] = useState(false);
+  const [dec, setDec] = useState(false);
+  const [itemDelete, setItemDelete] = useState(false); 
+  let total = 0
+
+  const handleRemove = (id) => {
+    let res = axios.delete(`https://blossombackend.onrender.com/carts/${id}`)
+    console.log("res deleted",res.data)
+    
+    setItemDelete(!itemDelete);
+  };
+
+  const handleDec = (id, quantity) => {
+    axios.patch(`https://blossombackend.onrender.com/carts/${id}`,{quantity: quantity-1})
+    setDec(!dec);
+  };
+
+  const handleInc = (id, quantity) => {
+    let res = axios.patch(`https://blossombackend.onrender.com/carts/${id}`,{quantity: quantity+1})
+    console.log(quantity)
+    setInc(!inc);
+  };
 
   useEffect(()=>{
     let userId = "6372460dfad1cc8a20b5b694";
@@ -31,30 +58,8 @@ const Carts = () => {
       // console.log(res.data)
       setData(res.data);
     })
-  },[]);
-  console.log(data)
-  // const [data, setdata] = useState([]);
-  // const [fetchData, setFetchData] = useState([]);
-  // let fetchData = []
-  // const datafromback = JSON.parse(localStorage.getItem("cartItems"));
-  // console.log(datafromback, "datahai");
-
-  // const newdata = datafromback.map((i, val) => {
-  //   return i[0].image;
-  // });
-  // const titl = datafromback.map((i, val) => {
-  //   return i[0].title;
-  // });
-  // const rate = datafromback.map((i, val) => {
-  //   return i[0].price;
-  // });
-
-//   console.log(rate,"rate")
-//   let meratotal=0;
-// for(var i=0; i<rate.length; i++) {
-// meratotal+=rate[i]
-// }
-// console.log(meratotal)
+  },[inc, dec, itemDelete]);
+  
 
   return (
     <>
@@ -87,7 +92,7 @@ const Carts = () => {
               <MDBCol md="2" lg="2" xl="2">
                 <MDBCardImage className="rounded-3" fluid
                   src={el.image}
-                  alt="Cotton T-shirt" />
+                  alt="icon" />
               </MDBCol>
               <MDBCol md="3" lg="3" xl="3">
                 <p className="lead fw-normal mb-2">{el.title}</p>
@@ -96,12 +101,17 @@ const Carts = () => {
               <MDBCol md="3" lg="3" xl="2"
                 className="d-flex align-items-center justify-content-around">
                 <MDBBtn color="link" className="px-2">
-                  <MDBIcon fas icon="minus" />
+                  {/* <MDBIcon fas icon="minus" /> */}
+                  <button onClick={() => handleDec(el._id, el.quantity)}>
+                    <AiOutlineMinusCircle size={"20px"}/>
+                  </button>
                 </MDBBtn>
 
                 {el.quantity}
                 <MDBBtn color="link" className="px-2">
-                  <MDBIcon fas icon="plus" />
+                  <button onClick={() => handleInc(el._id, el.quantity)}>
+                    <AiOutlinePlusCircle size={"20px"}/>
+                  </button>
                 </MDBBtn>
               </MDBCol>
               <MDBCol md="3" lg="2" xl="2" className="offset-lg-1">
@@ -111,7 +121,9 @@ const Carts = () => {
               </MDBCol>
               <MDBCol md="1" lg="1" xl="1" className="text-end">
                 <a href="#!" className="text-danger">
-                  <MDBIcon fas icon="trash text-danger" size="lg" />
+                  <button onClick={() => handleRemove(el._id)}>
+                    <BsFillTrashFill size="20px" />
+                  </button>
                 </a>
               </MDBCol>
             </MDBRow>
@@ -122,55 +134,10 @@ const Carts = () => {
     
 
   </MDBContainer>
+   <Link to='/payments'> <button style={{marginBottom: "40px", color: "white", background: "teal", borderRadius: "10px", paddingLeft: "25px", paddingRight: "25px", paddingTop: "10px", paddingBottom: "10px", border: "none"}}>Checkout</button></Link>
 </section>
     </section>
-    {/* <div className="imagedescpr">
-     
     
-      <div>
-      {
-        newdata.map((el)=>(
-        <div className="Mainiimageonly">
-        <img src={el} alt="" />
-        
-      </div>
-      ))
-      }
-      </div>
-     <div>
-
-    
-      {
-        titl.map((el)=> (
-          <div className="CartTitle">
-            <p>{el}</p>
-            <button className="incdec">+</button>
-  <button className="incdec">-</button>
-          </div>
-        ))
-      }
- </div>
-  
-  
-
-
-<div>
-  {
-        rate.map((el)=>(
-
-        <div className="ratehaimeara">
-    <p>Price:-{el}$ only</p>
-        </div>
-        ))
-        
-        }
-</div>
-
-
-      
-    </div> */}
-    {/* <h3>Total Price:${meratotal}</h3> */}
-   {/* <Link to='/Payment'> <button className="antimpage">Checkout</button></Link> */}
    
     </>
   );

@@ -17,6 +17,7 @@ import Carts from './Static-Pages/Cart/Carts'
 import Payment from './Payment-Page/Payment'
 import ProductDetails from './Static-Pages/ProductsSpecifications/ProductDetails'
 import AddProduct from "./Static-Pages/seller/AddProduct"
+import ShowUsers from './admin/ShowUsers'
 
 import Privateroute from './Components/Privateroute'
 function AllRoutes() {
@@ -55,6 +56,8 @@ function AllRoutes() {
 
 
 {/* <Route path='/Carts' element={<Carts/>}/> */}
+
+<Route path='/showusers' element={<ShowUsers/>}/>
 
 
 
