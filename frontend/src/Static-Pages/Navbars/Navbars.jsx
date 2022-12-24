@@ -24,7 +24,7 @@ const Navbars = () => {
   const dispatch = useDispatch();
   const { isauth } = useSelector((store) => store.login);
 
-  console.log(userEmail);
+ 
 
   // for navigating the user to the different pages
   const navigate = useNavigate();
@@ -46,8 +46,12 @@ const Navbars = () => {
         setdata([]);
       }else{
         setdata(res.data)
+        setIsNav(true);
+       setTimeout(() => {
+        setIsNav(false)
+       }, 4000);
       }
-      setIsNav(true);
+      
     } catch (error) {
       console.log(error);
     }
@@ -123,10 +127,19 @@ const Navbars = () => {
               {/* <span style={{ padding: 5 }}></span> */}
               {isauth ? (
                 <div>
+                 <AiOutlineUserAdd className="userfont"/>
                   <button className="btnhai">{userEmail}</button>
                   <button className="btnhaisec" onClick={handlelogout}>
                     Logout
                   </button>
+                  <select name="Profile"
+                  id=""
+                  onChange={handleChange}
+                  className={"select-taglogin"}>
+                    <option value='addproduct'>Seller Dashboard</option>
+                    <option value='userinfo'>User Profile</option>
+                    <option value='admin'>Admin Dashboard</option>
+                  </select>
                 </div>
               ) : (
                 <select
@@ -137,7 +150,7 @@ const Navbars = () => {
                 >
                   <option value="Register">Signup</option>
                   <option value="login">Login</option>
-                  <option value="seller">Seller Dashboard</option>
+                  <option value="addproduct">Seller Dashboard</option>
                   <option value="userinfo">User profile</option>
                   <option value="admin">Admin Dashboard</option>
                 </select>
@@ -150,7 +163,7 @@ const Navbars = () => {
               <BsMinecartLoaded style={{ marginTop: "32px" }} />
             </span> */}
 
-            <li>
+            <li >
               <Link to={`/Sale/:id/Carts`}>
                 <BsMinecartLoaded /> Cart{" "}
               </Link>
@@ -209,7 +222,7 @@ const Navbars = () => {
         </div>
       </div> */}
 
-      {setdata.length!=0 ? (
+      {(setdata.length!=0 && isNav)? (
         
           <div className="suggestionwala">
             {data.map((el) => (
@@ -222,10 +235,8 @@ const Navbars = () => {
             ))}
           </div>
        
-      ) :setdata.length==0 (
-        <div className="suggestionwala"style={{overflowY:'hidden'}}
-        
-        ></div>
+      ) : (
+        ' '
       )}
     </div>
   );
@@ -251,6 +262,12 @@ const Navbars22 = () => {
           className={isNav ? "navigation-menu expanded" : "navigation-menu"}
         >
           <ul>
+          <li>
+              <a href="/Register">Sign Up</a>
+            </li>
+            <li>
+              <a href="/Login">Login</a>
+            </li>
             <li>
               <a href="/Holiday">Holiday</a>
             </li>

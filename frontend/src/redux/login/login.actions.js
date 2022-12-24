@@ -14,7 +14,8 @@ export const login = (creds) => async (dispatch) => {
       creds
     );
     let data = await res.data;
-    localStorage.setItem("token",data.token)
+   
+   
     return dispatch({ type: LOGIN_GET_SUCCESS, payload: data });
   } catch (e) {
     return dispatch({ type: LOGIN_GET_ERROR, payload: e.message });
@@ -22,8 +23,8 @@ export const login = (creds) => async (dispatch) => {
 };
 
 export const logout = () => {
+    // to remove all userinfo at the time of user logout 
     
-    localStorage.removeItem('token');
     return{
 
          type: LOGOUT_GET 

@@ -232,6 +232,13 @@ nav .logo.space{
     right: 30px;
   }
 }
+
+@media (max-width: 850px){
+  .logo img{
+    /* height: 110px; */
+    width: 40%;
+  }
+}
 @media (max-width: 350px){
   nav .menu-icon,
   nav .cancel-icon,
@@ -283,12 +290,12 @@ nav .logo.space{
   color: black;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 500px) and (max-width: 1000px) {
   .navigation-menu ul {
     display: none;
   }
 }
-@media screen and (min-width: 780px) and (max-width: 1800px) {
+@media screen and (min-width: 821px) and (max-width: 1800px) {
 .metjabhai{
   display: none;
 }
@@ -304,7 +311,7 @@ nav .logo.space{
   margin:5px 30px;
   /* display: none; */
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 822px) {
   .navigation-menu ul {
    position: absolute;
     top: 125px;
@@ -331,7 +338,7 @@ nav .logo.space{
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 822px) {
   .navigation-menu ul {
     /* previous styles */
     display: none;
@@ -339,7 +346,7 @@ nav .logo.space{
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 822px) {
   .navigation-menu.expanded ul {
     display: block;
   }
@@ -577,11 +584,17 @@ nav .logo.space{
   cursor: pointer;
 }
 .select-tag{
-width: 100px;
-margin-top: 20px;
-height: 40px;
+width: 150px;
+margin-top: 5px;
+height: 30px;
 
 }
+.select-taglogin{
+  margin-left: 20px;
+  height: 40px;
+  border: none;
+}
+
 /* .suggestion_boxhai{
   height: 600px;
    overflow-x: hidden;
@@ -619,8 +632,9 @@ height: 100px;
 .products_image+h3{
   font-weight: 300;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
   color: black;
+  font-size: 20px;
   text-decoration: none;
 }
 .btnhai{
@@ -628,7 +642,7 @@ height: 100px;
   height: 40px;
 background-color: white;
 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-border: 1px solid black;
+border: none
 
 }
 .btnhaisec{
@@ -637,5 +651,10 @@ border: 1px solid black;
 background-color: white;
 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 border: 1px solid black;
-margin-left:5px;
+margin-left:20px;
+border: none;
+}
+.userfont{
+  font-size: 20px;
+  margin-right: 10px;
 }

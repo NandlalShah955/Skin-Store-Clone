@@ -1,14 +1,15 @@
 
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,link, Link } from "react-router-dom";
 import styles from "./Login.module.css";
 import facebook from "./logo/Facebook_F_icon.svg.png";
 import google from "./logo/Google__G__Logo.svg.png";
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "../../redux/login/login.actions";
 
+
 const Login = () => {
-  const { isauth, iserror, isloading } = useSelector((store) => store.login);
+  const { isauth, iserror, isloading,user } = useSelector((store) => store.login);
   const [loginDetails, setloginDetails] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -33,9 +34,17 @@ const Login = () => {
     if (iserror) {
       alert("Incorrect Email or password");
     } else if (isauth) {
+      if(user.role=='seller'){
+        navigate('/addproduct')
+      }else if (user.role=='admin'){
+       navigate('/admin')
+      }else{
+
+        navigate("/Sale");
+      }
+      
       alert("Logged in successfully");
 
-      navigate("/Sale");
     }
   }, [isauth, iserror]);
 
@@ -79,7 +88,10 @@ const Login = () => {
         <div className={styles.new_user}>
           <div className={styles.new_user_content}>
             <h2>New Customer</h2>
-            <button className={styles.new_continue}>Continue</button>
+          
+
+            <button className={styles.new_continue}> <Link to='/Register' style={{color:'white'}}>Continue</Link></button>
+         
           </div>
         </div>
       </div>
