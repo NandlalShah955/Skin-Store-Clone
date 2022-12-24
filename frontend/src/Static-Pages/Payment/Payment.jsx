@@ -61,10 +61,7 @@ const Payments = () => {
       <MDBContainer
       className="py-5"
       fluid
-      style={{
-        backgroundImage:
-          "url(https://mdbcdn.b-cdn.net/img/Photos/Others/background3.webp)",
-      }}
+     
     >
       <MDBRow className=" d-flex justify-content-center">
         <MDBCol md="10" lg="8" xl="5">

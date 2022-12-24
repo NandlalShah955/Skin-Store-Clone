@@ -37,7 +37,7 @@ const Login = () => {
       if(user.role=='seller'){
         navigate('/addproduct')
       }else if (user.role=='admin'){
-       navigate('/admin')
+       navigate('/showusers')
       }else{
 
         navigate("/Sale");

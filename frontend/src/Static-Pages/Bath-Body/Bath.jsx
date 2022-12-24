@@ -1,14 +1,20 @@
 import {HiOutlineShoppingBag} from 'react-icons/hi'
 import '../HomePage/HomePage.css'
 import '../SkinCare/SkinCare.css'
+import { useNavigate } from 'react-router-dom'
 
 
 function Bath() {
+  const navigate=useNavigate()
+  const handleredirect=()=>{
+navigate('/Sale')
+ }
+  
   return (
     <>
  
 
-<div className="Shopcateg">
+<div className="Shopcateg" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/11/Page-001-035911.png"
@@ -47,11 +53,11 @@ function Bath() {
         </div>
       </div>
 
-      <div className='topdiv'>
+      <div className='topdiv' onClick={handleredirect}>
         <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/34/SS-Batching-Christmas-Category_Banner-EG1180x450_2-034934.jpg" alt="" />
       </div>
 
-      <div className="overblog" id='overblog1'>
+      <div className="overblog" id='overblog1' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/06/original-SkinStore-Range-SerumsTreatments-044006.jpg"
@@ -94,7 +100,7 @@ Containing carefully blended levels of bespoke essential oils, our products are 
         </div>
       </div>
 
-      <div className="overblog" id='overblog2'>
+      <div className="overblog" id='overblog2' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/30/original-KFI_Skinstore_ShopRange_Bath-070130.png"
@@ -139,7 +145,7 @@ Enjoy the ultimate Spa-Inspired experience at home with our natural products.
 
       <h1 className="Shophai"> Best Sellers</h1>
 
-      <div className="buying_people">
+      <div className="buying_people" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp//productimg/480/480/11401781-1894964322188103.jpg"
@@ -180,7 +186,7 @@ Enjoy the ultimate Spa-Inspired experience at home with our natural products.
       </div>
       <h1 className="Shophai">What Blog Says</h1>
 
-      <div className="overblog" id='overblog1'>
+      <div className="overblog" id='overblog1' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/20/original-Webp.net-resizeimage_%2825%29-072820.jpg"

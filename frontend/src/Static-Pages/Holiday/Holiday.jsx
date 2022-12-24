@@ -2,14 +2,19 @@
 import '../HomePage/HomePage.css'
 import HolidaySlider from './HolidaySlider'
 import {HiOutlineShoppingBag} from 'react-icons/hi'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 function Holiday() {
+ const navigate=useNavigate()
+  const handleredirect=()=>{
+navigate('/Sale')
+ }
+ 
   return (
     <>
     {/* slider  */}
 <HolidaySlider/>
 {/* first red div  */}
-<div className="Trending_wala">
+<div className="Trending_wala" onClick={handleredirect}>
         <div className='heightkm'>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/01/original-original-SkinStore_Q4_Photography_2022_-_October_-_THG0035163_-_BATCHING_shot21500x500-052147-021101.jpg"
@@ -118,10 +123,11 @@ SHOP NOW
           <button>SHOP NOW</button>
         </div>
       </div>
+      
       <h1 className="Shophai"> Top Holiday Gift Packs</h1>
 {/* gift packs  */}
 
-<div className="buying_people">
+<div className="buying_people" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp//productimg/480/480/13812007-1244993329820695.jpg"

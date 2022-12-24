@@ -11,7 +11,7 @@ const ShowUsers = () => {
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        axios.get("http://localhost:8080/users").then((res)=>{
+        axios.get("https://blossombackend.onrender.com/users").then((res)=>{
             console.log(res.data);
             setData(res.data);
         })

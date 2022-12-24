@@ -77,9 +77,9 @@ function AllRoutes() {
       <Route
         path="/Sale/:id/Carts"
         element={
-          // <Privateroute>
+          <Privateroute>
           <Carts />
-          // </Privateroute>
+        </Privateroute>
         }
       />
       <Route
@@ -104,9 +104,13 @@ function AllRoutes() {
       <Route
         path="/showusers"
         element={
-          <AdminPrivate>
+          <Privateroute>
+            <AdminPrivate>
+          
             <ShowUsers />
           </AdminPrivate>
+          </Privateroute>
+          
         }
       />
 

@@ -2,14 +2,21 @@
 import {HiOutlineShoppingBag} from 'react-icons/hi'
 import '../HomePage/HomePage.css'
 import '../SkinCare/SkinCare.css'
+import { useNavigate } from 'react-router-dom'
+
 function Hair() {
+  const navigate=useNavigate()
+  const handleredirect=()=>{
+navigate('/Sale')
+ }
+  
   return (
     <>
- <div className='topdiv'>
+ <div className='topdiv' onClick={handleredirect}>
         <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/23/SS-Batching-Christmas-Category_Banner-EG1180x450_4-082423.jpg" alt="" />
       </div>
       
-      <div className="overblog" id='overblog1'>
+      <div className="overblog" id='overblog1' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/33/original-original-500x500-085431-082633.jpg"
@@ -51,7 +58,7 @@ Looking for thicker hair? Grow Gorgeous' range of hair growth products, which in
         </div>
       </div>
 
-      <div className="overblog" id='overblog2'>
+      <div className="overblog" id='overblog2' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/08/Screenshot_2022-04-08_115604-084408.png"
@@ -97,7 +104,7 @@ FEKKAI offers clean, high-performance haircare that doesn't compromise.
    
       <h1 className="Shophai" id='shop'> Shop by Hair Focus</h1>
 
-      <div className="Shopcateg">
+      <div className="Shopcateg" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/14/Page-001-015714.png"
@@ -138,7 +145,7 @@ FEKKAI offers clean, high-performance haircare that doesn't compromise.
 
       <h1 className="Shophai"> Best Sellers</h1>
 
-      <div className="buying_people">
+      <div className="buying_people" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp//productimg/480/480/12357671-1384966113558978.jpg"

@@ -1,13 +1,18 @@
 import {HiOutlineShoppingBag} from 'react-icons/hi'
 import '../HomePage/HomePage.css'
 import '../SkinCare/SkinCare.css'
+import { useNavigate } from 'react-router-dom'
 
 function Fragrance() {
+  const navigate=useNavigate()
+  const handleredirect=()=>{
+navigate('/Sale')
+ }
   return (
     <>
 
 <h1 className="Shophai">Fragrance</h1>
-  <div className="Shopcateg">
+  <div className="Shopcateg" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/37/Page-001-043237.png"
@@ -46,11 +51,11 @@ function Fragrance() {
         </div>
       </div>
 
-      <div className='topdiv'>
+      <div className='topdiv' onClick={handleredirect}>
         <img src="https://static.thcdn.com/images/xlarge/webp/widgets/121-us/04/SS-Batching-Christmas-Category_Banner-EG1180x450_7-082804.jpg" alt="" />
       </div>
 
-      <div className="overblog" id='overblog1'>
+      <div className="overblog" id='overblog1' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/58/original-CoaR_SkinToStore_500x500_Fragrance-021958.jpg"
@@ -96,7 +101,7 @@ We were born in 2018, holding fast to the idea that the fragrance industry was i
         </div>
       </div>
 
-      <div className="overblog" id='overblog2'>
+      <div className="overblog" id='overblog2' onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp/widgets/121-us/14/original-Screenshot_2022-04-08_125033-085414.png"
@@ -141,7 +146,7 @@ Enjoy the ultimate Spa-Inspired experience at home with our natural products.
 
       <h1 className="Shophai"> New & Trending</h1>
 
-      <div className="buying_people">
+      <div className="buying_people" onClick={handleredirect}>
         <div>
           <img
             src="https://static.thcdn.com/images/small/webp//productimg/480/480/11288823-1504904688237120.jpg"
