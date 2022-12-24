@@ -13,6 +13,24 @@
  <br/>
  Password :seller
 
+# Functionalities :
+<ul>
+<li>Home Page</li>
+<li>Products Page</li>
+<li>Login/Sign Up page</li>
+<li>Products Specification Page</li>
+<li>UserInfo Page</li>
+<li>Admin Dashboard</li>
+<li>Seller Dasboard</li>
+<li>Role Based Private Routing</li>
+<li>Add Product Page</li>
+<li>Cart Page</li>
+<li>Payment Page</li>
+</ul>
+
+
+
+
 # Project look like this
 # HomePage
 ![Screenshot (75)](https://user-images.githubusercontent.com/101573792/209440251-6e4741f8-a001-49d4-a09f-2c1457cc7d9c.png)
