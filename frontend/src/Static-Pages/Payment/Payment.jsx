@@ -10,12 +10,14 @@ import {
   } from "mdb-react-ui-kit";
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import {BsCheckCircleFill} from 'react-icons/bs'
   
 
 
 const Payments = () => {
   const [data, setData] = useState([])
   const [text, setText] = useState([])
+  const [success, setsuccess] = useState(false)
   const navigate = useNavigate();
  
   const handleChange = (e) => {
@@ -26,7 +28,7 @@ const Payments = () => {
     setText(e.target.value)
   }
 
-  const handleClick = (e) => {
+  const handleClick = () => {
     if(text.length <16){
       alert("Incorrect card number")
     }
@@ -34,12 +36,25 @@ const Payments = () => {
       alert("CVV must be 3 charactor")
     }
     else{
-      navigate("/cart")
+      setsuccess(true)
+      setTimeout(() => {
+        
+        navigate("/")
+      }, 4000);
     }
   }
 
   // val = e.target.value
- 
+  if(success){
+    return ( 
+    <>
+<BsCheckCircleFill className="donedanadan"/>
+<h1>Order Placed</h1>
+<p>Thank You for Placing the Order Keep Shoping</p>
+   
+    </>)
+  }
+
 
   return (
     <div>
