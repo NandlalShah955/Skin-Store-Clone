@@ -138,7 +138,7 @@ const Navbars = () => {
                   className={"select-taglogin"}>
                     <option value='addproduct'>Seller Dashboard</option>
                     <option value='userinfo'>User Profile</option>
-                    <option value='admin'>Admin Dashboard</option>
+                    <option value='showusers'>Admin Dashboard</option>
                   </select>
                 </div>
               ) : (
@@ -152,7 +152,7 @@ const Navbars = () => {
                   <option value="login">Login</option>
                   <option value="addproduct">Seller Dashboard</option>
                   <option value="userinfo">User profile</option>
-                  <option value="admin">Admin Dashboard</option>
+                  <option value="showusers">Admin Dashboard</option>
                 </select>
               )}
 

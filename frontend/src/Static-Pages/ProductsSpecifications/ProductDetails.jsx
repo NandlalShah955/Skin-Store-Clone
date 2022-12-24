@@ -38,7 +38,8 @@ function ProductDetails() {
     rating: currData.rating
   }
   console.log("this is object", obj)
-  let userId = "6372460dfad1cc8a20b5b694";
+  // let userId = "6372460dfad1cc8a20b5b694";
+  // let userId=localStorage.getItem("userId");
   // blossombackend.onrender.com/carts/6372460dfad1cc8a20b5b694
   // http://localhost:8080/carts/6372460dfad1cc8a20b5b694
   

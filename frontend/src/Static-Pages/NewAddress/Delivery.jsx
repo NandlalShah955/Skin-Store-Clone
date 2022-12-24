@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 
 import {
     MDBBtn,
@@ -15,7 +15,7 @@ import {
   } from "mdb-react-ui-kit";
 
 import "mdb-react-ui-kit/dist/css/mdb.min.css";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Delivery = () => {
   return (
@@ -77,7 +77,14 @@ const Delivery = () => {
                   <MDBInput label='Email' type='text' className="mb-4" size="lg" />
 
                   <div className="d-flex justify-content-end pt-3">
-                    <MDBBtn size="lg" className="ms-2" style={{backgroundColor: 'hsl(210, 100%, 50%)'}}>Place order</MDBBtn>
+                   <Link to='/payments'>
+                    <MDBBtn size="lg" className="ms-2" style={{backgroundColor: 'hsl(210, 100%, 50%)'}} >
+
+                    Place order
+                  
+                    </MDBBtn>
+                   </Link>
+                    
                   </div>
 
                 </MDBCardBody>

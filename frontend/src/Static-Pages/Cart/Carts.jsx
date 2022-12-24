@@ -32,6 +32,9 @@ const Carts = () => {
   const [inc, setInc] = useState(false);
   const [dec, setDec] = useState(false);
   const [itemDelete, setItemDelete] = useState(false); 
+  const userData = localStorage.getItem("token") || ""
+  const [userId, userEmail, userPassword] = userData.split(":")
+  console.log(userId)
   let total = 0
 
   const handleRemove = (id) => {
@@ -53,7 +56,7 @@ const Carts = () => {
   };
 
   useEffect(()=>{
-    let userId = "6372460dfad1cc8a20b5b694";
+    // let userId = "6372460dfad1cc8a20b5b694";
     axios.get(`https://blossombackend.onrender.com/carts/${userId}`).then((res)=>{
       // console.log(res.data)
       setData(res.data);
@@ -134,7 +137,7 @@ const Carts = () => {
     
 
   </MDBContainer>
-   <Link to='/payments'> <button style={{marginBottom: "40px", color: "white", background: "teal", borderRadius: "10px", paddingLeft: "25px", paddingRight: "25px", paddingTop: "10px", paddingBottom: "10px", border: "none"}}>Checkout</button></Link>
+   <Link to='/delivery'> <button style={{marginBottom: "40px", color: "white", background: "teal", borderRadius: "10px", paddingLeft: "25px", paddingRight: "25px", paddingTop: "10px", paddingBottom: "10px", border: "none"}}>Checkout</button></Link>
 </section>
     </section>
     
