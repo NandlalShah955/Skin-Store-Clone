@@ -4,7 +4,7 @@ const adminAuth = require("../middleware/adminAuth");
 
 const app = express.Router();
 
-app.get("/",adminAuth, async(req,res)=> {
+app.get("/", async(req,res)=> {
     const users = await User.find();
     return res.send(users);
 })

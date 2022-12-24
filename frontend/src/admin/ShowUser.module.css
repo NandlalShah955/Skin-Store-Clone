@@ -1,0 +1,8 @@
+
+
+@media (max-width: 480px) {
+    .username{
+        display: none;
+        /* color: red; */
+    }
+}

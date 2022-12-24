@@ -11,7 +11,7 @@ const AddProduct = () => {
     const [rating, setRating] = useState("");
     const [category, setCategory] = useState("");
     const [quantity, setQuantity] = useState("")
-    const [depcription, setDepcription] = useState("");
+    const [description, setDepcription] = useState("");
     const [imageUrl, setImageUrl] = useState("");
     const id  = "637ba8fd62bd5e6a227e2813"
     const postDetails = (imageUrl) => {
@@ -58,8 +58,9 @@ const AddProduct = () => {
         if(!localStorage.getItem("token")){
           alert("login please")
         }
+        console.log({title: title,price: price, description:description, image:imageUrl, rating: rating, category: category, quantity: quantity, userId: id});
         axios
-          .post("https://blossombackend.onrender.com/products", {title: title,price: price, depcription:depcription, image_link:imageUrl, rating: rating, category: category, quantity: quantity, userId: id}, {
+          .post("https://blossombackend.onrender.com/products", {title: title,price: price, description:description, image:imageUrl, rating: rating, category: category, quantity: quantity, userId: id}, {
             headers: {
               authorization: id,
             },
@@ -133,7 +134,7 @@ const AddProduct = () => {
             <input
               type="text"
               name="depcription"
-              value={depcription}
+              value={description}
               onChange={(e)=> setDepcription(e.target.value)}
               required
             />

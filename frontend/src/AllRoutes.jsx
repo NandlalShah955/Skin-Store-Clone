@@ -21,6 +21,7 @@ import ProductDetails from './Static-Pages/ProductsSpecifications/ProductDetails
 import { UserInfo } from './Static-Pages/UserInfo/UserInfo'
 
 import AddProduct from "./Static-Pages/seller/AddProduct"
+import ShowUsers from './admin/ShowUsers'
 
 import Privateroute from './Components/Privateroute'
 import Payments from './Static-Pages/Payment/Payment'
@@ -89,6 +90,8 @@ function AllRoutes() {
           </Privateroute>
         }
       />
+
+<Route path='/showusers' element={<ShowUsers/>}/>
 
       <Route
         path="/addproduct"
