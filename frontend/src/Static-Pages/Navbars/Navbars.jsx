@@ -24,7 +24,7 @@ const Navbars = () => {
   const dispatch = useDispatch();
   const { isauth } = useSelector((store) => store.login);
 
-  console.log(userEmail);
+ 
 
   // for navigating the user to the different pages
   const navigate = useNavigate();
@@ -132,6 +132,14 @@ const Navbars = () => {
                   <button className="btnhaisec" onClick={handlelogout}>
                     Logout
                   </button>
+                  <select name="Profile"
+                  id=""
+                  onChange={handleChange}
+                  className={"select-taglogin"}>
+                    <option value='addproduct'>Seller Dashboard</option>
+                    <option value='userinfo'>User Profile</option>
+                    <option value='admin'>Admin Dashboard</option>
+                  </select>
                 </div>
               ) : (
                 <select
