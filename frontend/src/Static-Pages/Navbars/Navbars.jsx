@@ -141,7 +141,7 @@ const Navbars = () => {
                 >
                   <option value="Register">Signup</option>
                   <option value="login">Login</option>
-                  <option value="seller">Seller Dashboard</option>
+                  <option value="addproduct">Seller Dashboard</option>
                   <option value="userinfo">User profile</option>
                   <option value="admin">Admin Dashboard</option>
                 </select>
