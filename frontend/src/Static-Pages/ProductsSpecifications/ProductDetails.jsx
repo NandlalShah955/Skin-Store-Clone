@@ -25,7 +25,28 @@ function ProductDetails() {
  
 
 
- function addToCart(){
+ const addToCart = ()=>{
+  // console.log("data", data)
+  let currData = data[0];
+  let obj = {
+    title: currData.title,
+    image: currData.image,
+    description: currData.description,
+    price: currData.price,
+    quantity: currData.quantity,
+    category: currData.category,
+    rating: currData.rating
+  }
+  console.log("this is object", obj)
+  let userId = "6372460dfad1cc8a20b5b694";
+  // blossombackend.onrender.com/carts/6372460dfad1cc8a20b5b694
+  // http://localhost:8080/carts/6372460dfad1cc8a20b5b694
+  
+  axios.post(`https://blossombackend.onrender.com/carts/${userId}`,obj).then((res)=> {
+    console.log("res--->",res)
+  }).catch((e)=>{
+    console.log("error hai", e);
+  })
    
   // console.log(data,"checking");
   cartData.push(data)
@@ -35,6 +56,7 @@ function ProductDetails() {
   useEffect(() => {
     axios.get(`https://blossombackend.onrender.com/products/Sale/${id}/spec`).then((res)=>{
       setdata(res.data)
+      // console.log(res.data)
     })
   }, []);
 
