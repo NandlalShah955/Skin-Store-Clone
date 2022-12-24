@@ -589,6 +589,11 @@ margin-top: 5px;
 height: 30px;
 
 }
+.select-taglogin{
+  margin-left: 20px;
+  height: 40px;
+  border: none;
+}
 
 /* .suggestion_boxhai{
   height: 600px;
