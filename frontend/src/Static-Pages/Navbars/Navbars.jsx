@@ -127,6 +127,7 @@ const Navbars = () => {
               {/* <span style={{ padding: 5 }}></span> */}
               {isauth ? (
                 <div>
+                 <AiOutlineUserAdd className="userfont"/>
                   <button className="btnhai">{userEmail}</button>
                   <button className="btnhaisec" onClick={handlelogout}>
                     Logout
@@ -154,7 +155,7 @@ const Navbars = () => {
               <BsMinecartLoaded style={{ marginTop: "32px" }} />
             </span> */}
 
-            <li>
+            <li >
               <Link to={`/Sale/:id/Carts`}>
                 <BsMinecartLoaded /> Cart{" "}
               </Link>
