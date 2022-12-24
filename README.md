@@ -3,6 +3,14 @@
     This website is a clone of SkinStore which is an e-commerce website which caters the latest innovative clinical skincare and luxury spa products.
 ​
 ## ✅ **Netlify link** [Click Here To See Magic](https://blossom-two.vercel.app/)
+# Credentials
+### Admin 
+ Username : admin@blossom.com
+ Password :admin
+### Seller 
+ Username :seller@blossom.com
+ Password :seller
+
 # Project look like this
 # HomePage
 ![Screenshot (75)](https://user-images.githubusercontent.com/101573792/209440251-6e4741f8-a001-49d4-a09f-2c1457cc7d9c.png)
