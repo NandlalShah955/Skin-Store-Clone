@@ -63,7 +63,7 @@ function AllRoutes() {
 <Route path='/addproduct' element={<AddProduct/>}/>
 
 <Route path='/payments' element={
-   <Payments /> }/>
+  <Privateroute> <Payments /> </Privateroute> }/>
 
 <Route path='/delivery' element={
   <Privateroute> <Delivery />  </Privateroute>}/>
